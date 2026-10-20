@@ -91,7 +91,7 @@ main{
 }
 .redhead{
   font-family:var(--f-display); font-weight:900; color:var(--red);
-  font-size:clamp(23px,6.3vw,58px); line-height:1.15; text-align:center; letter-spacing:.02em;
+  font-size:min(58px, calc((100vw - 92px) / 13.4)); line-height:1.15; text-align:center; letter-spacing:.02em; white-space:nowrap;
   margin:0; text-wrap:balance; user-select:none;
 }
 .redhead .chou{display:inline-block;cursor:pointer;transition:transform .5s cubic-bezier(.5,-0.4,.6,1.4)}

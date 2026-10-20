@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="一栋永远在筹备中的民间科学院：36 份理论档案，16 个能乱点的房间，8 种世界观，44 个隐藏成就。">
+<meta name="description" content="一栋永远在筹备中的民间科学院：37 份理论档案，16 个能乱点的房间，8 种世界观，44 个隐藏成就。">
 <meta name="theme-color" content="#d0121a">
 <meta property="og:type" content="website">
 <meta property="og:title" content="互联网民间科学院（筹）">
-<meta property="og:description" content="一栋永远在筹备中的民间科学院：36 份理论档案，16 个能乱点的房间，8 种世界观，44 个隐藏成就。">
+<meta property="og:description" content="一栋永远在筹备中的民间科学院：37 份理论档案，16 个能乱点的房间，8 种世界观，44 个隐藏成就。">
 <meta property="og:url" content="https://polaris-aeterna.github.io/minke-academy/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Ccircle%20cx%3D%2732%27%20cy%3D%2732%27%20r%3D%2727%27%20fill%3D%27none%27%20stroke%3D%27%23d0121a%27%20stroke-width%3D%275%27/%3E%3Ctext%20x%3D%2732%27%20y%3D%2743%27%20font-size%3D%2730%27%20font-weight%3D%27900%27%20text-anchor%3D%27middle%27%20fill%3D%27%23d0121a%27%20font-family%3D%27serif%27%3E%E6%B0%91%3C/text%3E%3C/svg%3E">
 <style>
@@ -115,7 +115,7 @@ main{
 }
 .redhead{
   font-family:var(--f-display); font-weight:900; color:var(--red);
-  font-size:clamp(23px,6.3vw,58px); line-height:1.15; text-align:center; letter-spacing:.02em;
+  font-size:min(58px, calc((100vw - 92px) / 13.4)); line-height:1.15; text-align:center; letter-spacing:.02em; white-space:nowrap;
   margin:0; text-wrap:balance; user-select:none;
 }
 .redhead .chou{display:inline-block;cursor:pointer;transition:transform .5s cubic-bezier(.5,-0.4,.6,1.4)}
@@ -781,6 +781,13 @@ const THEORIES = [
    useful:'你做了很好的工作，但全世界只有你导师知道的时候。',
    notFor:'代替论文本身。粉丝能让人点开你的论文，不能替你把证明写完。',
    item:'一个只显示粉丝数、不显示引用数的主页', cred:3},
+  {id:'sunxue', name:'孙学', short:'孙学', emoji:'🏆', fam:'思维派', src:'net', when:'约 2026.09',
+   slogan:'高富帅过时了，赢才是答案。',
+   thesis:'出自一篇发在评论区的"论文"：高富帅人设已经过时，背着它负债生存不划算，新答案是"孙学、黄毛、薄肌"三位一体。网友把它的核心概括成一个字：赢。',
+   a:'先放下撑不起的人设', b:'只问一件事：赢没赢',
+   useful:'你在为一个撑不起的人设持续付钱的时候。',
+   notFor:'投资建议。本院不讨论任何币，也不替你定义什么叫赢；把"赢"当成唯一标准，人生会只剩一张记分牌。',
+   item:'一块只有"赢"和"还没赢"两种状态的记分牌', cred:2},
   {id:'huangmao', name:'黄毛思维', short:'黄毛', emoji:'👱', fam:'思维派', src:'net', when:'约 2026.09',
    slogan:'头发可以不黄，日子必须先过。',
    thesis:'不必真去染黄毛。重点是先把自己的日子过好，守住边界和选择权，不因为别人丢了自己。',
@@ -1080,6 +1087,7 @@ const LAB_SPECIAL = {
   'collect|battery':'电量 1% 时，收藏夹里的 2,371 条学习资料一条也救不了你。先充电。',
   'applerel|battery':'电量 1% 的苹果和电量 1% 的安卓，处在同一个参考系：都快没电了。',
   'nexttime|bus':'公交车不接受"下次一定"。它真的会走。',
+  'sunxue|broke':'月底只剩 37 块，本理论会问你：赢了吗？本院建议先吃饭，赢的事明天再说。',
   'freud|2am':'凌晨两点睡不着，本理论会说是憋的。本院认为更可能是下午四点那杯冰美式。',
   'ligong|broke':'月底只剩 37 块，本理论建议继续攒。本院建议先吃顿好的：人比存钱罐重要。',
   'dafen|mom':'妈妈问你今年发了几篇论文。请不要回答"发了 40 篇笔记"。',
@@ -2267,9 +2275,12 @@ V.family = {
       <ul class="tree">
         <li><span class="node root">2025 · "三大理论"时期<small>大理论时代的前传</small></span>
           <ul><li>${n('freud', '约 2025 · 民间弗洛伊德')}</li><li>${n('ligong', '约 2025')}</li><li>${n('applerel', '约 2025 · 本院修正版')}</li></ul></li>
-        <li>${n('boji', '约 2026.08 · 一切的起点')}
+        <li><span class="node root">2026.08–09 · "三位一体"<small>孙学 + 黄毛 + 薄肌</small></span>
           <ul>
+            <li>${n('sunxue', '约 2026.09 · 一篇评论区论文')}</li>
             <li>${n('huangmao', '约 2026.09')}</li>
+            <li>${n('boji', '约 2026.08 · 后来被戏仿出了大水')}
+          <ul>
             <li>${n('water', '2026.10.05 前后 · 起源于对薄肌的戏仿')}
               <ul>
                 <li>${n('smallwater', '反方')}</li>
@@ -2280,6 +2291,7 @@ V.family = {
                 <li>${n('poop', '网友排的"家族第四席"')}</li>
                 <li>${n('egg', '与大氧、大走一样：仅见名称', 'pend')}</li>
               </ul></li>
+          </ul></li>
           </ul></li>
         <li><span class="node root">同期思维派<small>2026.10</small></span>
           <ul><li>${n('dafen', '2026.10.11 前后 · 学术圈分支')}</li><li>${n('queshi', '2026.10.14 前后')}</li><li>${n('nostudent', '2026.10')}</li><li>${n('americano', '2026.10')}</li><li>${n('shuaqi', '川渝分部')}</li></ul></li>

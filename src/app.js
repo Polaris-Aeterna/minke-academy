@@ -976,9 +976,12 @@ V.family = {
       <ul class="tree">
         <li><span class="node root">2025 · "三大理论"时期<small>大理论时代的前传</small></span>
           <ul><li>${n('freud', '约 2025 · 民间弗洛伊德')}</li><li>${n('ligong', '约 2025')}</li><li>${n('applerel', '约 2025 · 本院修正版')}</li></ul></li>
-        <li>${n('boji', '约 2026.08 · 一切的起点')}
+        <li><span class="node root">2026.08–09 · "三位一体"<small>孙学 + 黄毛 + 薄肌</small></span>
           <ul>
+            <li>${n('sunxue', '约 2026.09 · 一篇评论区论文')}</li>
             <li>${n('huangmao', '约 2026.09')}</li>
+            <li>${n('boji', '约 2026.08 · 后来被戏仿出了大水')}
+          <ul>
             <li>${n('water', '2026.10.05 前后 · 起源于对薄肌的戏仿')}
               <ul>
                 <li>${n('smallwater', '反方')}</li>
@@ -989,6 +992,7 @@ V.family = {
                 <li>${n('poop', '网友排的"家族第四席"')}</li>
                 <li>${n('egg', '与大氧、大走一样：仅见名称', 'pend')}</li>
               </ul></li>
+          </ul></li>
           </ul></li>
         <li><span class="node root">同期思维派<small>2026.10</small></span>
           <ul><li>${n('dafen', '2026.10.11 前后 · 学术圈分支')}</li><li>${n('queshi', '2026.10.14 前后')}</li><li>${n('nostudent', '2026.10')}</li><li>${n('americano', '2026.10')}</li><li>${n('shuaqi', '川渝分部')}</li></ul></li>
