@@ -1,0 +1,2888 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="一栋永远在筹备中的民间科学院：34 份“大理论”档案，16 个能乱点的房间，8 种世界观，44 个隐藏成就。">
+<meta name="theme-color" content="#d0121a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="互联网民间科学院（筹）">
+<meta property="og:description" content="一栋永远在筹备中的民间科学院：34 份“大理论”档案，16 个能乱点的房间，8 种世界观，44 个隐藏成就。">
+<meta property="og:url" content="https://polaris-aeterna.github.io/minke-academy/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Ccircle%20cx%3D%2732%27%20cy%3D%2732%27%20r%3D%2727%27%20fill%3D%27none%27%20stroke%3D%27%23d0121a%27%20stroke-width%3D%275%27/%3E%3Ctext%20x%3D%2732%27%20y%3D%2743%27%20font-size%3D%2730%27%20font-weight%3D%27900%27%20text-anchor%3D%27middle%27%20fill%3D%27%23d0121a%27%20font-family%3D%27serif%27%3E%E6%B0%91%3C/text%3E%3C/svg%3E">
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>互联网民间科学院（筹）</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@200;400;700;900&family=ZCOOL+QingKe+HuangYou&display=swap">
+<style>
+/* Layout: 一份红头文件摊在办公桌上，被互联网贴满了贴纸；楼层导览是这份文件的附件，每个房间是一扇门。 */
+:root{
+  --desk0:#e8e7e1; --sheet0:#fffefa; --ink0:#1c1b18; --muted0:#6b665b; --line0:#dcd8cd;
+  --red0:#d0121a; --yellow0:#ffd21a; --blue0:#1d5fdc; --pink0:#ff4f9f; --green0:#1d8a5a;
+  --on-yellow:#1c1b18; --on-red:#fffaf3;
+  --f-display:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+  --f-body:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+  --f-pop:"ZCOOL QingKe HuangYou","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --f-brush:"Ma Shan Zheng","STKaiti","KaiTi",cursive;
+  --f-ui:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --f-mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --r:6px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --desk0:#0f0e0c; --sheet0:#1a1916; --ink0:#ece8de; --muted0:#a29d91; --line0:#35322b;
+    --red0:#ff4d50; --yellow0:#ffd84d; --blue0:#7aa7ff; --pink0:#ff6fb4; --green0:#4cc38a;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --desk0:#0f0e0c; --sheet0:#1a1916; --ink0:#ece8de; --muted0:#a29d91; --line0:#35322b;
+  --red0:#ff4d50; --yellow0:#ffd84d; --blue0:#7aa7ff; --pink0:#ff6fb4; --green0:#4cc38a;
+  color-scheme:dark;
+}
+
+body{
+  --desk:var(--desk0); --sheet:var(--sheet0); --ink:var(--ink0); --muted:var(--muted0); --line:var(--line0);
+  --red:var(--red0); --yellow:var(--yellow0); --blue:var(--blue0); --pink:var(--pink0); --green:var(--green0);
+  background:var(--desk); color:var(--ink);
+  font-family:var(--f-body); font-size:16px; line-height:1.7;
+  min-height:100vh; overflow-x:hidden;
+  transition:background-color .6s ease, color .6s ease;
+}
+*,*::before,*::after{box-sizing:border-box}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:3px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- 顶栏 ---------- */
+.bar{
+  position:sticky; top:env(safe-area-inset-top,0px); z-index:40;
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+  padding-block:8px;
+  padding-left:max(16px, env(safe-area-inset-left,0px));
+  padding-right:max(16px, env(safe-area-inset-right,0px));
+  background:color-mix(in oklab, var(--sheet) 92%, transparent);
+  backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.bar-logo{display:flex;align-items:center;gap:8px;text-decoration:none;font-family:var(--f-display);font-weight:900;font-size:15px;letter-spacing:.04em;min-width:0}
+.bar-logo .txt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-logo i{font-style:normal;color:var(--red)}
+.mini-seal{flex:none;width:30px;height:30px;border:2px solid var(--red);border-radius:50%;display:grid;place-items:center;color:var(--red);font-size:11px;line-height:1;transform:rotate(-12deg);font-family:var(--f-display)}
+.bar-tools{display:flex;gap:6px;align-items:center;flex:none}
+.tool{
+  font-family:var(--f-ui); font-size:13px; padding:6px 10px; border-radius:999px;
+  border:1px solid var(--line); background:var(--sheet); cursor:pointer; white-space:nowrap;
+}
+.tool:hover{border-color:var(--ink)}
+.tool b{font-variant-numeric:tabular-nums}
+.merit{background:var(--yellow);color:var(--on-yellow);border-color:transparent;font-weight:600}
+.merit:active{transform:scale(.94)}
+@media (max-width:620px){
+  .bar-logo .txt{display:none}
+  .tool .lbl-long{display:none}
+}
+
+/* ---------- 公告滚动条 ---------- */
+.ticker{background:var(--red);color:var(--on-red);overflow:hidden;font-family:var(--f-ui);font-size:13px;white-space:nowrap;position:relative;cursor:pointer}
+.ticker-track{display:inline-flex;gap:56px;padding:6px 0;animation:tick 70s linear infinite;padding-left:100%}
+.ticker:hover .ticker-track,.ticker.paused .ticker-track{animation-play-state:paused}
+.ticker-track span::before{content:"院内公告 ▸ ";opacity:.75}
+@keyframes tick{to{transform:translateX(-100%)}}
+
+/* ---------- 主体 ---------- */
+main{
+  padding-block:28px 80px;
+  padding-left:max(16px, env(safe-area-inset-left,0px));
+  padding-right:max(16px, env(safe-area-inset-right,0px));
+}
+.wrap{max-width:920px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+
+/* 红头文件纸张 */
+.doc{
+  position:relative; background:var(--sheet); border:1px solid var(--line);
+  box-shadow:0 1px 0 var(--line), 0 18px 40px -24px rgba(0,0,0,.35);
+  padding:clamp(22px,5vw,56px) clamp(18px,5vw,64px);
+  min-width:0;
+}
+.redhead{
+  font-family:var(--f-display); font-weight:900; color:var(--red);
+  font-size:clamp(23px,6.3vw,58px); line-height:1.15; text-align:center; letter-spacing:.02em;
+  margin:0; text-wrap:balance; user-select:none;
+}
+.redhead .chou{display:inline-block;cursor:pointer;transition:transform .5s cubic-bezier(.5,-0.4,.6,1.4)}
+.redhead .chou.falling{transform:translateY(120px) rotate(70deg);opacity:.4}
+.docno{text-align:center;font-family:var(--f-body);font-size:15px;margin:14px 0 0;letter-spacing:.06em}
+.redline{display:flex;align-items:center;gap:12px;color:var(--red);margin:10px 0 26px}
+.redline::before,.redline::after{content:"";flex:1;height:2px;background:var(--red)}
+.redline span{font-size:18px;line-height:1}
+.doc-title{font-family:var(--f-display);font-weight:700;font-size:clamp(20px,3.6vw,28px);text-align:center;line-height:1.45;margin:0 0 22px;text-wrap:balance}
+.doc-body{font-size:17px;line-height:1.95;max-width:44em;margin:0 auto}
+.doc-body p{margin:0 0 .5em;text-indent:2em}
+.doc-body p.noindent{text-indent:0}
+.doc-body ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:2px}
+.doc-body li{text-indent:2em}
+.doc-body li a{color:var(--ink);text-decoration:none;background:linear-gradient(transparent 62%, color-mix(in oklab,var(--yellow) 70%, transparent) 62%);cursor:pointer}
+.doc-body li a:hover{background:var(--yellow);color:var(--on-yellow)}
+.doc-sign{text-align:right;margin-top:26px;font-size:16px;line-height:1.9;position:relative}
+.doc-foot{margin-top:30px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:8px 0;font-size:14px;display:flex;flex-direction:column;gap:2px}
+.doc-foot div{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* 公章 */
+.seal{position:absolute;right:clamp(0px,4vw,40px);top:-34px;width:150px;height:150px;transform:rotate(-14deg);cursor:pointer;opacity:.86;transition:transform .3s}
+.seal:hover{transform:rotate(-8deg) scale(1.04)}
+.seal.drop{animation:sealdrop 1.6s cubic-bezier(.5,0,.8,.4) forwards}
+@keyframes sealdrop{to{transform:translateY(160vh) rotate(260deg);opacity:0}}
+.seal text{font-family:var(--f-display);font-weight:700;fill:var(--red)}
+
+/* 贴纸 */
+.sticker{
+  position:absolute; z-index:3; font-family:var(--f-pop); background:var(--yellow); color:var(--on-yellow);
+  padding:6px 12px; font-size:15px; line-height:1.3; box-shadow:2px 3px 0 rgba(0,0,0,.18);
+  transform:rotate(var(--rot,-4deg)); cursor:pointer; user-select:none; max-width:210px;
+  transition:transform .2s;
+}
+.sticker:hover{transform:rotate(calc(var(--rot,-4deg) * -1)) scale(1.06)}
+.sticker.round{border-radius:50%;width:74px;height:74px;display:grid;place-items:center;font-size:40px;padding:0}
+.sticker.peeled{transform:rotate(30deg) translate(30px,-20px);opacity:.15}
+.scribble{position:absolute;pointer-events:none;color:var(--red);opacity:.75}
+
+/* 小标题 / 区块 */
+.sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 14px}
+.sec-h h2{font-family:var(--f-display);font-weight:900;font-size:22px;margin:0;letter-spacing:.02em}
+.sec-h .note{font-family:var(--f-ui);font-size:13px;color:var(--muted)}
+.eyebrow{font-family:var(--f-ui);font-size:12px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+
+/* ---------- 楼层导览 ---------- */
+.building{position:relative;max-width:760px;margin:0 auto;width:100%}
+.roof{height:56px;position:relative;margin:0 6%}
+.roof::before{content:"";position:absolute;inset:0;background:var(--ink);clip-path:polygon(0 100%,50% 0,100% 100%)}
+.flag{position:absolute;left:50%;top:-44px;width:2px;height:48px;background:var(--ink)}
+.flag span{position:absolute;left:2px;top:0;background:var(--red);color:var(--on-red);font-family:var(--f-display);font-weight:900;font-size:15px;padding:2px 10px 2px 8px;transform-origin:left center;animation:wave 2.4s ease-in-out infinite;white-space:nowrap}
+@keyframes wave{50%{transform:skewY(-6deg) scaleX(.92)}}
+.floors{border:3px solid var(--ink);border-top:none;background:var(--sheet)}
+.floor{display:grid;grid-template-columns:48px 1fr 1fr;border-top:3px solid var(--ink)}
+.floor-no{display:grid;place-items:center;font-family:var(--f-mono);font-weight:700;font-size:13px;border-right:3px solid var(--ink);background:color-mix(in oklab,var(--ink) 6%,var(--sheet))}
+.room{
+  position:relative; display:flex; flex-direction:column; justify-content:flex-end; gap:4px;
+  min-height:96px; padding:12px 12px 10px 12px; text-decoration:none; color:var(--ink);
+  border-left:2px dashed var(--line); background:var(--sheet); cursor:pointer; min-width:0;
+  transition:background .2s;
+}
+.floor .room:nth-child(2){border-left:none}
+.room:hover{background:color-mix(in oklab,var(--yellow) 22%,var(--sheet))}
+.room .door{position:absolute;right:12px;top:10px;width:26px;height:38px;border:2px solid var(--ink);border-bottom:none;border-radius:3px 3px 0 0;transform-origin:left;transition:transform .35s}
+.room .door::after{content:"";position:absolute;right:3px;top:18px;width:4px;height:4px;border-radius:50%;background:var(--ink)}
+.room:hover .door{transform:perspective(120px) rotateY(-55deg)}
+.room b{font-family:var(--f-display);font-weight:900;font-size:16px;line-height:1.3;padding-right:34px;text-wrap:balance}
+.room small{font-family:var(--f-ui);font-size:12px;color:var(--muted)}
+.room .chip{align-self:flex-start}
+.room.here{background:repeating-linear-gradient(135deg,var(--sheet) 0 10px,color-mix(in oklab,var(--ink) 5%,var(--sheet)) 10px 20px);cursor:default}
+.room.visited b::after{content:" ✓";color:var(--green);font-size:13px}
+.ground{height:10px;background:var(--ink);margin:0 -3%}
+@media (max-width:520px){
+  .floor{grid-template-columns:34px 1fr 1fr}
+  .room{min-height:88px;padding:10px 8px 8px}
+  .room b{font-size:14px;padding-right:22px}
+  .room .door{width:18px;height:28px;right:8px}
+}
+
+/* chips */
+.chip{display:inline-flex;align-items:center;gap:4px;font-family:var(--f-ui);font-size:11.5px;line-height:1.4;padding:1px 7px;border-radius:999px;border:1px solid currentColor;white-space:nowrap}
+.chip.red{color:var(--red)}
+.chip.blue{color:var(--blue)}
+.chip.green{color:var(--green)}
+.chip.mute{color:var(--muted)}
+.chip.solid{background:var(--yellow);color:var(--on-yellow);border-color:var(--yellow)}
+
+/* 按钮 */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;
+  font-family:var(--f-pop);font-size:17px;letter-spacing:.04em;padding:9px 18px;border-radius:var(--r);
+  background:var(--red);color:var(--on-red);border:2px solid var(--red);
+  box-shadow:0 3px 0 color-mix(in oklab,var(--red) 55%,#000);transition:transform .08s, box-shadow .08s;
+  text-decoration:none; line-height:1.2;
+}
+.btn:active{transform:translateY(3px);box-shadow:none}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink);box-shadow:0 3px 0 var(--ink)}
+.btn.yellow{background:var(--yellow);color:var(--on-yellow);border-color:var(--on-yellow);box-shadow:0 3px 0 var(--on-yellow)}
+.btn.small{font-size:14px;padding:5px 12px}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btn-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+
+/* 表单 */
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font-family:var(--f-ui);font-size:13px;color:var(--muted)}
+input[type=text],textarea,select{
+  width:100%;border:2px solid var(--ink);border-radius:var(--r);background:var(--sheet);padding:9px 12px;font-size:16px;font-family:var(--f-body);
+}
+textarea{resize:vertical;min-height:80px;line-height:1.6}
+
+/* 房间页头（门牌） */
+.room-head{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.crumb{font-family:var(--f-ui);font-size:13px;color:var(--muted);display:flex;gap:6px;flex-wrap:wrap}
+.crumb a{color:var(--muted)}
+.plaque{
+  position:relative;display:inline-block;padding:14px 30px;border:3px double var(--ink);background:var(--sheet);
+  font-family:var(--f-display);font-weight:900;font-size:clamp(24px,5vw,40px);line-height:1.2;color:var(--red);letter-spacing:.06em;text-wrap:balance;
+  background-image:radial-gradient(circle at 10px 10px,var(--muted) 2.5px,transparent 3px),radial-gradient(circle at calc(100% - 10px) 10px,var(--muted) 2.5px,transparent 3px),radial-gradient(circle at 10px calc(100% - 10px),var(--muted) 2.5px,transparent 3px),radial-gradient(circle at calc(100% - 10px) calc(100% - 10px),var(--muted) 2.5px,transparent 3px);
+}
+.room-lede{font-size:17px;max-width:40em;margin:0;color:var(--ink)}
+.room-lede em{font-style:normal;background:var(--yellow);color:var(--on-yellow);padding:0 4px}
+
+.panel{background:var(--sheet);border:1px solid var(--line);padding:clamp(16px,3.5vw,28px);min-width:0;position:relative}
+.panel.bold{border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+.ui{font-family:var(--f-ui)}
+.hl{background:var(--yellow);color:var(--on-yellow);padding:0 3px}
+
+/* ---------- 档案卡 ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.fbtn{font-family:var(--f-ui);font-size:13px;padding:5px 12px;border-radius:999px;border:1px solid var(--ink);background:transparent;cursor:pointer}
+.fbtn[aria-pressed=true]{background:var(--ink);color:var(--sheet)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:18px}
+.card{perspective:1200px;min-width:0}
+.card-in{display:grid;transition:transform .55s cubic-bezier(.3,.7,.3,1);transform-style:preserve-3d;height:100%}
+.card.flipped .card-in{transform:rotateY(180deg)}
+.face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--sheet);border:2px solid var(--ink);padding:14px 16px 14px;display:flex;flex-direction:column;gap:8px;cursor:pointer;min-width:0}
+.face.back{transform:rotateY(180deg);background:color-mix(in oklab,var(--yellow) 14%,var(--sheet))}
+.card-top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-family:var(--f-mono);font-size:11px;color:var(--muted);border-bottom:1px dashed var(--line);padding-bottom:6px}
+.card h3{font-family:var(--f-display);font-weight:900;font-size:21px;margin:0;line-height:1.25;display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.card h3 .emo{font-size:30px;line-height:1;flex:none}
+.slogan{font-family:var(--f-pop);font-size:17px;line-height:1.4;margin:0}
+.slogan span{background:var(--yellow);color:var(--on-yellow);box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 4px}
+.card p{margin:0;font-size:14.5px;line-height:1.7}
+.card .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:4px}
+.back-h{font-family:var(--f-ui);font-size:12px;color:var(--red);letter-spacing:.1em}
+.stars{color:var(--red);letter-spacing:2px;font-size:13px}
+
+/* 理论详情弹窗 */
+dialog{border:none;padding:0;background:transparent;color:var(--ink);max-width:min(680px,calc(100vw - 32px));width:100%;max-height:calc(100vh - 40px)}
+dialog::backdrop{background:rgba(10,8,5,.55);backdrop-filter:blur(2px)}
+.dlg{background:var(--sheet);border:2px solid var(--ink);box-shadow:8px 8px 0 var(--red);padding:clamp(18px,4vw,30px);display:flex;flex-direction:column;gap:14px;max-height:calc(100vh - 56px);overflow:auto;position:relative}
+.dlg-close{position:absolute;right:10px;top:10px;width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);background:var(--sheet);cursor:pointer;font-size:18px;line-height:1}
+.dl{display:grid;grid-template-columns:7.5em 1fr;gap:8px 14px;margin:0;font-size:15px}
+.dl dt{font-family:var(--f-ui);font-size:13px;color:var(--muted);padding-top:2px}
+.dl dd{margin:0;min-width:0}
+@media (max-width:480px){.dl{grid-template-columns:1fr}.dl dt{padding-top:6px}}
+
+/* 模式面板 */
+.modes{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,180px),1fr));gap:10px}
+.mode-card{text-align:left;border:2px solid var(--ink);background:var(--sheet);padding:10px 12px;cursor:pointer;display:flex;flex-direction:column;gap:2px;border-radius:var(--r)}
+.mode-card b{font-family:var(--f-pop);font-size:19px;font-weight:400}
+.mode-card span{font-family:var(--f-ui);font-size:12.5px;color:var(--muted);line-height:1.45}
+.mode-card[aria-pressed=true]{background:var(--ink);color:var(--sheet)}
+.mode-card[aria-pressed=true] span{color:inherit;opacity:.8}
+.toggles{display:flex;gap:16px;flex-wrap:wrap;font-family:var(--f-ui);font-size:14px}
+.toggles label{display:flex;gap:6px;align-items:center;cursor:pointer}
+
+/* 成就 */
+.achs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:8px}
+.ach{border:1px solid var(--line);padding:8px 10px;display:flex;gap:10px;align-items:flex-start;min-width:0}
+.ach .medal{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--muted);color:var(--muted);font-family:var(--f-display);font-weight:900;font-size:13px}
+.ach.on{border-color:var(--red)}
+.ach.on .medal{border-color:var(--red);background:var(--red);color:var(--on-red)}
+.ach b{display:block;font-family:var(--f-display);font-size:14px;line-height:1.35}
+.ach small{display:block;font-family:var(--f-ui);font-size:12px;color:var(--muted);line-height:1.4}
+.progress{height:10px;border:2px solid var(--ink);border-radius:999px;overflow:hidden;background:var(--sheet)}
+.progress i{display:block;height:100%;background:var(--red);transition:width .4s}
+
+/* toast */
+#toasts{
+  position:fixed;z-index:80;left:50%;transform:translateX(-50%);
+  bottom:calc(16px + env(safe-area-inset-bottom,0px));
+  display:flex;flex-direction:column-reverse;gap:8px;align-items:center;width:min(440px,calc(100vw - 32px));pointer-events:none
+}
+.toast{pointer-events:auto;background:var(--ink);color:var(--sheet);font-family:var(--f-ui);font-size:14px;padding:10px 14px;border-radius:var(--r);box-shadow:0 8px 24px -8px rgba(0,0,0,.4);animation:tin .25s ease-out;max-width:100%;line-height:1.5}
+.toast.ach-t{background:var(--sheet);color:var(--ink);border:2px solid var(--red);display:flex;gap:10px;align-items:center}
+.toast.ach-t .medal{flex:none;width:36px;height:36px;border-radius:50%;background:var(--red);color:var(--on-red);display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:13px;transform:rotate(-10deg)}
+.toast.out{animation:tout .3s ease-in forwards}
+@keyframes tin{from{transform:translateY(12px);opacity:0}}
+@keyframes tout{to{transform:translateY(8px);opacity:0}}
+
+/* 浮字 / 弹幕 / 特效层 */
+#fx,#danmaku,#floaters{position:fixed;inset:0;pointer-events:none;z-index:30;overflow:hidden}
+#floaters{z-index:70}
+.floater{position:absolute;font-family:var(--f-pop);font-size:18px;color:var(--red);white-space:nowrap;animation:floatup 1s ease-out forwards;text-shadow:0 0 3px var(--sheet),0 0 3px var(--sheet)}
+@keyframes floatup{to{transform:translate(-50%,-70px);opacity:0}}
+.dm{position:absolute;left:100%;white-space:nowrap;font-family:var(--f-pop);font-size:19px;pointer-events:auto;cursor:pointer;padding:0 4px;
+  text-shadow:-1px -1px 0 var(--sheet),1px -1px 0 var(--sheet),-1px 1px 0 var(--sheet),1px 1px 0 var(--sheet);animation:dm linear forwards}
+.dm::after{content:"NPC";font-family:var(--f-ui);font-size:9px;vertical-align:super;margin-left:3px;opacity:.6}
+@keyframes dm{to{transform:translateX(calc(-100vw - 100%))}}
+
+/* 大睡模式 */
+body.mode-sleep{
+  --desk:#0a1130; --sheet:#121a3c; --ink:#d9ddf2; --muted:#8a91b8; --line:#2a3462; --red:#ff8a8a; --yellow:#ffe27a; --blue:#9fb7ff; --green:#7fdcae;
+  color-scheme:dark;
+}
+body.mode-sleep main .doc,body.mode-sleep main .panel,body.mode-sleep .card{transition:transform 3s ease;transform-origin:bottom left}
+body.mode-sleep main .wrap > *:nth-child(odd){transform:rotate(-.7deg)}
+body.mode-sleep main .wrap > *:nth-child(even){transform:rotate(.5deg)}
+.moon{position:fixed;right:calc(24px + env(safe-area-inset-right,0px));top:110px;width:70px;height:70px;border-radius:50%;box-shadow:-14px 8px 0 0 #ffe9a8;transform:rotate(-20deg);opacity:.9}
+.zzz{position:absolute;font-family:var(--f-pop);color:#cfd6ff;font-size:24px;animation:zz 4s ease-out forwards}
+@keyframes zz{to{transform:translate(40px,-140px) rotate(14deg);opacity:0}}
+.wake{position:fixed;z-index:60;left:50%;transform:translateX(-50%);top:calc(64px + env(safe-area-inset-top,0px));pointer-events:auto}
+
+/* 大水模式 */
+.water{position:fixed;left:0;right:0;bottom:0;height:var(--lvl,26vh);transition:height 1s ease;pointer-events:none}
+.water svg{position:absolute;left:0;top:-28px;width:200%;height:30px;animation:wv 6s linear infinite}
+.water svg path{fill:color-mix(in oklab,var(--blue) 30%,transparent)}
+.water .body{position:absolute;inset:0;background:color-mix(in oklab,var(--blue) 30%,transparent)}
+.water .w2{top:-20px;animation-duration:9s;opacity:.7}
+@keyframes wv{to{transform:translateX(-50%)}}
+body.mode-water .card,body.mode-water .room,body.mode-water .panel{animation:bob 3.2s ease-in-out infinite}
+body.mode-water .card:nth-child(3n+1),body.mode-water .room:nth-child(odd){animation-delay:-1.1s}
+body.mode-water .card:nth-child(3n+2){animation-delay:-2s}
+@keyframes bob{50%{transform:translateY(-5px) rotate(.4deg)}}
+.bubble{position:absolute;border:2px solid color-mix(in oklab,var(--blue) 60%,transparent);border-radius:50%;animation:bub 5s ease-in forwards}
+@keyframes bub{to{transform:translateY(-34vh);opacity:0}}
+.bottle-w{position:fixed;z-index:60;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--sheet);border:2px solid var(--ink);padding:10px 12px;display:flex;gap:10px;align-items:center;pointer-events:auto;box-shadow:4px 4px 0 var(--blue);font-family:var(--f-ui);font-size:13px;max-width:calc(100vw - 32px)}
+.bottle{width:30px;height:64px;border:2px solid var(--ink);border-radius:8px 8px 6px 6px;position:relative;overflow:hidden;flex:none}
+.bottle::before{content:"";position:absolute;left:8px;right:8px;top:-2px;height:7px;background:var(--ink);border-radius:2px}
+.bottle i{position:absolute;left:0;right:0;bottom:0;background:var(--blue);transition:height .4s}
+
+/* 薄肌模式 */
+body.mode-thin main *,body.mode-thin .bar *{font-weight:200 !important;letter-spacing:.08em}
+body.mode-thin .doc,body.mode-thin .panel,body.mode-thin .face,body.mode-thin .floors,body.mode-thin .floor,body.mode-thin .plaque{border-width:1px !important;box-shadow:none !important}
+body.mode-thin .wrap{max-width:760px}
+body.mode-thin .face,body.mode-thin .panel{background-image:repeating-linear-gradient(90deg,transparent 0 calc(50% - .5px),color-mix(in oklab,var(--ink) 10%,transparent) calc(50% - .5px) calc(50% + .5px),transparent calc(50% + .5px) 100%),repeating-linear-gradient(0deg,transparent 0 38px,color-mix(in oklab,var(--ink) 7%,transparent) 38px 39px)}
+
+/* 大粉模式 */
+body.mode-pink{
+  --desk:color-mix(in oklab,var(--desk0) 72%,var(--pink0));
+  --sheet:color-mix(in oklab,var(--sheet0) 86%,var(--pink0));
+  --line:color-mix(in oklab,var(--line0) 55%,var(--pink0));
+  --red:var(--pink0); --yellow:color-mix(in oklab,var(--yellow0) 50%,var(--pink0));
+}
+.noodle{position:absolute;top:-60px;font-size:28px;animation:fall linear forwards}
+.noodle.str{width:3px;height:60px;border-radius:3px;background:repeating-linear-gradient(180deg,#f3e3b0 0 6px,#e9d08c 6px 12px);transform-origin:top}
+@keyframes fall{to{transform:translateY(calc(100vh + 120px)) rotate(var(--spin,180deg))}}
+
+/* 发疯模式 */
+body.mode-crazy .plaque,body.mode-crazy .redhead,body.mode-crazy .card h3,body.mode-crazy .sec-h h2{animation:jit .18s steps(2) infinite}
+body.mode-crazy .card:nth-child(odd){transform:rotate(-1.5deg)}
+body.mode-crazy .card:nth-child(even){transform:rotate(1.2deg)}
+body.mode-crazy .room:nth-child(odd){transform:rotate(-1deg)}
+@keyframes jit{50%{transform:translate(1px,-1px) rotate(.4deg)}}
+.shake{animation:shk .5s}
+@keyframes shk{20%{transform:translate(-8px,3px) rotate(-1deg)}40%{transform:translate(7px,-4px) rotate(1deg)}60%{transform:translate(-5px,2px)}80%{transform:translate(4px,-2px)}}
+.crazyline{position:absolute;font-family:var(--f-pop);color:var(--red);font-size:clamp(22px,5vw,44px);white-space:nowrap;animation:cz 2.6s ease-out forwards;text-shadow:2px 2px 0 var(--yellow)}
+@keyframes cz{0%{transform:scale(.4) rotate(-8deg);opacity:0}15%{transform:scale(1.1) rotate(3deg);opacity:1}80%{opacity:1}to{transform:scale(1) rotate(-2deg);opacity:0}}
+
+/* 班味模式 */
+body.mode-work main{filter:grayscale(.92) contrast(.92)}
+body.mode-work .btn::after{content:"（收到）";font-size:.7em;opacity:.8}
+.postit{position:absolute;width:132px;padding:12px;background:#fff59a;color:#33302a;font-family:var(--f-brush);font-size:19px;line-height:1.3;box-shadow:2px 4px 10px rgba(0,0,0,.18);pointer-events:auto;cursor:pointer}
+
+/* 确实模式 */
+.queshi-wm{position:fixed;inset:0;display:grid;place-items:center;pointer-events:none;font-family:var(--f-display);font-weight:900;font-size:min(42vw,420px);color:color-mix(in oklab,var(--red) 9%,transparent);transform:rotate(-14deg);user-select:none;line-height:1}
+
+/* 正常生活模式：安静 */
+body.mode-normal #danmaku,body.mode-normal #fx{display:none}
+body.mode-normal .sticker{display:none}
+
+/* ---------- 各房间 ---------- */
+/* 天气 / 院历 */
+.almanac{display:grid;grid-template-columns:1.2fr 1fr;gap:0;border:2px solid var(--ink);background:var(--sheet)}
+.almanac > div{padding:16px 18px;min-width:0}
+.almanac > div + div{border-left:2px solid var(--ink)}
+.almanac .big{font-family:var(--f-display);font-weight:900;font-size:22px;line-height:1.4;margin:6px 0}
+.yiji{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:start;font-size:15px}
+.yiji .y,.yiji .j{font-family:var(--f-display);font-weight:900;width:30px;height:30px;display:grid;place-items:center;color:var(--on-red);background:var(--red);border-radius:50%;font-size:15px}
+.yiji .j{background:var(--ink);color:var(--sheet)}
+@media (max-width:600px){.almanac{grid-template-columns:1fr}.almanac > div + div{border-left:none;border-top:2px solid var(--ink)}}
+
+/* 售货机 */
+.vend{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;align-items:start}
+@media (max-width:720px){.vend{grid-template-columns:1fr}}
+.machine{background:var(--red);border-radius:14px 14px 6px 6px;padding:16px;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);color:var(--on-red);display:flex;flex-direction:column;gap:12px}
+.machine-title{font-family:var(--f-pop);font-size:24px;text-align:center;letter-spacing:.08em}
+.glass{background:color-mix(in oklab,var(--sheet) 88%,var(--blue));border:3px solid var(--ink);border-radius:6px;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:8px;color:var(--ink)}
+.slot{display:flex;flex-direction:column;align-items:center;gap:2px;padding:4px 0;border-bottom:3px solid color-mix(in oklab,var(--ink) 50%,transparent)}
+.slot .e{font-size:26px;line-height:1.2;transition:transform .3s}
+.slot small{font-family:var(--f-ui);font-size:10px;color:var(--muted);text-align:center;line-height:1.2}
+.slot.drop .e{animation:vdrop .7s ease-in forwards}
+@keyframes vdrop{40%{transform:translateY(-6px)}to{transform:translateY(80px);opacity:0}}
+.coin-in{display:flex;flex-direction:column;gap:8px;background:color-mix(in oklab,var(--ink) 20%,var(--red));padding:10px;border-radius:6px}
+.coin-in input{border-color:var(--ink);background:var(--sheet);color:var(--ink)}
+.tray{height:16px;background:var(--ink);border-radius:3px}
+.receipt{
+  background:#fbfaf3;color:#26241f;font-family:var(--f-mono);font-size:13.5px;line-height:1.6;padding:18px 18px 26px;
+  box-shadow:0 10px 30px -14px rgba(0,0,0,.4);position:relative;max-width:360px;width:100%;margin:0 auto;
+  -webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 10px) no-repeat, conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/16px 10px repeat-x;
+  mask:linear-gradient(#000 0 0) top/100% calc(100% - 10px) no-repeat, conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/16px 10px repeat-x;
+  animation:print 1.1s steps(14) both;
+}
+@keyframes print{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+.receipt h4{font-family:var(--f-display);font-weight:900;font-size:20px;text-align:center;margin:4px 0 2px;line-height:1.3;color:#26241f}
+.receipt .c{text-align:center}
+.receipt hr{border:none;border-top:1px dashed #8d887c;margin:8px 0}
+.receipt .row{display:flex;justify-content:space-between;gap:12px}
+.receipt .stamp{position:absolute;right:14px;bottom:30px;border:2px solid #d0121a;color:#d0121a;font-family:var(--f-display);font-weight:900;padding:2px 8px;transform:rotate(-12deg);font-size:13px;opacity:.85}
+
+/* 培养皿 */
+.dish-zone{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:end}
+@media (max-width:620px){.dish-zone{grid-template-columns:1fr}}
+.dish{width:min(300px,80vw);aspect-ratio:1;max-width:100%;border-radius:50%;margin:0 auto;position:relative;
+  background:radial-gradient(circle at 35% 30%,color-mix(in oklab,var(--sheet) 70%,#fff) 0 18%,transparent 19%),radial-gradient(circle,color-mix(in oklab,var(--green) 12%,var(--sheet)) 0 62%,color-mix(in oklab,var(--ink) 25%,var(--sheet)) 63% 66%,transparent 67%);
+  display:grid;place-items:center}
+.dish .ea,.dish .eb{position:absolute;font-size:54px;transition:all 1.2s cubic-bezier(.6,-0.3,.4,1.3)}
+.dish .ea{left:20%}.dish .eb{right:20%}
+.dish.merge .ea{left:38%;transform:rotate(-20deg) scale(1.15)}
+.dish.merge .eb{right:38%;transform:rotate(20deg) scale(1.15)}
+.dish.merge::after{content:"";position:absolute;inset:30%;border-radius:50%;background:radial-gradient(circle,color-mix(in oklab,var(--yellow) 70%,transparent),transparent 70%);animation:glow 1.2s ease-out}
+@keyframes glow{from{transform:scale(.2);opacity:0}}
+
+/* 相对论 */
+.osbadge{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-pop);font-size:clamp(34px,8vw,56px);line-height:1.1;padding:6px 20px;border:3px solid var(--ink);background:var(--yellow);color:var(--on-yellow);transform:rotate(-2deg)}
+.formula{font-family:var(--f-display);font-size:clamp(18px,3.4vw,24px);text-align:center;padding:12px;border-block:1px solid var(--line);overflow-x:auto;white-space:nowrap}
+.formula i{font-style:italic}
+.calc-out{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:10px}
+.calc-out > div{border:1px solid var(--line);padding:10px 12px;min-width:0}
+.calc-out b{display:block;font-family:var(--f-display);font-weight:900;font-size:24px;font-variant-numeric:tabular-nums;line-height:1.2}
+.calc-out small{font-family:var(--f-ui);font-size:12px;color:var(--muted)}
+input[type=range]{width:100%;accent-color:var(--red)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips button{font-family:var(--f-ui);font-size:13px;padding:4px 10px;border-radius:999px;border:1px dashed var(--ink);background:transparent;cursor:pointer}
+.chips button:hover{background:var(--yellow);color:var(--on-yellow)}
+
+/* 家谱 */
+.tree,.tree ul{list-style:none;margin:0;padding:0}
+.tree ul{padding-left:14px}
+.tree li{position:relative;padding:4px 0}
+.tree ul > li{padding-left:20px}
+.tree ul > li::before{content:"";position:absolute;left:0;top:0;bottom:0;border-left:2px solid var(--ink)}
+.tree ul > li:last-child::before{bottom:auto;height:21px}
+.tree ul > li::after{content:"";position:absolute;left:0;top:19px;width:16px;border-top:2px solid var(--ink)}
+.node{display:inline-flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:3px 10px;border:2px solid var(--ink);background:var(--sheet);cursor:pointer;font-family:var(--f-display);font-weight:700;font-size:15px;text-align:left}
+.node:hover{background:var(--yellow);color:var(--on-yellow)}
+.node small{font-family:var(--f-ui);font-weight:400;font-size:12px;color:var(--muted)}
+.node:hover small{color:inherit}
+.node.root{background:var(--ink);color:var(--sheet)}
+.node.root small{color:inherit;opacity:.75}
+.node.pend{border-style:dashed}
+
+/* 老虎机 */
+.slotm{background:var(--ink);color:var(--sheet);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:14px;box-shadow:6px 6px 0 var(--red)}
+.reels{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:8px}
+.reel{background:var(--sheet);color:var(--ink);border-radius:6px;height:84px;overflow:hidden;position:relative;border:3px solid var(--yellow)}
+.reel .strip{display:flex;flex-direction:column}
+.reel .strip div{height:78px;display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:clamp(28px,6vw,44px);line-height:1}
+.reel.spin .strip{animation:spin .12s linear infinite}
+@keyframes spin{to{transform:translateY(-312px)}}
+.slot-out{font-family:var(--f-pop);font-size:clamp(20px,4.4vw,30px);line-height:1.35;text-align:center;min-height:2.7em;color:var(--yellow)}
+
+/* 考试 */
+.q{display:flex;flex-direction:column;gap:10px}
+.q h3{font-family:var(--f-display);font-weight:900;font-size:20px;margin:0}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:8px}
+.opt{text-align:left;border:2px solid var(--ink);background:var(--sheet);padding:10px 14px;cursor:pointer;font-size:15.5px;line-height:1.5;border-radius:var(--r)}
+.opt:hover{background:color-mix(in oklab,var(--yellow) 40%,var(--sheet))}
+.badge-card{max-width:380px;margin:0 auto;width:100%;border:3px solid var(--ink);background:var(--sheet);box-shadow:8px 8px 0 var(--red);overflow:hidden;position:relative}
+.badge-card .hd{background:var(--red);color:var(--on-red);padding:12px 16px;font-family:var(--f-display);font-weight:900;font-size:17px;letter-spacing:.08em;display:flex;justify-content:space-between;align-items:center}
+.badge-card .hole{width:44px;height:10px;border-radius:999px;background:var(--desk);border:2px solid var(--ink)}
+.badge-card .bd{padding:18px;display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:start}
+.badge-card .photo{width:96px;height:120px;border:2px solid var(--ink);display:grid;place-items:center;font-size:58px;background:color-mix(in oklab,var(--yellow) 30%,var(--sheet))}
+.badge-card .nm{font-family:var(--f-display);font-weight:900;font-size:24px;line-height:1.25;word-break:break-all}
+.badge-card .sch{font-family:var(--f-pop);font-size:22px;color:var(--red);line-height:1.3}
+.badge-card .meta{font-family:var(--f-ui);font-size:12px;color:var(--muted);line-height:1.6}
+.badge-card .ft{border-top:2px dashed var(--line);padding:12px 18px 16px;font-size:14px;line-height:1.7}
+.badge-card .ft b{font-family:var(--f-brush);font-weight:400;font-size:22px;color:var(--red)}
+.badge-card svg.mini{position:absolute;right:10px;bottom:10px;width:84px;height:84px;transform:rotate(-16deg);opacity:.8}
+
+/* 翻译局 */
+.haha-meter{display:flex;flex-direction:column;gap:8px}
+.haha-meter .bar2{height:22px;border:2px solid var(--ink);border-radius:4px;overflow:hidden;background:repeating-linear-gradient(90deg,var(--sheet) 0 9.5%,var(--line) 9.5% 10%)}
+.haha-meter .bar2 i{display:block;height:100%;background:var(--red);transition:width .3s}
+.haha-verdict{font-family:var(--f-pop);font-size:22px;line-height:1.35}
+.emo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(54px,1fr));gap:6px}
+.emo-grid button{font-size:28px;aspect-ratio:1;border:2px solid var(--line);background:var(--sheet);cursor:pointer;border-radius:var(--r);line-height:1;max-width:100%}
+.emo-grid button[aria-pressed=true]{border-color:var(--red);background:color-mix(in oklab,var(--yellow) 35%,var(--sheet))}
+.gen-table{display:grid;grid-template-columns:auto 1fr;border:2px solid var(--ink)}
+.gen-table > div{padding:8px 12px;border-bottom:1px solid var(--line);min-width:0}
+.gen-table > div:nth-last-child(-n+2){border-bottom:none}
+.gen-table .k{font-family:var(--f-ui);font-size:13px;color:var(--muted);border-right:1px solid var(--line);white-space:nowrap}
+.hbars{display:flex;flex-direction:column;gap:6px}
+.hbar{display:grid;grid-template-columns:minmax(0,9em) 1fr 3.4em;gap:10px;align-items:center;font-size:14px}
+.hbar .lab{font-family:var(--f-ui);font-size:13px;text-align:right;line-height:1.3}
+.hbar .track{height:18px;background:color-mix(in oklab,var(--ink) 6%,var(--sheet));border-radius:2px;position:relative}
+.hbar .track i{position:absolute;left:0;top:0;bottom:0;background:var(--red);border-radius:2px;transition:width .8s cubic-bezier(.2,.8,.2,1)}
+.hbar.hi .track i{background:var(--yellow);outline:2px solid var(--ink)}
+.hbar .v{font-family:var(--f-mono);font-size:13px;font-variant-numeric:tabular-nums;text-align:right}
+
+/* 法院 */
+.transcript{display:flex;flex-direction:column;gap:10px;font-size:16px}
+.line{display:grid;grid-template-columns:7.5em 1fr;gap:12px;animation:tin .3s ease-out}
+.line .who{font-family:var(--f-display);font-weight:900;font-size:14px;text-align:right;color:var(--red);line-height:1.7}
+.line.sys .who{color:var(--muted)}
+@media (max-width:520px){.line{grid-template-columns:1fr;gap:0}.line .who{text-align:left}}
+.verdict{border:2px solid var(--ink);padding:22px clamp(16px,4vw,32px);position:relative;background:var(--sheet)}
+.verdict h3{font-family:var(--f-display);font-weight:900;text-align:center;font-size:24px;margin:0 0 4px;letter-spacing:.3em}
+.verdict ol{margin:12px 0 0;padding-left:1.6em;display:flex;flex-direction:column;gap:6px}
+.stampin{position:absolute;right:18px;bottom:14px;width:120px;height:120px;animation:stampin .5s cubic-bezier(.3,1.6,.6,1) both;animation-delay:.2s}
+@keyframes stampin{from{transform:scale(2.6) rotate(-30deg);opacity:0}to{transform:scale(1) rotate(-14deg);opacity:.85}}
+.cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px}
+.case-btn{text-align:left;border:2px solid var(--ink);background:var(--sheet);padding:10px 14px;cursor:pointer;display:flex;flex-direction:column;gap:2px;border-radius:var(--r)}
+.case-btn b{font-family:var(--f-display);font-weight:900;font-size:16px}
+.case-btn small{font-family:var(--f-ui);font-size:12px;color:var(--muted);line-height:1.4}
+.case-btn[aria-pressed=true]{background:var(--ink);color:var(--sheet)}
+.case-btn[aria-pressed=true] small{color:inherit;opacity:.8}
+
+/* 花园 */
+.tombs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:18px 14px;align-items:end}
+.tomb{background:color-mix(in oklab,var(--muted) 22%,var(--sheet));border:2px solid var(--ink);border-radius:50% 50% 4px 4px / 34% 34% 4px 4px;padding:28px 14px 12px;text-align:center;display:flex;flex-direction:column;gap:6px;position:relative;min-width:0}
+.tomb h3{font-family:var(--f-display);font-weight:900;font-size:19px;margin:0;line-height:1.3}
+.tomb .yr{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.tomb p{margin:0;font-size:14px;line-height:1.55;font-family:var(--f-brush);font-size:17px}
+.tomb .acts{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:4px}
+.tomb .acts button{font-family:var(--f-ui);font-size:12px;border:1px solid var(--ink);background:var(--sheet);border-radius:999px;padding:3px 9px;cursor:pointer}
+.tomb .flowers{min-height:22px;font-size:15px;letter-spacing:-3px;line-height:1.2;word-break:break-all}
+.tomb.alive{animation:revive .9s ease-out}
+@keyframes revive{30%{transform:translateY(-18px) rotate(-3deg)}60%{transform:translateY(0) rotate(2deg)}}
+.tomb.mine{background:color-mix(in oklab,var(--yellow) 22%,var(--sheet))}
+
+/* 失物 */
+.lost{display:flex;flex-direction:column;border:2px solid var(--ink)}
+.lost-row{display:grid;grid-template-columns:3.2em 1fr auto;gap:12px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line);min-width:0}
+.lost-row:last-child{border-bottom:none}
+.lost-row .no{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.lost-row b{font-family:var(--f-display);font-size:16px;display:block;line-height:1.4}
+.lost-row small{font-family:var(--f-ui);font-size:12px;color:var(--muted);display:block;line-height:1.4}
+.lost-row .res{grid-column:2 / -1;font-family:var(--f-pop);color:var(--red);font-size:16px}
+@media (max-width:480px){.lost-row{grid-template-columns:1fr auto}.lost-row .no{display:none}.lost-row .res{grid-column:1 / -1}}
+
+/* 长期主义 */
+.reno{font-family:var(--f-display);font-weight:900;font-size:clamp(44px,12vw,110px);line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.02em;word-break:break-all}
+.tape{background:repeating-linear-gradient(-45deg,var(--yellow) 0 18px,var(--ink) 18px 36px);height:22px;border-block:2px solid var(--ink)}
+
+/* 会议 */
+.meet-q{font-family:var(--f-display);font-weight:900;font-size:clamp(18px,3.6vw,26px);line-height:1.5;word-break:break-all}
+.meet-q .p{color:var(--red)}
+
+/* 院长办公室 */
+.office{position:relative;height:340px;border:3px solid var(--ink);background:linear-gradient(var(--sheet) 0 74%,color-mix(in oklab,var(--ink) 12%,var(--sheet)) 74%);overflow:hidden}
+.office .it{position:absolute;background:none;border:none;cursor:pointer;line-height:1;padding:4px;transition:transform .2s}
+.office .it:hover{transform:scale(1.12) rotate(-4deg)}
+.office .win{left:8%;top:12%;width:120px;height:96px;border:4px solid var(--ink);background:linear-gradient(color-mix(in oklab,var(--blue) 30%,var(--sheet)),color-mix(in oklab,var(--blue) 10%,var(--sheet)));display:grid;grid-template-columns:1fr 1fr;padding:0;transform-origin:left}
+.office .win::before{content:"";border-right:4px solid var(--ink)}
+.office .win.open{transform:perspective(300px) rotateY(-50deg)}
+.office .desk{position:absolute;left:38%;bottom:16%;width:min(240px,44%);height:16px;background:var(--ink)}
+.office .desk::before,.office .desk::after{content:"";position:absolute;top:16px;width:10px;height:60px;background:var(--ink)}
+.office .desk::before{left:10px}.office .desk::after{right:10px}
+.office .note{left:46%;bottom:calc(16% + 16px);font-family:var(--f-brush);font-size:16px;background:#fff59a;color:#33302a;padding:6px 8px;transform:rotate(-4deg);box-shadow:1px 2px 4px rgba(0,0,0,.2)}
+.office .chair{left:26%;bottom:14%;font-size:64px}
+.office .plant{right:8%;bottom:20%;font-size:64px}
+.office .drawer{left:calc(38% + 20px);bottom:calc(16% - 32px);font-family:var(--f-ui);font-size:12px;border:2px solid var(--ink);background:var(--sheet);padding:2px 8px}
+.office .cat{position:absolute;bottom:18%;left:-120px;font-size:70px;transition:left 2.4s ease-in-out}
+.office .cat.in{left:44%}
+.office-msg{min-height:3.4em;font-size:17px;line-height:1.7}
+@media (max-width:520px){.office{height:300px}.office .win{width:84px;height:70px}.office .chair,.office .plant{font-size:48px}}
+
+/* 速读 */
+.speed{min-height:180px;border:2px solid var(--ink);padding:20px;font-size:17px;line-height:1.9;position:relative;overflow:hidden}
+.speed.reading{display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:clamp(30px,8vw,64px);color:var(--red)}
+.cert{border:6px double var(--red);padding:22px;text-align:center;display:flex;flex-direction:column;gap:6px;background:var(--sheet)}
+.cert h3{font-family:var(--f-brush);font-weight:400;font-size:clamp(28px,6vw,40px);margin:0;color:var(--red)}
+
+/* 正常生活出口 */
+.exit-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px;font-size:clamp(22px,4.4vw,32px);font-family:var(--f-display);line-height:1.6}
+.exit-list li{padding:6px 0;border-bottom:1px solid var(--line)}
+
+/* 尽头 */
+.endzone{text-align:center;padding:60px 0 20px;color:var(--muted);font-family:var(--f-ui);font-size:13px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.endzone .ch{font-size:46px;cursor:pointer}
+
+.sources{font-family:var(--f-ui);font-size:12.5px;color:var(--muted);line-height:1.7}
+.sources a{color:var(--muted)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  .ticker-track{animation:none;padding-left:16px;flex-wrap:wrap;white-space:normal}
+}
+
+/* 补充 */
+.building{padding-top:46px}
+.flash{position:fixed;inset:0;z-index:90;display:grid;place-items:center;background:var(--sheet);color:var(--red);font-family:var(--f-pop);font-size:clamp(40px,12vw,120px);pointer-events:none;animation:flash 1.9s ease-out forwards;text-align:center;line-height:1.2;padding-inline:16px}
+@keyframes flash{0%{opacity:0;transform:scale(1.4)}10%{opacity:1;transform:scale(1)}70%{opacity:1}to{opacity:0}}
+.six{position:absolute;top:-60px;font-family:var(--f-pop);color:var(--red);animation:fall linear forwards}
+.example-tag{font-family:var(--f-ui);font-size:12px;color:var(--muted);text-align:center;margin-top:8px}
+.hist{display:flex;flex-direction:column;gap:0;border:2px solid var(--ink)}
+.hist > div{padding:10px 14px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
+.hist > div:last-child{border-bottom:none;background:color-mix(in oklab,var(--yellow) 18%,var(--sheet))}
+.hist b{font-family:var(--f-display);font-weight:900}
+.hist .vno{font-family:var(--f-mono);font-size:12px;color:var(--red)}
+.drafts{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:10px}
+.draft{border:1px dashed var(--ink);padding:12px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.draft b{font-family:var(--f-display);font-weight:900}
+.empty{border:2px dashed var(--line);padding:22px;text-align:center;color:var(--muted);font-family:var(--f-ui);font-size:14px;display:flex;flex-direction:column;gap:10px;align-items:center}
+.result-card{border:2px solid var(--ink);background:var(--sheet);padding:18px;display:flex;flex-direction:column;gap:8px;box-shadow:6px 6px 0 var(--yellow)}
+.result-card h3{font-family:var(--f-display);font-weight:900;font-size:26px;margin:0;line-height:1.3}
+.kv{display:grid;grid-template-columns:5.5em 1fr;gap:6px 12px;font-size:15px}
+.kv dt{font-family:var(--f-ui);font-size:13px;color:var(--muted);padding-top:2px}
+.kv dd{margin:0;min-width:0}
+.res-line{font-family:var(--f-pop);color:var(--red);font-size:15px;line-height:1.4;min-height:1.4em}
+.office-link{font-family:var(--f-ui);font-size:14px}
+body.mode-water #toasts{bottom:calc(112px + env(safe-area-inset-bottom,0px))}
+
+</style>
+</head>
+<body>
+<header class="bar">
+  <a href="#home" class="bar-logo" aria-label="回到大厅"><span class="mini-seal" aria-hidden="true">民科</span><span class="txt">互联网民间科学院<i>（筹）</i></span></a>
+  <div class="bar-tools">
+    <button class="tool merit" id="meritBtn" type="button" title="敲一下，功德 +1"><span class="lbl-long">学术</span>功德 <b id="meritNum">0</b></button>
+    <button class="tool" id="modeBtn" type="button">世界观<span class="lbl-long"> · <span id="modeName">院内标准</span></span></button>
+    <button class="tool" id="achBtn" type="button">成就 <b id="achNum">0</b></button>
+  </div>
+</header>
+<div class="ticker" title="点一下暂停"><div class="ticker-track" id="ticker"></div></div>
+
+<main id="view"></main>
+
+<div id="fx" aria-hidden="true"></div>
+<div id="danmaku" aria-hidden="true"></div>
+<div id="floaters" aria-hidden="true"></div>
+<div id="toasts" role="status" aria-live="polite"></div>
+
+<dialog id="dlgTheory" aria-label="理论档案">
+  <div class="dlg"><button class="dlg-close" type="button" data-close aria-label="关闭">×</button><div id="theoryBody" style="display:flex;flex-direction:column;gap:12px"></div></div>
+</dialog>
+<dialog id="dlgMode" aria-label="世界观切换器">
+  <div class="dlg">
+    <button class="dlg-close" type="button" data-close aria-label="关闭">×</button>
+    <h2 style="font-family:var(--f-display);font-weight:900;font-size:26px;margin:0;padding-right:40px">世界观切换器</h2>
+    <p class="small muted" style="margin:0">选一个学派的规则，整个网站会照它的样子重新表达。"正常生活"永远在最后一个。</p>
+    <div class="modes" id="modeGrid"></div>
+    <div class="toggles"><label><input type="checkbox" id="tgDm"> 院内 NPC 弹幕</label><label><input type="checkbox" id="tgSnd"> 电子木鱼声</label></div>
+    <p class="small muted ui" style="margin:0">键盘彩蛋：在页面空白处直接打出 boji、dafen、queshi、fafeng 试试。还有几个，本院不说。</p>
+  </div>
+</dialog>
+<dialog id="dlgAch" aria-label="学术成就">
+  <div class="dlg">
+    <button class="dlg-close" type="button" data-close aria-label="关闭">×</button>
+    <h2 style="font-family:var(--f-display);font-weight:900;font-size:26px;margin:0;padding-right:40px">学术成就</h2>
+    <div id="achBody"></div>
+  </div>
+</dialog>
+
+<script>
+/* ================= 院内数据 ================= */
+// src: net = 网络收录（据公开讨论转述）；pend = 仅见名称，主张待核实；classic = 网络古典；orig = 本院戏仿
+const SRC = {
+  net:{label:'网络收录', cls:'blue'},
+  pend:{label:'待核实', cls:'mute'},
+  classic:{label:'网络古典', cls:'green'},
+  orig:{label:'本院戏仿', cls:'red'}
+};
+const FAMS = ['大字辈','思维派','网络古典','本院原创'];
+
+const THEORIES = [
+  {id:'boji', name:'薄肌理论', short:'薄肌', emoji:'💪', fam:'大字辈', src:'net', when:'约 2026.08',
+   slogan:'不要块头，要线条。',
+   thesis:'不追求练成一扇门，只追求薄薄一层清晰的线条。重点在"肌"，"薄"是一种克制。',
+   a:'不追求块头', b:'只留一层薄薄的线条',
+   useful:'想动起来，又不想把健身变成第二份工作的时候。',
+   notFor:'把人生所有不顺都归因于"还没练出来"。线条不负责还房贷。',
+   item:'一面只照得到锁骨的镜子', cred:3},
+  {id:'water', name:'大水理论', short:'大水', emoji:'💧', fam:'大字辈', src:'net', when:'2026.10.05 前后',
+   slogan:'弱者喝饮料，强者喝大水。',
+   thesis:'戒掉奶茶和含糖饮料，拎一大瓶白水出门。健康、省钱、简单，瓶子越大，气场越强。',
+   a:'拎一大瓶白水出门', b:'把奶茶钱省下来',
+   useful:'每天下午三点准时想点奶茶的时候。',
+   notFor:'短时间猛灌。医生提醒过：关键是总量合适、少量多次，猛灌可能稀释血钠。强者也要讲科学。',
+   item:'一只比通勤包还大的水瓶', cred:4},
+  {id:'sleep', name:'大睡理论', short:'大睡', emoji:'😴', fam:'大字辈', src:'net', when:'2026.10',
+   slogan:'十点断电，八小时重启。',
+   thesis:'不再报复性熬夜，按点睡觉，睡满八小时。睡觉不是浪费时间，是给人生做一次断电重启。',
+   a:'十点准时断电', b:'把八小时完整还给自己',
+   useful:'白天被生活关机、晚上想把人生要回来的时候。',
+   notFor:'室友的呼噜、楼上的装修，以及凌晨两点突然到访的灵感。',
+   item:'一盏到十点就自己熄灭的床头灯', cred:5},
+  {id:'smallwater', name:'小水理论', short:'小水', emoji:'🥛', fam:'大字辈', src:'net', when:'2026.10',
+   slogan:'瓶子小一点，次数多一点。',
+   thesis:'大水理论的反方。小瓶好带、干净，喝完再接，少量多次。',
+   a:'带一小瓶水', b:'少量多次地喝完它',
+   useful:'包很小、路很长、厕所很远的时候。',
+   notFor:'在大水派面前保持气场。',
+   item:'一瓶能塞进外套口袋的水', cred:4},
+  {id:'bigcup', name:'大杯理论', short:'大杯', emoji:'🫙', fam:'大字辈', src:'net', when:'2026.10',
+   slogan:'水是单位的，杯子是自己的。',
+   thesis:'买一个和大水一样大的杯子，去公司或学校接水。省下买水的钱，也省下买水的路。',
+   a:'带一个巨大的杯子', b:'去单位的饮水机接满',
+   useful:'单位有饮水机，而你有一点点不好意思的时候。',
+   notFor:'排在你后面接水的同事的眼神。',
+   item:'茶水间里一只写着名字的超大杯', cred:3},
+  {id:'veg', name:'大菜理论', short:'大菜', emoji:'🥬', fam:'大字辈', src:'net', when:'2026.10',
+   slogan:'光有大水不够，还得有大菜。',
+   thesis:'喝大水的同时，配一大份蔬菜，少吃加工食品。大理论家族的营养补丁。',
+   a:'端上一大份蔬菜', b:'把加工食品请出餐桌',
+   useful:'外卖软件已经能背出你家地址的时候。',
+   notFor:'让青菜变得像炸鸡一样好吃。',
+   item:'一只装得下整棵生菜的碗', cred:4},
+  {id:'pepper', name:'彩椒理论', short:'彩椒', emoji:'🫑', fam:'大字辈', src:'net', when:'2026.10.14 前后',
+   slogan:'不知道吃什么，就吃彩椒。',
+   thesis:'把彩椒当固定蔬菜：简单、好吃、颜色多。红黄绿摆一盘，就是一个红绿灯。',
+   a:'每天来一点彩椒', b:'把选择困难交给颜色',
+   useful:'站在菜市场不知道买什么的时候。',
+   notFor:'不吃彩椒的人。',
+   item:'一盏用三色彩椒拼成的红绿灯', cred:3},
+  {id:'stand', name:'大站理论', short:'大站', emoji:'🧍', fam:'大字辈', src:'net', when:'2026.10.13 前后',
+   slogan:'坐满一小时，站起来五分钟。',
+   thesis:'不久坐。每坐一段时间就起身站一站、走两步，让屁股和人生都恢复一下血液循环。',
+   a:'每小时站起来一次', b:'让身体重新通上电',
+   useful:'你和工位椅已经长在一起的时候。',
+   notFor:'会议室里只有你一个人突然站起来时的尴尬。',
+   item:'一把会定时把人弹起来的椅子', cred:4},
+  {id:'egg', name:'大蛋理论', short:'大蛋', emoji:'🥚', fam:'大字辈', src:'pend', when:'2026.10',
+   slogan:'（待核实）每天一个蛋。',
+   thesis:'本院只在"大理论"清单里见过这个名字，具体主张未核实。暂按字面理解：好好吃鸡蛋。',
+   a:'每天吃一个蛋', b:'用最低成本补一点蛋白质',
+   useful:'早饭想认真、又没时间认真的时候。',
+   notFor:'鸡蛋本人的意见。',
+   item:'一个写着"待核实"的蛋托', cred:2},
+  {id:'oxygen', name:'大氧理论', short:'大氧', emoji:'🌳', fam:'大字辈', src:'pend', when:'2026.10',
+   slogan:'（待核实）出门，吸一口大氧。',
+   thesis:'仅见名称，主张未核实。暂按字面理解：离开屏幕，去室外呼吸一会儿。',
+   a:'出门吸一口新鲜空气', b:'离开屏幕十分钟',
+   useful:'屋里的空气和心情一样闷的时候。',
+   notFor:'雾霾天。',
+   item:'一扇推开就有风的窗', cred:2},
+  {id:'walk', name:'大走理论', short:'大走', emoji:'🚶', fam:'大字辈', src:'pend', when:'2026.10',
+   slogan:'（待核实）三公里以内，用腿解决。',
+   thesis:'仅见名称，主张未核实。暂按字面理解：能走的路就走。',
+   a:'能走的路就走', b:'把通勤变成散步',
+   useful:'天气好、鞋舒服、时间够的时候。',
+   notFor:'迟到。迟到请参考平静但快跑学派。',
+   item:'一双鞋底磨平的运动鞋', cred:2},
+  {id:'poop', name:'大便理论', short:'大便', emoji:'💩', fam:'大字辈', src:'net', when:'2026.10',
+   slogan:'顺畅，是最便宜的体检。',
+   thesis:'被网友排进"大理论家族"的又一席：吃好、喝好、睡好之后，排得顺就是身体在给你打分。',
+   a:'每天顺畅一次', b:'把马桶当成最便宜的体检中心',
+   useful:'你终于开始关心自己身体的时候。',
+   notFor:'在饭桌上讨论本理论。',
+   item:'一卷印着"已阅"的卫生纸', cred:3},
+  {id:'dafen', name:'大粉理论', short:'大粉', emoji:'🍜', fam:'大字辈', src:'pend', when:'出处未找到',
+   slogan:'弱者吃轻食，强者嗦大粉。',
+   thesis:'本院全网检索，未找到可靠出处。学界因此分裂为两派：嗦粉派认为是一大碗米粉，粉色派认为是把一切变成粉色。本院以两种解读并列收录。',
+   a:'嗦一大碗粉', b:'顺便把世界调成粉色',
+   useful:'饿了，或者心情灰了。',
+   notFor:'白衬衫。',
+   item:'一只粉色的碗，里面装着粉', cred:2},
+  {id:'huangmao', name:'黄毛思维', short:'黄毛', emoji:'👱', fam:'思维派', src:'net', when:'约 2026.09',
+   slogan:'头发可以不黄，日子必须先过。',
+   thesis:'不必真去染黄毛。重点是先把自己的日子过好，守住边界和选择权，不因为别人丢了自己。',
+   a:'先把自己的日子过好', b:'守住自己的边界',
+   useful:'总在替别人的期待加班的时候。',
+   notFor:'理发店的预约，以及染完之后家里人的表情。',
+   item:'一瓶从未开封的染发剂', cred:3},
+  {id:'queshi', name:'确实理论', short:'确实', emoji:'🙂', fam:'思维派', src:'net', when:'2026.10.14 前后',
+   slogan:'确实。',
+   thesis:'别人说什么，先回一句"确实"。不急着反驳，也不急着证明自己。',
+   a:'先说一句确实', b:'不急着证明自己',
+   useful:'争论的温度开始超过话题本身的时候。',
+   notFor:'你真的必须拒绝的事。"确实"不等于"可以"。',
+   item:'一个只会点头的车载摆件', cred:5},
+  {id:'nostudent', name:'拒绝学生思维', short:'反学生', emoji:'🎓', fam:'思维派', src:'net', when:'2026.10',
+   slogan:'没有标准答案，也没人通知你交卷。',
+   thesis:'不再等标准答案，也不再等别人安排。自己拿主意，自己承担结果。',
+   a:'不等标准答案', b:'自己拿主意、自己认结果',
+   useful:'你又在等一句永远不会来的"老师说可以了"的时候。',
+   notFor:'你确实需要请教别人的时候。问人不是学生思维，不敢问才是。',
+   item:'一张没有标准答案的答题卡', cred:4},
+  {id:'americano', name:'冰美式理论', short:'冰美式', emoji:'🧊', fam:'思维派', src:'net', when:'2026.10',
+   slogan:'苦是苦了点，但便宜又清醒。',
+   thesis:'一杯低价冰美式解决早八的一切问题。没有奶盖，没有小料，没有犹豫。',
+   a:'来一杯冰美式', b:'把早八的灵魂叫醒',
+   useful:'闹钟响了三次，你还在梦里开会的时候。',
+   notFor:'和大睡理论同时执行。下午四点的冰美式，会在晚上十点找你算账。',
+   item:'一杯只剩冰的冰美式', cred:3},
+  {id:'shuaqi', name:'耍起理论', short:'耍起', emoji:'🌶️', fam:'思维派', src:'net', when:'2026.10',
+   slogan:'先耍起再说。',
+   thesis:'川渝方言式生存术：事情还没想清楚，可以先把日子耍起来。',
+   a:'先耍起来', b:'想不通的明天再想',
+   useful:'你已经纠结了三天要不要出门的时候。',
+   notFor:'第二天早上八点的考试。',
+   item:'一副永远凑不齐四个人的麻将', cred:3},
+  {id:'applerel', name:'苹果安卓相对论', short:'苹安', emoji:'📱', fam:'思维派', src:'net', when:'约 2025',
+   slogan:'没有绝对的苹果，只有相对的参考系。（本院修正版）',
+   thesis:'原说法把万物分成"苹果"和"安卓"两类，从手机一路分到学历、房子和人。本院在相对论框架下复核后认为：同一个人在不同参考系里可以同时是苹果和安卓，所以这套分类在任何参考系里都不成立。唯一绝对的，是电量。',
+   a:'把万物分成两类', b:'再发现分类取决于参考系',
+   useful:'挑手机。',
+   notFor:'给任何一个人定价。人不是机型。',
+   item:'一部电量永远显示 20% 的手机', cred:1},
+  {id:'hotwater', name:'多喝热水理论', short:'热水', emoji:'♨️', fam:'网络古典', src:'classic', when:'流传已久',
+   slogan:'多喝热水。',
+   thesis:'感冒、失恋、加班、考砸、人生迷茫，统一处方：多喝热水。大水理论的祖父，至今仍在长辈群里执业。',
+   a:'多喝热水', b:'其余问题一概不管',
+   useful:'你真的有点着凉的时候。',
+   notFor:'除了着凉以外的一切。',
+   item:'一只印着"多喝热水"的保温杯', cred:3},
+  {id:'reboot', name:'重启理论', short:'重启', emoji:'🔄', fam:'网络古典', src:'classic', when:'流传已久',
+   slogan:'重启能解决九成问题，剩下一成再重启一次。',
+   thesis:'电脑卡了重启，路由器断了重启，人生卡了就睡一觉。大睡理论是它的生物学版本。',
+   a:'先关机', b:'再开机看看',
+   useful:'电子设备，以及熬了三个通宵的你。',
+   notFor:'已经发出去的消息。',
+   item:'一个只有"关"键的遥控器', cred:4},
+  {id:'collect', name:'收藏即学会定律', short:'收藏', emoji:'⭐', fam:'网络古典', src:'classic', when:'流传已久',
+   slogan:'收藏了，就等于学会了。',
+   thesis:'点下收藏的那一刻，知识以量子态进入大脑。只要永远不打开收藏夹，这个状态就永远不会坍缩。',
+   a:'点一下收藏', b:'再也不打开它',
+   useful:'刷到"三分钟学会 Excel"的时候。',
+   notFor:'真正需要用 Excel 的那一天。',
+   item:'一个装着 2,371 条从未打开的收藏夹', cred:1},
+  {id:'nexttime', name:'下次一定永动机', short:'下次', emoji:'⏭️', fam:'网络古典', src:'classic', when:'流传已久',
+   slogan:'下次一定。',
+   thesis:'"下次一定"可以无限次使用，不消耗任何能量，是人类发明的第一台永动机。',
+   a:'说一句下次一定', b:'把这一次也变成下次',
+   useful:'被邀请做你不想做的事的时候。',
+   notFor:'你其实很想去的那一次。',
+   item:'一本每页只写着"下次"的日历', cred:2},
+  {id:'monday', name:'周一引力定律', short:'周一', emoji:'🌑', fam:'网络古典', src:'orig', when:'每周一',
+   slogan:'周一的床，引力是平时的 9.8 倍。',
+   thesis:'周一的床对人体有额外引力；周五下午时间流速加快，光谱向下班方向红移。本院每周一提交写入物理教材的申请，每周一被驳回。',
+   a:'周一起不来', b:'周五走得飞快',
+   useful:'解释你为什么周一迟到。',
+   notFor:'你老板。',
+   item:'一张周一自动加重的床', cred:4},
+  {id:'readnoreply', name:'薛定谔的已读', short:'已读', emoji:'👀', fam:'网络古典', src:'classic', when:'流传已久',
+   slogan:'只要不点开，消息就既读了又没读。',
+   thesis:'对方没回你的时候，你们处在"已读"和"未读"的叠加态。点开对话框的那一刻，叠加态坍缩为"已读不回"。',
+   a:'不点开那条消息', b:'保持一种体面的叠加态',
+   useful:'收到"在吗"的时候。',
+   notFor:'老板的消息。老板的消息没有叠加态。',
+   item:'一个永远亮着小红点的头像', cred:3},
+  {id:'ddl', name:'Deadline 相对论', short:'DDL', emoji:'⏰', fam:'网络古典', src:'classic', when:'流传已久',
+   slogan:'截止前一小时，等于平时一周。',
+   thesis:'越靠近截止时间，个人时间流速越慢、效率越高。人类的创造力都集中在 deadline 前的事件视界里。',
+   a:'先拖着', b:'在最后一小时变成神',
+   useful:'解释你为什么昨晚通宵。',
+   notFor:'第二次还这么干。',
+   item:'一只最后一分钟才开始走的钟', cred:4},
+  {id:'battery', name:'电量焦虑 20% 定律', short:'电量', emoji:'🔋', fam:'网络古典', src:'classic', when:'流传已久',
+   slogan:'电量低于 20%，安全感也低于 20%。',
+   thesis:'手机电量与主人的安全感严格正相关。低于 20% 开始坐立不安，低于 5% 开始向陌生人借充电宝。',
+   a:'盯着电量', b:'在每一个插座前停留',
+   useful:'出远门之前。',
+   notFor:'你自己的电量。你也会没电，也需要充。',
+   item:'一根两米长的数据线', cred:4},
+  {id:'shower', name:'洗澡灵感守恒定律', short:'洗澡', emoji:'🚿', fam:'网络古典', src:'classic', when:'流传已久',
+   slogan:'灵感只在洗澡时出现，擦干就蒸发。',
+   thesis:'浴室里产生的每一个好点子，都会在你擦干身体的同时等量消失。灵感总量守恒。',
+   a:'在浴室想出绝世好主意', b:'擦干之后全部忘记',
+   useful:'给自己一个多洗几次澡的理由。',
+   notFor:'防水笔记本的销量。',
+   item:'一块能写字的浴室瓷砖', cred:4},
+  {id:'calmrun', name:'平静但快跑学派', short:'快跑', emoji:'🏃', fam:'本院原创', src:'orig', when:'本院',
+   slogan:'心里不必慌，车门要关时，可以快一点。',
+   thesis:'把"不要焦虑"和"不要行动"拆开。人可以很平静，也可以跑得很快。',
+   a:'心里不慌', b:'车门要关时跑快一点',
+   useful:'目标明确、窗口有限、跑起来也安全的时候。',
+   notFor:'你其实不想去，只是怕被评价。那时的问题不是跑得够不够快，而是要不要去。',
+   item:'一双平静放着、随时能穿的鞋', cred:4},
+  {id:'slack', name:'纪律性摆烂', short:'摆烂', emoji:'🛋️', fam:'本院原创', src:'orig', when:'本院',
+   slogan:'准时开始，准时摆烂。',
+   thesis:'摆烂也要有纪律：准时开始，准时结束，期间不许评估自己。',
+   a:'准时开始摆烂', b:'期间不许评估自己',
+   useful:'你需要从持续的自我评估里暂时退出的时候。',
+   notFor:'连"今天休息得好不好"也做成评分表。',
+   item:'一台只在打卡时罢工的打卡机', cred:4},
+  {id:'tomorrow', name:'明天仓库理论', short:'明天', emoji:'📦', fam:'本院原创', src:'orig', when:'本院',
+   slogan:'被推迟的问题没有消失，只是换了地址。',
+   thesis:'所有"明天再说"的问题都存在明天仓库。仓库没有容量上限，但按日计息。',
+   a:'把问题存进明天', b:'明天再把它转存到后天',
+   useful:'今天确实处理不了的事。',
+   notFor:'仓库的租金。它按天收。',
+   item:'一张写着"明天再说"的提货单', cred:3},
+  {id:'chair', name:'椅子阻力学', short:'椅子', emoji:'🪑', fam:'本院原创', src:'orig', when:'本院',
+   slogan:'坐下之后，"马上起来"会变成一个弹性单位。',
+   thesis:'人坐下后，"马上"的时长随坐垫柔软程度指数增长。沙发上的"马上"约等于四十分钟。',
+   a:'坐下', b:'说马上起来',
+   useful:'解释"马上到"。',
+   notFor:'大站理论的信徒。',
+   item:'一把正在质疑椅子制度的椅子', cred:4},
+  {id:'unbox', name:'开箱自律幻觉', short:'开箱', emoji:'🛒', fam:'本院原创', src:'orig', when:'本院',
+   slogan:'计划在装备到货前最完整。',
+   thesis:'一个人的自律，在快递签收那一刻达到巅峰，随后按小时衰减。',
+   a:'先下单装备', b:'把开箱当成开始',
+   useful:'解释那台跑步机为什么变成了衣架。',
+   notFor:'旧工具确实挡了路的时候。有时候买对东西，真的有用。',
+   item:'一间只装修了开箱区的工作室', cred:3},
+  {id:'antitheory', name:'反理论学派', short:'反理论', emoji:'🚫', fam:'本院原创', src:'orig', when:'本院',
+   slogan:'用一句话解释全部人生的理论，都请先等等。',
+   thesis:'一切"一句话解释人生"的理论都需要例外。包括这句话本身。',
+   a:'欢迎有用的概括', b:'给例外留一个座位',
+   useful:'某个口号开始吞掉所有具体差别的时候。比如现在。',
+   notFor:'这条理论本身。它也是一句覆盖很广的话。',
+   item:'一把正在质疑椅子制度的椅子的邻座', cred:5}
+];
+
+const ANNOUNCE = [
+  '长期主义研究室尚未装修，但认为时间站在自己这边。',
+  '本院没有终极结论。若发现疑似终极结论，请送往六楼失物招领处。',
+  '反内耗委员会今日取消会议，因为开会只是为了讨论是否需要开会。',
+  '您可以退出任何学派。办公室钥匙无需归还，因为我们没有配钥匙。',
+  '饮水机已加装第二个出水口，大水派与小水派请错峰接水。',
+  '院长出去看看世界了，你也可以。',
+  '今日学术共识：暂无。',
+  '大睡学派提醒：现在如果已过十点，请勿继续阅读本公告。',
+  '确实。',
+  '薄肌学派招新：门槛很低，线条很薄。',
+  '本院全网检索"大粉理论"出处未果，现以嗦粉派、粉色派两种解读并列收录。',
+  '本院非权威机构。权威上周出门买大水，至今未归。',
+  '大站理论研究小组提醒：你已经坐了很久了。',
+  '苹果安卓相对论研究所声明：本所只研究手机，不研究人。'
+];
+
+const DANMAKU = [
+  '前方大水预警','强者已经在喝了','确实','这个院长不太对劲','已截图发给我妈','薄肌在哪报名',
+  '我是来嗦粉的','有没有大睡搭子','看完已经十二点了，大睡失败','收藏了=学会了','家人们谁懂啊',
+  '6','这理论我爸十年前就说过','我的工位是安卓的','已读','我站着看的（大站派）','笑死，我是小水派',
+  '这个网站有班味','我已经不信了','公交车关门了啊啊啊','长期主义研究室什么时候装修好','确实确实',
+  '我在上班时间看这个','弹幕护体','民科本科','v我50听我讲大水理论','这是我见过最正经的不正经',
+  '谁在凌晨两点看这个','说得对，但我要去喝水了','楼上大睡派的快去睡'
+];
+
+const FLOATS = ['功德+1','大水+1','确实','已阅','6','薄肌+0.1','睡意+1','已读','收到','线条+1','嗦','+1 但是'];
+
+const CRAZY_LINES = [
+  '我不理解！我不明白！我不接受！','谁懂啊，我只是想喝口水','啊啊啊啊啊（学术性尖叫）',
+  '你说得对，但我现在要发疯了','精神状态：良好（自评）','我的情绪很稳定，稳定地崩溃',
+  '我没疯，是世界先动的手','求求了，让我把这个周报写成诗'
+];
+
+const ROOMS = [
+  {id:'dean', name:'院长办公室', floor:'天台', status:'院长不在'},
+  {id:'longterm', name:'长期主义研究室', floor:'7F', status:'尚未装修'},
+  {id:'meeting', name:'反内耗委员会', floor:'7F', status:'会议已取消'},
+  {id:'garden', name:'退休理论花园', floor:'6F', status:'可以献花'},
+  {id:'lost', name:'失物招领处', floor:'6F', status:'认领多半失败'},
+  {id:'emoji', name:'代际翻译局', floor:'5F', status:'哈学研究中'},
+  {id:'court', name:'理论法院', floor:'5F', status:'今日开庭'},
+  {id:'family', name:'大理论家谱馆', floor:'4F', status:'附老虎机'},
+  {id:'exam', name:'学派分配处', floor:'4F', status:'免试入学'},
+  {id:'vending', name:'理论自动售货机', floor:'3F', status:'只收烦恼'},
+  {id:'relativity', name:'苹果安卓相对论研究所', floor:'3F', status:'参考系混乱'},
+  {id:'lab', name:'反例实验室', floor:'2F', status:'"但是"试剂充足'},
+  {id:'hybrid', name:'学说杂交器', floor:'2F', status:'培养皿已消毒'},
+  {id:'archive', name:'理论档案馆', floor:'1F', status:'34 份档案'},
+  {id:'home', name:'大厅', floor:'1F', status:'你在这里'},
+  {id:'speedread', name:'量子速读室', floor:'B1', status:'0.3 秒一本'},
+  {id:'exit', name:'正常生活出口', floor:'B1', status:'始终开放'}
+];
+
+const MODES = {
+  std:{name:'院内标准', desc:'默认的混乱程度：弹幕、功德、到处都能点。'},
+  sleep:{name:'大睡', desc:'关灯。整个页面开始打瞌睡。'},
+  water:{name:'大水', desc:'水位上涨，卡片漂起来，附赠一只大水瓶。'},
+  thin:{name:'薄肌', desc:'所有字体练成薄肌，只剩线条。'},
+  pink:{name:'大粉', desc:'嗦粉派与粉色派联合执政。天上掉粉。'},
+  crazy:{name:'发疯', desc:'精神状态良好（自评）。'},
+  work:{name:'班味', desc:'全站变灰，所有按钮自带"收到"。'},
+  queshi:{name:'确实', desc:'本院对一切的回应统一为：确实。'},
+  normal:{name:'正常生活', desc:'关掉所有特效。安静、可读、没有弹幕。'}
+};
+
+const ACH = [
+  ['enter','初入民科','第一次走进本院'],
+  ['merit1','功德 +1','敲一下顶栏的学术功德'],
+  ['merit100','功德小有','学术功德达到 100'],
+  ['merit500','功德无量（暂定）','学术功德达到 500'],
+  ['m_sleep','主动大睡','切换到大睡世界观'],
+  ['m_water','强者喝大水','切换到大水世界观'],
+  ['m_thin','薄肌初成','切换到薄肌世界观'],
+  ['m_pink','嗦粉派与粉色派','切换到大粉世界观'],
+  ['m_crazy','精神状态良好','切换到发疯世界观'],
+  ['m_work','班味入味','切换到班味世界观'],
+  ['m_queshi','确实','切换到确实世界观'],
+  ['idle','被动大睡','在页面上发呆 45 秒'],
+  ['overdrink','强者也要讲科学','在大水世界观里一口气喝太多'],
+  ['dashui','拼音歧义','在键盘上打出 dashui'],
+  ['yuanshen','启动！','在键盘上打出 yuanshen'],
+  ['v50','V 我 50','在键盘上打出 v50'],
+  ['six','6','在键盘上打出 666'],
+  ['konami','院长回来了','↑↑↓↓←→←→BA'],
+  ['seal','失去权威','连续点公章'],
+  ['chou','筹字永远不摘','试图摘掉"筹"字'],
+  ['archive','档案管理员','翻开 5 张理论卡的背面'],
+  ['lab1','第一个反例','在反例实验室生成一个新版本'],
+  ['lab5','打补丁大师','让一个理论长到 v5'],
+  ['hybrid','杂交育种','在培养皿里培育一个新学派'],
+  ['vending3','售货机常客','买 3 张理论收据'],
+  ['classify','万物分类学家','用分类器分类 5 样东西'],
+  ['refuse','本所拒绝','试图用分类器给人分类'],
+  ['slot','强者语录','拉一次大理论老虎机'],
+  ['jackpot','原教旨大水','老虎机抽中大水理论本体'],
+  ['exam','入学','完成学派分配考试'],
+  ['haha','哈学通胀','一次打出 30 个以上的哈'],
+  ['court','并列结案','听完一场庭审'],
+  ['flower','墓前献花','给退休的梗献一朵花'],
+  ['revive','复活师','申请复活一个梗'],
+  ['retire','我已经不信了','亲手退休一个旧观点'],
+  ['claim','认领失败','在失物招领处认领一件东西'],
+  ['meeting','开会成瘾','把会议嵌套到第 5 层'],
+  ['urge','短期催促者','催长期主义研究室 10 次'],
+  ['chair','坐上院长的椅子','在院长办公室坐一坐'],
+  ['speed','量子速读者','完成一次量子速读'],
+  ['danmaku','已举报（并没有）','点一条弹幕'],
+  ['exit','正常生活','走一次正常生活出口'],
+  ['allrooms','全楼巡查','走遍所有房间'],
+  ['end','互联网的尽头','把大厅拉到最底']
+];
+
+/* ---- 反例实验室 ---- */
+const CONDS = [
+  {id:'bus', icon:'🚌', label:'公交车正在关门', kind:'时间窗口', prefix:'限时', patch:'先上车，理论等坐稳了再说'},
+  {id:'battery', icon:'🪫', label:'手机电量 1%', kind:'资源限制', prefix:'低电量', patch:'先找充电宝，理论稍后同步'},
+  {id:'boss', icon:'👔', label:'老板就站在你身后', kind:'他人在场', prefix:'隐蔽版', patch:'先切回工作窗口，理论转入地下'},
+  {id:'rain', icon:'🌧️', label:'外面突然下大雨', kind:'环境变化', prefix:'防水版', patch:'以不淋湿为第一原则'},
+  {id:'mom', icon:'📞', label:'妈妈打来视频', kind:'家庭因素', prefix:'报平安版', patch:'一切暂停，先说"吃了，挺好的"'},
+  {id:'milktea', icon:'🧋', label:'同事请你喝奶茶', kind:'人情往来', prefix:'人情版', patch:'收下，说谢谢，理论明天恢复执行'},
+  {id:'2am', icon:'🌙', label:'凌晨两点来了灵感', kind:'时间错位', prefix:'夜间版', patch:'记一行字，然后继续睡'},
+  {id:'broke', icon:'💸', label:'月底只剩 37 块', kind:'预算限制', prefix:'月底版', patch:'先保证三天的饭，理论按预算执行'}
+];
+const LAB_SPECIAL = {
+  'water|milktea':'收下奶茶，说声谢谢。人情今天还，大水明天喝。',
+  'water|rain':'雨也是一种大水，但请撑伞。强者不必淋雨。',
+  'sleep|2am':'灵感来了就记一句话，然后继续睡。明天的你，比现在的你更会写。',
+  'sleep|mom':'先接视频，说"正准备睡"，然后真的去睡。',
+  'boji|broke':'月底不办卡。俯卧撑是免费的，线条不看余额。',
+  'queshi|boss':'老板说什么都可以先说确实。但"今晚加班"那一句，需要第二个词。',
+  'calmrun|bus':'这正是本学派的原生场景。平静地，快跑。',
+  'stand|boss':'站起来。老板会以为你很积极，其实你只是在执行大站理论。',
+  'collect|battery':'电量 1% 时，收藏夹里的 2,371 条学习资料一条也救不了你。先充电。',
+  'applerel|battery':'电量 1% 的苹果和电量 1% 的安卓，处在同一个参考系：都快没电了。',
+  'nexttime|bus':'公交车不接受"下次一定"。它真的会走。',
+  'dafen|broke':'37 块还够嗦三碗粉。本理论到了月底反而最强。',
+  'hotwater|rain':'淋了雨，确实可以多喝热水。本理论终于等到了它的适用场景。',
+  'tomorrow|mom':'妈妈问的事，不能存进明天仓库。仓库不收这一类货。',
+  'ddl|2am':'凌晨两点的灵感，正好赶上明早九点的截止。本理论在此刻抵达巅峰。',
+  'shower|2am':'灵感不在浴室出现，说明守恒定律出现裂缝。请立刻记下来，并通知本院。'
+};
+
+/* ---- 学说杂交 ---- */
+const RELS = [
+  {k:'互补', t:(A,B)=>`${A.short}负责开头，${B.short}负责收尾。两者在时间上错开，互不打架。`},
+  {k:'冲突', t:(A,B)=>`${A.short}和${B.short}在同一时段争夺同一具身体，培养皿里已经吵起来了。`},
+  {k:'错位', t:(A,B)=>`两者解决的根本不是同一个问题，放在一起却意外地成立。`},
+  {k:'套娃', t:(A,B)=>`${B.short}其实是${A.short}的一个特例，或者反过来。本院暂时分不清。`}
+];
+
+/* ---- 售货机 ---- */
+const V_PRE = ['大','薄','小','纯血','野生','反向','量子','赛博','超大杯','原教旨'];
+const V_SUF = ['理论','主义','定律','守恒定律','相对论','思维','学派','二象性'];
+const V_STRONG = ['先喝一大瓶水','先大睡一觉','先站起来五分钟','先说一句确实','先嗦一碗大粉','先出门吸一口大氧','先把它存进明天仓库'];
+const V_ASPECT = ['参考系','剂量','窗口期','含水量','线条','电量','饱和度'];
+const V_COND = ['周一以外','电量高于 20%','睡满八小时之后','喝完第三杯水之后','没有人看着的时候','吃饱以后','老板不在线时','不下雨的日子'];
+const V_STOP = ['我','的','了','很','太','好','想','要','在','是','就','都','也','还','有','没','怎么','什么','为什么','今天','真的','一直','又','总是','感觉','觉得','不知道','怎么办','啊','吧','呢','吗','嗯','这个','那个','老是','有点','一点','特别','非常'];
+
+/* ---- 苹果安卓 ---- */
+const OS = [
+  {k:'苹果', why:['封闭，但很丝滑','贵，但它自己觉得值','不能魔改，但很省心','充电慢，但气质好']},
+  {k:'安卓', why:['开源，可以随便加蛋','能魔改，也能被魔改','什么都能装，包括烦恼','越用越有自己的想法']},
+  {k:'鸿蒙', why:['自成一派，生态还在长','和家里其他东西都能连上','说不清它是什么，但它很努力']},
+  {k:'诺基亚', why:['摔不坏','续航一周','功能很少，所以从不出错']},
+  {k:'塞班', why:['曾经很火','已退休，请移步退休理论花园']},
+  {k:'小灵通', why:['信号只在窗边有','属于一种时代的浪漫']}
+];
+const OBSERVERS = ['你妈','你的猫','十年后的你','一只路过的鸽子','隔壁工位','外星人','你老板','楼下保安'];
+const REFUSE = ['学历','房子','买房','车子','人','男','女','父母','爸','妈','对象','老婆','老公','朋友','孩子','身高','长相','老家','同事','领导','学校','工资','收入','前任','室友','家庭','户口','出身','老师','同学','他','她','你'];
+const CLASSIFY_CHIPS = ['煎饼果子','我的工位','周一','奶茶','大水','地铁','螺蛳粉','我的学历'];
+
+/* ---- 家谱 / 老虎机 ---- */
+const SLOT_PRE = ['大','小','薄','纯','反','野','超大'];
+const SLOT_NOUN = {
+  '水':['喝饮料','喝{X}'], '睡':['熬夜刷手机','十点{X}'], '站':['久坐不动','每小时{X}一次'], '蛋':['点外卖','每天两个{X}'],
+  '菜':['吃炸鸡','端一盆{X}'], '粉':['吃轻食','嗦一碗{X}'], '走':['打车三百米','{X}一万步'], '氧':['闷在空调房','出门吸{X}'],
+  '肌':['练成门板','只要{X}'], '班':['加班到十点','准点下{X}'], '哭':['憋着','{X}一场'], '笑':['强颜欢笑','{X}三声'],
+  '躺':['假装没在躺','光明正大地{X}'], '饭':['随便对付一口','认真吃一顿{X}'], '门':['宅在家里','出{X}'], '确':['急着反驳','先说{X}实']
+};
+const SLOT_SUF = ['理论','思维','主义','学派','定律'];
+
+/* ---- 考试 ---- */
+const SCHOOLS = {
+  sleep:{name:'大睡学派', emoji:'😴', motto:'十点断电，八小时重启。', symbol:'一盏会自己熄灭的灯', enemy:'凌晨两点的灵感', desc:'你相信大部分问题睡一觉会变小，剩下的问题睡两觉。你不是懒，你是在执行一次长达八小时的系统更新。', mode:'sleep'},
+  water:{name:'大水学派', emoji:'💧', motto:'弱者喝饮料，强者喝大水。', symbol:'一只比包还大的水瓶', enemy:'下午三点的奶茶广告', desc:'你的方案朴素而坚定：先喝口水。你的瓶子很大，但你记得少量多次。', mode:'water'},
+  boji:{name:'薄肌学派', emoji:'💪', motto:'不要块头，要线条。', symbol:'一面只照得到锁骨的镜子', enemy:'夜宵', desc:'你追求一种克制的力量感。不必很大，但要清楚。这一点在你的人际关系里也成立。', mode:'thin'},
+  fen:{name:'大粉学派', emoji:'🍜', motto:'一切问题，嗦完再说。', symbol:'一只粉色的碗', enemy:'白衬衫', desc:'你知道一碗热乎的东西能化解多少情绪。至于你是嗦粉派还是粉色派，本院允许你两个都是。', mode:'pink'},
+  queshi:{name:'确实学派', emoji:'🙂', motto:'确实。', symbol:'一个只会点头的摆件', enemy:'需要你说"不"的场合', desc:'你擅长让空气降温。你说"确实"的时候，心里其实已经想好了下一步。', mode:'queshi'},
+  crazy:{name:'发疯学派', emoji:'🫠', motto:'精神状态良好（自评）。', symbol:'一本写满"啊"的笔记本', enemy:'"你冷静一点"', desc:'你的情绪很真实，表达也很真实。你没疯，你只是拒绝把所有感受都写成周报。', mode:'crazy'},
+  slack:{name:'纪律性摆烂学派', emoji:'🛋️', motto:'准时开始，准时摆烂。', symbol:'一台只在打卡时罢工的打卡机', enemy:'"今天你进步了吗"', desc:'你知道休息不需要理由，但需要纪律。你的摆烂很规律，规律到有点像一种自律。', mode:'work'},
+  run:{name:'平静但快跑学派', emoji:'🏃', motto:'心里不慌，车门要关时跑快一点。', symbol:'一双随时能穿的鞋', enemy:'被滥用的"慢慢来"', desc:'你分得清"不着急"和"不行动"。你可以很平静，也可以在三秒内冲上公交车。', mode:null}
+};
+const QUIZ = [
+  {q:'周一早上七点，闹钟响了。你：', o:[['再睡五分钟（重复六次）','sleep'],['先灌一口床头的大水','water'],['做十个俯卧撑，然后后悔','boji'],['对着天花板发出一声学术性尖叫','crazy']]},
+  {q:'同事说："这个方案是不是有点问题？"你：', o:[['确实。','queshi'],['心里不慌，手上已经开始改了','run'],['先去嗦碗粉，冷静一下','fen'],['有问题，明天再说','slack']]},
+  {q:'你的包里一定有：', o:[['一瓶 1.5 升的水','water'],['眼罩和耳塞','sleep'],['一根弹力带','boji'],['一包螺蛳粉附赠的酸笋','fen']]},
+  {q:'晚上十二点，你在：', o:[['早就睡了','sleep'],['刷别人早睡打卡的视频，越刷越精神','crazy'],['按计划躺着，什么也不想','slack'],['想明早怎么赶上第一班地铁','run']]},
+  {q:'收到一条"在吗"。你回：', o:[['确实在。','queshi'],['（已读，不回）','slack'],['"在！怎么了？"然后去喝了口水','water'],['"？"','crazy']]},
+  {q:'选一个最像你的表情：', o:[['😅','queshi'],['🫠','crazy'],['💪','boji'],['🍜','fen']]},
+  {q:'公交车正在关门。你：', o:[['平静地，快跑','run'],['等下一班，顺便坐会儿','slack'],['跑，并把它算作今天的有氧','boji'],['确实关了。','queshi']]},
+  {q:'人生遇到一个大难题。你的第一反应：', o:[['先睡一觉','sleep'],['先喝杯水','water'],['先吃碗粉','fen'],['先拆成三件明天就能做的小事','run']]}
+];
+
+/* ---- 代际翻译 ---- */
+const EMOJI = [
+  {e:'🙂', old:'开心，和蔼可亲', young:'我很平静。（其实我很生气）', note:'本院解读：确实。'},
+  {e:'😊', old:'高兴', young:'客气的终点，礼貌的尽头', note:'常见于工作群最后一句。'},
+  {e:'👍', old:'好的，点赞', young:'行吧。对话到此为止', note:'长辈发是真心，同龄人发要小心。'},
+  {e:'😅', old:'不好意思', young:'流汗黄豆：尴尬，但保持体面', note:'中文互联网最高频的社交缓冲材料。'},
+  {e:'😂', old:'真的很好笑', young:'有点过时的好笑，常用于反讽', note:'已被 😭 和 💀 部分取代。'},
+  {e:'😭', old:'出什么事了？要不要紧？', young:'太好笑了 / 太可爱了 / 太好了', note:'最容易引发跨代误会的表情，没有之一。'},
+  {e:'💀', old:'不吉利，快撤回', young:'笑死（字面意义上的）', note:'长辈看到会打电话来问。'},
+  {e:'🌹', old:'早上好，祝你好运', young:'？', note:'通常与"早安"大字图一起出现。'},
+  {e:'🙏', old:'谢谢，阿弥陀佛', young:'求求了', note:'两代人罕见的语义重叠区：都在求。'},
+  {e:'🫠', old:'这是什么？', young:'融化了，班味入骨', note:'周四下午出现频率最高。'},
+  {e:'🐶', old:'小狗，真可爱', young:'狗头保命：刚才那句是开玩笑的', note:'加在任何冒犯性言论后面，效果因人而异。'},
+  {e:'🤡', old:'马戏团', young:'小丑竟是我自己', note:'常用于自我检讨。'},
+  {e:'🥺', old:'怎么哭了', young:'求你了（撒娇版）', note:'用于借会员账号成功率 +30%（本院估计）。'},
+  {e:'👌', old:'好的', young:'好的（真心）或 好的（放弃了）', note:'需结合上下文与句号判断。'},
+  {e:'😁', old:'开心', young:'尬笑，牙比心情多', note:'本院建议慎用。'},
+  {e:'🍵', old:'喝茶', young:'我就静静看着，不说话', note:'吃瓜的高级形态。'}
+];
+const ZAIMA = [
+  ['借钱',24],['帮忙砍一刀',17],['投个票 / 点个赞',14],['借视频会员',11],['拉你进一个群',9],
+  ['推销保险或课程',8],['问你某个文件在哪',7],['前任，深夜',6],['（对方已撤回）',3.6],['真的只想问你在不在',0.4]
+];
+
+/* ---- 法院 ---- */
+const CASES = [
+  {id:'w', title:'大水 诉 小水', cause:'瓶子大小，是否决定一个人的强度',
+   lines:[
+    ['书记员','现在开庭。请双方不要在庭上喝水，至少不要喝出声音。',1],
+    ['原告 · 大水理论','弱者喝饮料，强者喝大水。瓶子越大，意志越坚定。'],
+    ['被告 · 小水理论','大瓶太重。我的瓶子小，但我喝完会再接。我们一天喝下去的总量是一样的。'],
+    ['原告 · 大水理论','一样？你一路上要找几次饮水机？'],
+    ['被告 · 小水理论','你一路上要找几次厕所？'],
+    ['证人 · 饮水机','我只是一台饮水机。我每天被两派各接一百次，我没有意见。'],
+    ['专家证人 · 医生','补充一句：重点是总量合适、少量多次。短时间猛灌，对谁都不好。'],
+    ['审判长','本庭注意到，双方的分歧只在瓶子上，不在水上。']],
+   verdict:['在长时间外出、沿途没有补给的场景中，大水优先。','在包小、路长、需要少量多次的场景中，小水优先。','短时间内猛灌者，两派均不予支持。','本案以两种偏好并列结案。诉讼费由饮水机承担（已拒绝）。']},
+  {id:'s', title:'大睡 诉 报复性熬夜', cause:'夜里的时间，到底归谁',
+   lines:[
+    ['书记员','现在开庭。现在是晚上十点零一分，原告已经很困了。',1],
+    ['原告 · 大睡理论','十点断电，八小时重启。被告每天偷走我两个小时。'],
+    ['被告 · 报复性熬夜','白天没有一分钟属于我。我只是在夜里把自己要回来。'],
+    ['原告 · 大睡理论','你要回来的方式，是刷两个小时别人的生活。'],
+    ['被告 · 报复性熬夜','……确实。'],
+    ['证人 · 手机','我可以作证。屏幕使用时间显示，被告昨晚看了 214 条视频，记住了 0 条。'],
+    ['审判长','本庭认为被告的诉求有一部分成立：白天确实欠了被告时间。']],
+   verdict:['被告追讨时间的诉求成立，但追讨对象应当是白天，而不是睡眠。','在第二天需要早起的夜晚，大睡优先执行。','周五晚上本庭休庭，不予审理。','本案以两种偏好并列结案。宣判时，原告已睡着。']},
+  {id:'b', title:'薄肌 诉 大粉', cause:'嗦粉是否破坏线条',
+   lines:[
+    ['书记员','现在开庭。请被告先把碗放下。',1],
+    ['原告 · 薄肌理论','我练了三个月才有一层线条，被告一碗就让它消失了。'],
+    ['被告 · 大粉理论（嗦粉派）','线条是你的，粉是我的。你不能要求世界上没有粉。'],
+    ['被告 · 大粉理论（粉色派）','补充一点：我们派只是想让世界变成粉色，与碳水无关。'],
+    ['审判长','粉色派请先坐下，你们不是本案被告。'],
+    ['证人 · 一碗螺蛳粉','（沉默，但存在感很强）'],
+    ['原告 · 薄肌理论','……其实我也想吃。']],
+   verdict:['粉可以嗦，线条可以练，二者分时段执行时不构成冲突。','嗦粉后步行二十分钟，视为双方和解。','粉色派与本案无关，但本庭允许法庭变成粉色。','本案以"吃完去走走"调解结案。'], after:'pink'},
+  {id:'q', title:'拒绝学生思维 诉 确实', cause:'说"确实"，算不算放弃思考',
+   lines:[
+    ['书记员','现在开庭。',1],
+    ['原告 · 拒绝学生思维','被告对什么都说确实。这就是在等别人给标准答案。'],
+    ['被告 · 确实理论','确实。'],
+    ['原告 · 拒绝学生思维','你看！'],
+    ['被告 · 确实理论','确实。但我说确实，是为了让争吵先降温。降温之后，我会自己拿主意。'],
+    ['原告 · 拒绝学生思维','……那你现在拿个主意。'],
+    ['被告 · 确实理论','我决定，先说确实。'],
+    ['审判长','本庭需要一个更具体的场景。']],
+   verdict:['"确实"用于给争论降温时，有效。','"确实"用于逃避一个必须由你自己作出的决定时，无效。','原告的主张同样有边界：向人请教不是学生思维，不敢请教才是。','本案以两种偏好并列结案。被告对判决表示：确实。']}
+];
+
+/* ---- 花园 ---- */
+const TOMBS = [
+  ['神马都是浮云','约 2010','生前看淡一切，死后亦然。'],
+  ['给力','约 2010','曾经很给力，现在不太给力了。'],
+  ['元芳你怎么看','约 2012','元芳至今没有回答。'],
+  ['我也是醉了','约 2014','醒了。'],
+  ['duang','约 2015','duang。（回声）'],
+  ['然并卵','约 2015','然而并没有什么用。包括这块碑。'],
+  ['洪荒之力','约 2016','已用尽。'],
+  ['蓝瘦香菇','约 2016','难受，想哭。'],
+  ['皮皮虾我们走','约 2017','皮皮虾走了，没有回来。'],
+  ['佛系','约 2017','都行，可以，没关系。'],
+  ['skr','约 2018','碑文过短，经审核通过。'],
+  ['我太难了','约 2019','现在不难了，因为退休了。'],
+  ['奥利给','约 2020','曾经给过。'],
+  ['凡尔赛','约 2020','其实我也没那么火，就随便上了几次热搜。'],
+  ['yyds','约 2021','永远的神，暂时的梗。'],
+  ['绝绝子','约 2021','绝了。'],
+  ['栓Q','约 2022','我真的栓Q。'],
+  ['芭比Q了','约 2022','完了，字面意义上的。'],
+  ['尊嘟假嘟','约 2023','退休是尊嘟。'],
+  ['city不city','约 2024','退休生活，很 city。']
+];
+const REVIVE = [
+  '复活成功。但只在长辈群里活了下来。',
+  '复活失败。当代网友已读不回。',
+  '复活成功，持续 3 秒，被一个新梗挤下了热搜。',
+  '复活成功，已被某品牌注册成营销文案。复活申请撤回。',
+  '该梗表示：别叫我，我在退休。',
+  '复活为表情包形态，今后只以图片存在。',
+  '复活成功！……在你一个人的聊天框里。'
+];
+
+/* ---- 失物招领 ---- */
+const LOST = [
+  ['一份对未来的确定性','拾获于：凌晨三点的天花板'],
+  ['周一早上的灵魂','拾获于：地铁 2 号线，往床的方向'],
+  ['"下次一定"里的那个下次','拾获于：从未抵达'],
+  ['答应自己的早睡','拾获于：昨晚 1:47'],
+  ['收藏夹里的 2,371 条学习资料','拾获于：从未打开'],
+  ['大学时的头发','拾获于：毕业照'],
+  ['借出去的充电宝','拾获于：上一次聚餐'],
+  ['上个月的工资','拾获于：到账后 3 小时'],
+  ['一句没说出口的"其实我不同意"','拾获于：会议室，第 47 分钟'],
+  ['小时候的梦想（科学家）','拾获于：本院。已改名为民间科学家'],
+  ['另一只袜子','拾获于：洗衣机的另一个维度'],
+  ['打开冰箱时想拿的那样东西','拾获于：冰箱门打开后的第 2 秒']
+];
+const CLAIM = [
+  '认领失败：经核实，此物从未属于任何人。',
+  '请出示你曾经拥有过它的证明材料。',
+  '已被另一位民科认领。经查，那位是明天的你。',
+  '认领成功！……抱歉，看错了。',
+  '此物正在长期主义研究室装修，暂不外借。',
+  '确实。（窗口工作人员已大睡）'
+];
+
+/* ---- 院历 ---- */
+const WEATHER = ['大睡','大水','薄肌','局部发疯','确实','大粉','零星班味','多云转摆烂','晴转耍起','阵性内耗'];
+const YI = ['喝大水（少量多次）','说一句确实','十点大睡','站起来走走','嗦一碗粉','不解释自己','给一个理论找反例','退休一个旧观点','把明天的事留给明天','出门吸一口大氧'];
+const JI = ['报复性熬夜','解释自己','打开收藏夹','回复"在吗"','苹果安卓论战','短时间猛灌','在周一做决定','看前任朋友圈','开会讨论是否开会','把休息做成评分表'];
+
+const SPEED_TEXT = '摘要：本文以周一引力场为背景，考察大水理论在通勤条件下的适用边界。研究发现，当瓶身容量超过 1.5 升且公交车正在关门时，携水者的奔跑效率与水的晃动幅度呈显著负相关（p 值暂无）。进一步地，在引入大睡变量后，样本中 100% 的受试者表示"确实"。本文认为，强者喝大水，但强者也应当少量多次；本文同时承认，以上结论在周五下午可能发生红移。关键词：大水；周一；确实；民间科学。';
+
+</script>
+<script>
+(() => {
+'use strict';
+
+/* ================= 工具 ================= */
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const rnd = (a, b) => a + Math.random() * (b - a);
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const byId = Object.fromEntries(THEORIES.map(t => [t.id, t]));
+const body = document.body;
+const BASE_TITLE = document.title;
+const NOW = new Date();
+const DATE_CN = `${NOW.getFullYear()} 年 ${NOW.getMonth() + 1} 月 ${NOW.getDate()} 日`;
+const DAYKEY = `${NOW.getFullYear()}-${NOW.getMonth() + 1}-${NOW.getDate()}`;
+const seeded = seed => { let s = seed >>> 0; return () => { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; }; };
+const hash = str => { let h = 2166136261; for (const ch of str) { h ^= ch.codePointAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
+const DAYSEED = NOW.getFullYear() * 10000 + (NOW.getMonth() + 1) * 100 + NOW.getDate();
+const stars = n => '★'.repeat(n) + '☆'.repeat(5 - n);
+const mkNo = t => 'MK-' + String(THEORIES.indexOf(t) + 1).padStart(3, '0');
+
+/* ================= 状态 ================= */
+const KEY = 'minke-academy-v1';
+const DEF = {merit:0, ach:{}, visited:{}, flipped:{}, drafts:[], tombs:[], lost:[], flowers:{}, vend:0, classify:0, urge:0, mode:'std', danmaku:true, sound:true, name:'', drink:0, drinkDay:''};
+let S;
+try { S = Object.assign({}, DEF, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch (e) { S = Object.assign({}, DEF); }
+let storageOk = true;
+let saveT;
+function save() {
+  clearTimeout(saveT);
+  saveT = setTimeout(() => { try { localStorage.setItem(KEY, JSON.stringify(S)); storageOk = true; } catch (e) { storageOk = false; } }, 150);
+}
+const T = {labBase:null, retirePick:'', hybridA:null, deanBack:0};
+
+/* ================= 声音：电子木鱼 ================= */
+let actx;
+function knock(pitch = 1) {
+  if (!S.sound) return;
+  try {
+    actx = actx || new (window.AudioContext || window.webkitAudioContext)();
+    const t = actx.currentTime, o = actx.createOscillator(), g = actx.createGain();
+    o.type = 'sine';
+    o.frequency.setValueAtTime(760 * pitch, t);
+    o.frequency.exponentialRampToValueAtTime(380 * pitch, t + 0.09);
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(0.45, t + 0.004);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + 0.22);
+    o.connect(g).connect(actx.destination);
+    o.start(t); o.stop(t + 0.25);
+  } catch (e) {}
+}
+
+/* ================= toast / 成就 / 功德 ================= */
+function pushToast(el, ms) {
+  const box = $('#toasts');
+  box.appendChild(el);
+  const all = $$('.toast', box);
+  if (all.length > 3) all[0].remove();
+  setTimeout(() => { el.classList.add('out'); setTimeout(() => el.remove(), 320); }, ms);
+}
+function toast(msg, opts = {}) {
+  if (!opts.raw) {
+    if (body.classList.contains('mode-queshi')) msg = '确实。';
+    else if (body.classList.contains('mode-work')) msg = '好的收到。' + msg + ' 辛苦了。';
+  }
+  const el = document.createElement('div');
+  el.className = 'toast';
+  el.textContent = msg;
+  pushToast(el, opts.ms || 2800);
+}
+function unlock(id) {
+  if (S.ach[id]) return;
+  const a = ACH.find(x => x[0] === id);
+  if (!a) return;
+  S.ach[id] = Date.now();
+  save();
+  updateAchNum();
+  const el = document.createElement('div');
+  el.className = 'toast ach-t';
+  el.innerHTML = `<span class="medal">成就</span><div><b>成就解锁：${esc(a[1])}</b><br><small>${esc(a[2])}</small></div>`;
+  pushToast(el, 3800);
+  knock(1.5);
+}
+function updateAchNum() { $('#achNum').textContent = `${Object.keys(S.ach).length}/${ACH.length}`; }
+function floatText(text, x, y) {
+  if (RM) return;
+  const el = document.createElement('span');
+  el.className = 'floater';
+  el.textContent = text;
+  el.style.left = x + 'px';
+  el.style.top = (y - 10) + 'px';
+  el.style.transform = 'translate(-50%,0)';
+  $('#floaters').appendChild(el);
+  setTimeout(() => el.remove(), 1000);
+}
+function addMerit(n, x, y, text) {
+  S.merit += n;
+  $('#meritNum').textContent = S.merit;
+  save();
+  if (x != null) floatText(text || `功德+${n}`, x, y);
+  if (S.merit >= 100) unlock('merit100');
+  if (S.merit >= 500) unlock('merit500');
+}
+function copyText(text) {
+  const done = () => toast('已复制，可以粘贴给朋友了。', {raw:true});
+  const fallback = () => {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    ta.remove();
+    ok ? done() : toast('复制没有成功。可以手动选中文字再复制。', {raw:true});
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback);
+  else fallback();
+}
+
+/* ================= 世界观 ================= */
+let modeTimers = [];
+const FX = {};
+function clearModeFx() {
+  modeTimers.forEach(clearInterval);
+  modeTimers = [];
+  $('#fx').innerHTML = '';
+  $$('.wake,.bottle-w').forEach(e => e.remove());
+}
+function setMode(m, opts = {}) {
+  clearModeFx();
+  body.classList.remove(...Object.keys(MODES).map(k => 'mode-' + k));
+  const list = Array.isArray(m) ? m : [m];
+  list.forEach(k => body.classList.add('mode-' + k));
+  S.mode = list[0];
+  save();
+  $('#modeName').textContent = list.map(k => MODES[k].name).join(' + ');
+  list.forEach(k => FX[k] && FX[k]());
+  if (!opts.silent) {
+    list.forEach(k => unlock('m_' + k));
+    if (MODES[list[0]] && list.length === 1) toast(`世界观已切换：${MODES[list[0]].name}。${MODES[list[0]].desc}`, {raw:true});
+  }
+  document.title = body.classList.contains('mode-sleep') ? '（大睡中）' + BASE_TITLE : BASE_TITLE;
+  renderModeGrid();
+}
+FX.sleep = () => {
+  const fx = $('#fx');
+  fx.insertAdjacentHTML('beforeend', '<div class="moon"></div>');
+  if (!RM) modeTimers.push(setInterval(() => {
+    const z = document.createElement('span');
+    z.className = 'zzz';
+    z.textContent = pick(['z', 'Z', 'zZ', 'zzZ', '呼…']);
+    z.style.left = rnd(4, 90) + 'vw';
+    z.style.top = rnd(30, 92) + 'vh';
+    fx.appendChild(z);
+    setTimeout(() => z.remove(), 4000);
+  }, 650));
+  const b = document.createElement('button');
+  b.className = 'btn yellow small wake';
+  b.textContent = '大睡中 · 点这里醒来';
+  b.addEventListener('click', () => { idleSlept = false; setMode('std', {silent:true}); toast('早上好。你睡了一小会儿。', {raw:true}); });
+  body.appendChild(b);
+};
+FX.water = () => {
+  const fx = $('#fx');
+  const wave = cls => `<svg class="${cls}" viewBox="0 0 1200 30" preserveAspectRatio="none" aria-hidden="true"><path d="M0 15 Q 75 0 150 15 T 300 15 T 450 15 T 600 15 T 750 15 T 900 15 T 1050 15 T 1200 15 V30 H0Z"/></svg>`;
+  if (S.drinkDay !== DAYKEY) { S.drink = 0; S.drinkDay = DAYKEY; }
+  const lvl = () => (14 + Math.min(S.drink, 3000) / 3000 * 26) + 'vh';
+  fx.insertAdjacentHTML('beforeend', `<div class="water" id="waterEl" style="--lvl:${lvl()}">${wave('w1')}${wave('w2')}<div class="body"></div></div>`);
+  if (!RM) modeTimers.push(setInterval(() => {
+    const b = document.createElement('span');
+    const s = rnd(6, 16);
+    b.className = 'bubble';
+    b.style.cssText = `width:${s}px;height:${s}px;left:${rnd(2, 98)}vw;bottom:${rnd(0, 10)}vh`;
+    fx.appendChild(b);
+    setTimeout(() => b.remove(), 5000);
+  }, 420));
+  const w = document.createElement('div');
+  w.className = 'bottle-w';
+  const pct = () => Math.min(100, S.drink / 2000 * 100);
+  w.innerHTML = `<div class="bottle" aria-hidden="true"><i style="height:${pct()}%"></i></div><div><b>今日大水</b><br><span id="drinkTxt" style="font-variant-numeric:tabular-nums">${S.drink} / 2000 ml</span><br><button class="btn small" id="drinkBtn" style="margin-top:4px">喝一口（250ml）</button></div>`;
+  body.appendChild(w);
+  let sips = [];
+  $('#drinkBtn', w).addEventListener('click', e => {
+    e.stopPropagation();
+    const now = Date.now();
+    sips = sips.filter(t => now - t < 5000);
+    sips.push(now);
+    S.drink += 250;
+    save();
+    $('i', w).style.height = pct() + '%';
+    $('#drinkTxt').textContent = `${S.drink} / 2000 ml`;
+    const we = $('#waterEl'); if (we) we.style.setProperty('--lvl', lvl());
+    knock(0.6);
+    if (sips.length >= 5) {
+      sips = [];
+      unlock('overdrink');
+      toast('医生提醒：短时间大口猛灌可能稀释血钠。强者也要少量多次。本院已暂停供水 3 秒。', {raw:true, ms:4200});
+      const btn = $('#drinkBtn'); btn.disabled = true; setTimeout(() => { btn.disabled = false; }, 3000);
+    } else if (S.drink === 2000) toast('今日 2000ml 已达成。强者喝大水，也知道什么时候停。', {raw:true});
+    else toast(pick(['咕咚。', '强者已饮。', '又省下一杯奶茶钱。', '水位上涨中。']));
+  });
+};
+FX.pink = () => {
+  if (RM) return;
+  const fx = $('#fx');
+  modeTimers.push(setInterval(() => {
+    const n = document.createElement('span');
+    const isBowl = Math.random() < 0.35;
+    n.className = isBowl ? 'noodle' : 'noodle str';
+    if (isBowl) n.textContent = pick(['🍜', '🍥', '🌸']);
+    n.style.left = rnd(0, 98) + 'vw';
+    n.style.setProperty('--spin', rnd(-360, 360) + 'deg');
+    n.style.animationDuration = rnd(4, 8) + 's';
+    fx.appendChild(n);
+    setTimeout(() => n.remove(), 8200);
+  }, 380));
+};
+FX.crazy = () => {
+  if (RM) return;
+  const m = $('main');
+  m.classList.remove('shake'); void m.offsetWidth; m.classList.add('shake');
+  const fx = $('#fx');
+  const say = () => {
+    const l = document.createElement('div');
+    l.className = 'crazyline';
+    l.textContent = pick(CRAZY_LINES);
+    l.style.left = rnd(2, 40) + 'vw';
+    l.style.top = rnd(18, 75) + 'vh';
+    fx.appendChild(l);
+    setTimeout(() => l.remove(), 2700);
+  };
+  say();
+  modeTimers.push(setInterval(say, 3600));
+};
+FX.work = () => {
+  const fx = $('#fx');
+  const notes = ['周报？', '收到', '这个需求很简单', '对齐一下颗粒度', '下班前给我'];
+  notes.slice(0, window.innerWidth < 600 ? 2 : 4).forEach((t, i) => {
+    const p = document.createElement('div');
+    p.className = 'postit';
+    p.textContent = t;
+    p.style.cssText = `top:${18 + i * 19}vh;${i % 2 ? 'right' : 'left'}:${rnd(1, 4)}vw;transform:rotate(${rnd(-8, 8)}deg)`;
+    p.addEventListener('click', () => { p.remove(); toast('已阅，已转发，已忘记。', {raw:true}); });
+    fx.appendChild(p);
+  });
+};
+FX.queshi = () => { $('#fx').insertAdjacentHTML('beforeend', '<div class="queshi-wm" aria-hidden="true">确实</div>'); };
+
+function renderModeGrid() {
+  const g = $('#modeGrid');
+  if (!g) return;
+  g.innerHTML = Object.entries(MODES).map(([k, m]) =>
+    `<button class="mode-card" data-mode="${k}" aria-pressed="${body.classList.contains('mode-' + k)}"><b>${m.name}</b><span>${m.desc}</span></button>`).join('');
+}
+
+/* ================= 弹幕 ================= */
+function spawnDanmaku() {
+  if (!S.danmaku || RM || document.hidden || body.classList.contains('mode-normal')) return;
+  const d = document.createElement('span');
+  d.className = 'dm';
+  d.textContent = pick(DANMAKU);
+  d.style.top = rnd(14, 64) + 'vh';
+  const dur = rnd(10, 16);
+  d.style.animationDuration = dur + 's';
+  d.style.color = pick(['var(--ink)', 'var(--red)', 'var(--blue)', 'var(--green)']);
+  d.title = '院内 NPC 弹幕（虚构）。点一下举报。';
+  d.addEventListener('click', e => {
+    e.stopPropagation();
+    d.textContent = '已举报（并没有）';
+    d.style.color = 'var(--muted)';
+    unlock('danmaku');
+  });
+  $('#danmaku').appendChild(d);
+  setTimeout(() => d.remove(), dur * 1000 + 300);
+}
+
+/* ================= 闲置 / 切屏 / 键盘彩蛋 ================= */
+let lastAct = Date.now(), idleSlept = false;
+function activity() {
+  lastAct = Date.now();
+  if (idleSlept) {
+    idleSlept = false;
+    setMode('std', {silent:true});
+    toast('你醒了。刚才睡着的那一小会儿，本院替你记下了。', {raw:true});
+  }
+}
+['pointermove', 'keydown', 'scroll', 'touchstart', 'wheel'].forEach(ev => addEventListener(ev, activity, {passive:true}));
+setInterval(() => {
+  if (!idleSlept && S.mode === 'std' && Date.now() - lastAct > 45000 && !document.hidden && !document.querySelector('dialog[open]')) {
+    idleSlept = true;
+    setMode('sleep', {silent:true});
+    unlock('idle');
+    toast('检测到你已经 45 秒没有动静。本院已为你关灯。动一下就能醒来。', {raw:true, ms:4500});
+  }
+}, 3000);
+
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) document.title = pick(['（大睡中）互联网民间科学院', '院长在找你', '你的大水还没喝完', '确实。', '你去哪了？']);
+  else {
+    document.title = body.classList.contains('mode-sleep') ? '（大睡中）' + BASE_TITLE : BASE_TITLE;
+    if (!body.classList.contains('mode-normal')) { addMerit(1); toast('你回来了。学术功德 +1。'); }
+  }
+});
+
+function flash(text) {
+  const f = document.createElement('div');
+  f.className = 'flash';
+  f.textContent = text;
+  body.appendChild(f);
+  setTimeout(() => f.remove(), 2000);
+}
+function rainSix() {
+  if (RM) { toast('666', {raw:true}); return; }
+  for (let i = 0; i < 36; i++) {
+    const s = document.createElement('span');
+    s.className = 'six';
+    s.textContent = '6';
+    s.style.left = rnd(0, 98) + 'vw';
+    s.style.fontSize = rnd(20, 64) + 'px';
+    s.style.setProperty('--spin', rnd(-180, 180) + 'deg');
+    s.style.animationDuration = rnd(1.6, 3.4) + 's';
+    s.style.animationDelay = rnd(0, 0.8) + 's';
+    $('#floaters').appendChild(s);
+    setTimeout(() => s.remove(), 4400);
+  }
+}
+function deanReturns() {
+  unlock('konami');
+  T.deanBack = Date.now();
+  const cat = $('#officeCat');
+  if (cat) { cat.classList.add('in'); $('#officeMsg').textContent = '院长回来了。院长是一只猫。院长压住了论文，然后睡着了。'; }
+  else toast('院长回来了。院长是一只猫。它现在在天台的院长办公室，90 秒后会再出门。', {raw:true, ms:4500});
+}
+const KON = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+let kpos = 0, kbuf = '';
+document.addEventListener('keydown', e => {
+  if (e.target.closest && e.target.closest('input,textarea,select,[contenteditable]')) return;
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  const k = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+  if (k === KON[kpos]) { kpos++; if (kpos === KON.length) { kpos = 0; deanReturns(); } }
+  else kpos = k === KON[0] ? 1 : 0;
+  if (e.key.length !== 1) return;
+  kbuf = (kbuf + e.key.toLowerCase()).slice(-12);
+  const hit = w => { if (kbuf.endsWith(w)) { kbuf = ''; return true; } return false; };
+  if (hit('dashui')) {
+    unlock('dashui');
+    toast('检测到拼音歧义：dashui 是大睡还是大水？本院以两种偏好并列执行。', {raw:true, ms:4500});
+    setMode(['sleep', 'water'], {silent:true});
+  } else if (hit('yuanshen')) { unlock('yuanshen'); flash('原神，启动！'); }
+  else if (hit('v50')) {
+    unlock('v50');
+    const d = NOW.getDay();
+    if (d === 4) { flash('疯狂星期四'); toast('今天确实是星期四。本院没有 50，但有一大瓶水。', {raw:true, ms:4000}); }
+    else toast(`今天是星期${'日一二三四五六'[d]}。本院允许你提前疯狂，但不允许提前收钱。`, {raw:true, ms:4000});
+  }
+  else if (hit('666')) { unlock('six'); rainSix(); }
+  else if (hit('boji')) setMode('thin');
+  else if (hit('dafen')) setMode('pink');
+  else if (hit('queshi')) setMode('queshi');
+  else if (hit('fafeng')) setMode('crazy');
+});
+
+/* 点哪都有反应 */
+let lastFloat = 0;
+document.addEventListener('click', e => {
+  if (e.target.closest('button,a,input,textarea,select,label,summary,dialog,.dm,.sticker,.postit,.face,.seal,.chou,[data-noflt]')) return;
+  if (body.classList.contains('mode-normal')) return;
+  const now = Date.now();
+  if (now - lastFloat < 110) return;
+  lastFloat = now;
+  const c = body.classList;
+  const t = c.contains('mode-queshi') ? '确实'
+    : c.contains('mode-sleep') ? pick(['嘘——', 'zzz', '睡意+1'])
+    : c.contains('mode-water') ? pick(['咕咚', '大水+1', '波'])
+    : c.contains('mode-pink') ? pick(['嗦', '粉+1', '🍜'])
+    : c.contains('mode-thin') ? '线条+1'
+    : c.contains('mode-work') ? pick(['收到', '已阅', '好的'])
+    : c.contains('mode-crazy') ? pick(['啊！', '啊啊！', '？！'])
+    : pick(FLOATS);
+  addMerit(1, e.clientX, e.clientY, t);
+});
+
+/* ================= 共用片段 ================= */
+function roomHead(id, lede) {
+  const r = ROOMS.find(x => x.id === id);
+  return `<div class="room-head"><nav class="crumb" aria-label="位置"><a href="#home">大厅</a><span>/</span><span>${r.floor}</span><span>/</span><span>${r.name}</span></nav><h1 class="plaque">${r.name}</h1><p class="room-lede">${lede}</p></div>`;
+}
+function foot() {
+  const others = ROOMS.filter(r => r.id !== 'home' && r.id !== current);
+  const un = others.filter(r => !S.visited[r.id]);
+  const nxt = pick(un.length ? un : others);
+  return `<div class="btn-row" style="justify-content:space-between;margin-top:8px"><a class="btn ghost small" href="#home">← 回大厅</a><a class="btn yellow small" href="#${nxt.id}">随便推开一扇门：${nxt.name} →</a></div>`;
+}
+function cardHtml(t) {
+  const s = SRC[t.src];
+  return `<div class="card" data-id="${t.id}">
+  <div class="card-in">
+    <div class="face front" tabindex="0" role="button" aria-label="${esc(t.name)}，翻到背面">
+      <div class="card-top"><span>档案 ${mkNo(t)}</span><span>${esc(t.when)}</span></div>
+      <h3><span>${esc(t.name)}</span><span class="emo" aria-hidden="true">${t.emoji}</span></h3>
+      <p class="slogan"><span>${esc(t.slogan)}</span></p>
+      <p>${esc(t.thesis)}</p>
+      <div class="tags"><span class="chip ${s.cls}">${s.label}</span><span class="chip mute">${t.fam}</span><span class="stars" title="确实指数">${stars(t.cred)}</span></div>
+    </div>
+    <div class="face back">
+      <div class="back-h">不负责解决什么</div><p>${esc(t.notFor)}</p>
+      <div class="back-h">什么时候有用</div><p>${esc(t.useful)}</p>
+      <div class="back-h">院内物件</div><p>${esc(t.item)}</p>
+      <div class="btn-row" style="margin-top:auto;padding-top:6px"><button class="btn small" data-act="detail">档案详情</button><button class="btn small ghost" data-act="lab">给它一个反例</button></div>
+    </div>
+  </div></div>`;
+}
+const SRC_EXPLAIN = {
+  net:'网络收录：依据 2026 年的公开报道与网友整理转述。文字是本院的概括，不是原话；本院不收录提出者姓名。',
+  pend:'待核实：本院只见到这个名称，主张是按字面推测的。',
+  classic:'网络古典：流传已久的说法，出处众多，本院不追溯首创者。',
+  orig:'本院戏仿：原创玩笑，不是网络流行语。'
+};
+function openTheory(id) {
+  const t = byId[id];
+  if (!t) return;
+  $('#theoryBody').innerHTML = `
+    <div class="card-top"><span>档案 ${mkNo(t)}</span><span>${SRC[t.src].label} · ${t.fam}</span></div>
+    <h2 style="font-family:var(--f-display);font-weight:900;font-size:clamp(24px,5vw,32px);margin:0;line-height:1.25;padding-right:40px">${t.emoji} ${esc(t.name)}</h2>
+    <p class="slogan"><span>${esc(t.slogan)}</span></p>
+    <dl class="dl">
+      <dt>主张</dt><dd>${esc(t.thesis)}</dd>
+      <dt>什么时候有用</dt><dd>${esc(t.useful)}</dd>
+      <dt>不负责解决</dt><dd>${esc(t.notFor)}</dd>
+      <dt>院内物件</dt><dd>${esc(t.item)}</dd>
+      <dt>出现时间</dt><dd>${esc(t.when)}</dd>
+      <dt>内容身份</dt><dd>${SRC_EXPLAIN[t.src]}</dd>
+      <dt>确实指数</dt><dd><span class="stars">${stars(t.cred)}</span></dd>
+    </dl>
+    <div class="btn-row"><button class="btn" data-go="lab" data-tid="${t.id}">送去反例实验室</button><button class="btn ghost" data-go="hybrid" data-tid="${t.id}">放进培养皿</button><button class="btn ghost" data-go="garden" data-tid="${t.id}">我已经不信了</button></div>`;
+  const d = $('#dlgTheory');
+  if (!d.open) d.showModal();
+}
+
+/* ================= 视图 ================= */
+const V = {};
+let current = 'home';
+
+/* ---------- 大厅 ---------- */
+function buildingHtml() {
+  const floors = ['天台', '7F', '6F', '5F', '4F', '3F', '2F', '1F', 'B1'];
+  let h = '<div class="building"><div class="roof"><div class="flag"><span>筹</span></div></div><div class="floors">';
+  for (const f of floors) {
+    const rs = ROOMS.filter(r => r.floor === f);
+    h += `<div class="floor"><div class="floor-no">${f}</div>`;
+    rs.forEach(r => {
+      if (r.id === 'home') h += `<div class="room here"><span class="chip solid">你在这里</span><b>大厅</b></div>`;
+      else h += `<a class="room${S.visited[r.id] ? ' visited' : ''}" href="#${r.id}"><span class="door" aria-hidden="true"></span><span class="chip mute">${r.status}</span><b>${r.name}</b></a>`;
+    });
+    if (f === '天台') h += `<button class="room" type="button" data-wind style="text-align:left;border-top:none;border-right:none;border-bottom:none;font:inherit"><span class="chip mute">风很大</span><b>天台</b></button>`;
+    h += '</div>';
+  }
+  return h + '</div><div class="ground"></div></div>';
+}
+V.home = {
+  html() {
+    const dr = seeded(DAYSEED);
+    const dpick = a => a[Math.floor(dr() * a.length)];
+    const w = [dpick(WEATHER), dpick(WEATHER), dpick(WEATHER)];
+    const yi = [...YI].sort(() => dr() - 0.5).slice(0, 2);
+    const ji = [...JI].sort(() => dr() - 0.5).slice(0, 2);
+    const picks = [...THEORIES].sort(() => dr() - 0.5).slice(0, 3);
+    const emo = Math.floor(dr() * 70) + 20;
+    const qs = 1 + Math.floor(dr() * 5), wind = 1 + Math.floor(dr() * 9);
+    return `<div class="wrap">
+    <article class="doc" id="mainDoc">
+      <span class="sticker" style="--rot:-6deg;left:-8px;top:-16px" data-sticker="note">看不懂？那就对了</span>
+      <span class="sticker round" style="--rot:8deg;right:-12px;top:150px" data-sticker="emo" aria-label="流汗黄豆贴纸">😅</span>
+      <h1 class="redhead">互联网民间科学院<span class="chou" id="chou" title="试试把它摘掉">（筹）</span>文件</h1>
+      <p class="docno">民科院发〔2026〕250 号</p>
+      <div class="redline" aria-hidden="true"><span>★</span></div>
+      <h2 class="doc-title">关于让一句歪理<br>拥有一间办公室的通知</h2>
+      <div class="doc-body">
+        <p class="noindent">各位网友、各学派、各"大×理论"研究小组：</p>
+        <p>近期，薄肌、大水、大睡等理论相继出现，中文互联网进入"大理论时代"。为妥善安置这些理论，本院决定（筹）成立。现将有关事项通知如下：</p>
+        <ol>
+          <li>一、凡来访者，均可在<a href="#archive">理论档案馆</a>查阅 ${THEORIES.length} 份理论档案，并翻到背面，查看它们不负责解决的问题。</li>
+          <li>二、对任何理论有意见的，请前往<a href="#lab">反例实验室</a>给它一个具体的"但是"，或在<a href="#hybrid">学说杂交器</a>里让它和别的理论生一个孩子。</li>
+          <li>三、有烦恼的，可投入<a href="#vending">理论自动售货机</a>，兑换一张理论收据。本机只收烦恼，不收钱。</li>
+          <li>四、尚未加入学派的，请到<a href="#exam">学派分配处</a>免试入学，领取工牌。</li>
+          <li>五、对用"苹果安卓"给人分类有疑问的，请咨询<a href="#relativity">相对论研究所</a>。本所只研究手机，不研究人。</li>
+          <li>六、不再相信的旧观点，可送往<a href="#garden">退休理论花园</a>安葬，允许申请复活。</li>
+          <li>七、本院世界观可随时切换。点顶栏的"世界观"，或者直接在键盘上打出某些拼音。</li>
+        </ol>
+        <p>特此通知。</p>
+      </div>
+      <div class="doc-sign">
+        <svg class="seal" id="seal" viewBox="0 0 200 200" role="img" aria-label="公章：互联网民间科学院（筹），学术专用章，非权威">
+          <defs><path id="sealArc" d="M 30 104 A 70 70 0 1 1 170 104"/></defs>
+          <circle cx="100" cy="100" r="92" fill="none" style="stroke:var(--red)" stroke-width="7"/>
+          <text font-size="18"><textPath href="#sealArc" startOffset="50%" text-anchor="middle">互联网民间科学院（筹）</textPath></text>
+          <text x="100" y="122" font-size="54" text-anchor="middle">★</text>
+          <text x="100" y="160" font-size="14" text-anchor="middle">学术专用章·非权威</text>
+        </svg>
+        <div>互联网民间科学院（筹）</div>
+        <div>${DATE_CN}</div>
+      </div>
+      <div class="doc-foot">
+        <div><span>抄送：各位的大睡搭子、饮水搭子，院长（不在）。</span></div>
+        <div><span>互联网民间科学院（筹）办公室</span><span>${DATE_CN}印发</span></div>
+      </div>
+    </article>
+
+    <section>
+      <div class="sec-h"><h2>附件一：楼层导览</h2><span class="note">每扇门都能推开。去过的房间会打勾。</span></div>
+      ${buildingHtml()}
+    </section>
+
+    <section>
+      <div class="sec-h"><h2>附件二：院内天气与院历</h2><span class="note">按日期生成，每天不同</span></div>
+      <div class="almanac">
+        <div>
+          <div class="eyebrow">院内天气 · ${DATE_CN}</div>
+          <div class="big">上午${w[0]}，午后转${w[1]}，傍晚局部${w[2]}。</div>
+          <div class="small muted ui">降 emo 概率 ${emo}% · 确实指数 <span class="stars">${stars(qs)}</span> · 大站风 ${wind} 级</div>
+          <div class="small muted ui" style="margin-top:6px">本预报不观测你的情绪，也不观测全网。</div>
+        </div>
+        <div>
+          <div class="eyebrow">院历</div>
+          <div class="yiji" style="margin-top:8px"><span class="y">宜</span><span>${yi.join('<br>')}</span><span class="j">忌</span><span>${ji.join('<br>')}</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-h"><h2>附件三：本日精选档案</h2><span class="note">不以热度排名 · 点卡片翻面</span></div>
+      <div class="cards">${picks.map(cardHtml).join('')}</div>
+      <div class="btn-row" style="margin-top:14px"><a class="btn" href="#archive">进档案馆看全部 ${THEORIES.length} 份</a><button class="btn ghost" type="button" data-random-room>随便推开一扇门</button></div>
+    </section>
+
+    <section class="sources">
+      <p><b>本院非权威机构。</b>标"网络收录"的条目依据公开讨论转述，文字为本院概括；标"待核实"的只见过名称；标"本院戏仿"的是原创玩笑。本院只收理论，不收提出者姓名。所有内容都不构成健康、投资或人生建议。喝水请少量多次。</p>
+      <p>资料线索：<a href="https://www.huxiu.com/article/4897592.html" target="_blank" rel="noopener">虎嗅《薄肌和大水理论崛起后，中文互联网的"大理论时代"开始了》</a> · <a href="https://baike.baidu.com/item/%E5%A4%A7%E6%B0%B4%E7%90%86%E8%AE%BA/69315070" target="_blank" rel="noopener">百度百科"大水理论"</a> · <a href="https://m.21jingji.com/article/20261020/herald/9bb9d7bc1132e9c761e43e5884bf17b4.html" target="_blank" rel="noopener">21 财经：大水理论走红</a> · <a href="https://github.com/grokkkkkk/cn-theories" target="_blank" rel="noopener">网友整理的"××理论"演变档案</a></p>
+      <p>本院源码：<a href="https://github.com/Polaris-Aeterna/minke-academy" target="_blank" rel="noopener">github.com/Polaris-Aeterna/minke-academy</a>。院长不在，欢迎提交新的大×理论。</p>
+    </section>
+
+    <div class="endzone" id="endzone">
+      <span class="ch" id="endChair" role="button" tabindex="0" aria-label="一把椅子">🪑</span>
+      <span>你已到达互联网的尽头。这里只有一把椅子。</span>
+    </div>
+  </div>`;
+  },
+  mount(root) {
+    let sealClicks = [];
+    $('#seal', root).addEventListener('click', e => {
+      const now = Date.now();
+      sealClicks = sealClicks.filter(t => now - t < 2500);
+      sealClicks.push(now);
+      knock(0.8);
+      floatText(pick(['盖章', '啪', '非权威', '已盖']), e.clientX, e.clientY);
+      if (sealClicks.length >= 5) {
+        sealClicks = [];
+        const s = $('#seal');
+        s.classList.add('drop');
+        unlock('seal');
+        toast('公章掉了。本院已失去最后一点权威。', {raw:true});
+        setTimeout(() => { s.classList.remove('drop'); toast('公章已找回。本院重新获得了一点点权威（非权威）。', {raw:true}); }, 2600);
+      }
+    });
+    $('#chou', root).addEventListener('click', () => {
+      const c = $('#chou');
+      c.classList.add('falling');
+      unlock('chou');
+      setTimeout(() => { c.classList.remove('falling'); toast('"筹"字永远不摘。已用胶水粘回。', {raw:true}); }, 900);
+    });
+    $$('[data-sticker]', root).forEach(st => st.addEventListener('click', () => {
+      if (st.dataset.sticker === 'note') {
+        st.classList.toggle('peeled');
+        toast(st.classList.contains('peeled') ? '贴纸已撕下。' : '……又贴回去了。', {raw:true});
+      } else {
+        const seq = [['😅', '流汗黄豆：尴尬，但保持体面。'], ['🫠', '融化了：班味入骨。'], ['🙂', '微笑：我很平静（我很生气）。'], ['💀', '骷髅：笑死。'], ['😭', '大哭：太好笑了。']];
+        const i = (seq.findIndex(x => x[0] === st.textContent) + 1) % seq.length;
+        st.textContent = seq[i][0];
+        toast(seq[i][1], {raw:true});
+      }
+    }));
+    const end = $('#endzone', root);
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(es => { if (es.some(x => x.isIntersecting)) { unlock('end'); io.disconnect(); } }, {threshold:0.6});
+      io.observe(end);
+    }
+    const sit = () => toast('你坐下了。"马上起来"开始变成一个弹性单位。', {raw:true});
+    $('#endChair', root).addEventListener('click', sit);
+    $('#endChair', root).addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); sit(); } });
+  }
+};
+
+/* ---------- 档案馆 ---------- */
+V.archive = {
+  html() {
+    return `<div class="wrap">${roomHead('archive', `收录 ${THEORIES.length} 份理论档案。正面是主张，<em>背面是它不负责解决的事</em>。点卡片翻面。`)}
+    <div class="panel">
+      <div class="field" style="margin-bottom:12px"><label for="arcQ">搜索名称、口号或主张</label><input id="arcQ" type="text" placeholder="例：水、睡、确实、周一" autocomplete="off"></div>
+      <div class="filters" role="group" aria-label="按家族筛选">
+        <button class="fbtn" data-fam="" aria-pressed="true">全部</button>
+        ${FAMS.map(f => `<button class="fbtn" data-fam="${f}" aria-pressed="false">${f}</button>`).join('')}
+        <span class="ui small muted" id="arcCount" style="margin-left:auto"></span>
+      </div>
+    </div>
+    <div class="cards" id="arcCards"></div>
+    ${foot()}</div>`;
+  },
+  mount(root) {
+    let fam = '', q = '';
+    const draw = () => {
+      const list = THEORIES.filter(t => (!fam || t.fam === fam) && (!q || (t.name + t.slogan + t.thesis + t.short).toLowerCase().includes(q.toLowerCase())));
+      $('#arcCount').textContent = `共 ${list.length} 份`;
+      $('#arcCards').innerHTML = list.length ? list.map(cardHtml).join('')
+        : `<div class="empty" style="grid-column:1/-1"><b style="font-family:var(--f-display);font-size:18px;color:var(--ink)">本院暂未建立这个学科。</b><span>可以清空筛选，或者去售货机现做一个。</span><div class="btn-row"><button class="btn small ghost" id="arcClear">清空筛选</button><a class="btn small" href="#vending">去售货机</a></div></div>`;
+      const c = $('#arcClear');
+      if (c) c.addEventListener('click', () => { q = ''; fam = ''; $('#arcQ').value = ''; $$('.fbtn').forEach(b => b.setAttribute('aria-pressed', b.dataset.fam === '')); draw(); });
+    };
+    $('#arcQ', root).addEventListener('input', e => { q = e.target.value.trim(); draw(); });
+    $$('.fbtn', root).forEach(b => b.addEventListener('click', () => {
+      fam = b.dataset.fam;
+      $$('.fbtn', root).forEach(x => x.setAttribute('aria-pressed', x === b));
+      draw();
+    }));
+    draw();
+  }
+};
+
+/* ---------- 反例实验室 ---------- */
+V.lab = {
+  html() {
+    const base = T.labBase || 'water';
+    return `<div class="wrap">${roomHead('lab', '给一个理论一个具体的"但是"。它不会因此认输，只会长出一个<em>更精确的新版本</em>。原版本永远保留。')}
+    <div class="panel bold">
+      <div class="grid2">
+        <div class="field"><label for="labSel">选一个理论</label><select id="labSel">${THEORIES.map(t => `<option value="${t.id}"${t.id === base ? ' selected' : ''}>${t.emoji} ${esc(t.name)}</option>`).join('')}</select></div>
+        <div class="field"><label>当前版本</label><div id="labCur"></div></div>
+      </div>
+    </div>
+    <section><div class="sec-h"><h2>选一个具体的反例</h2><span class="note">不问宏大的哲学问题，只问一个具体场景</span></div>
+      <div class="cases" id="labConds">${CONDS.map(c => `<button class="case-btn" data-cond="${c.id}"><b>${c.icon} ${c.label}</b><small>挑战类型：${c.kind}</small></button>`).join('')}</div>
+    </section>
+    <section id="labOut"></section>
+    <section><div class="sec-h"><h2>版本记录</h2><span class="note">每次修改都保留父版本</span></div><div id="labHist"></div></section>
+    <section><div class="sec-h"><h2>我的临时抽屉</h2><span class="note">只存在这台设备的浏览器里</span></div><div id="drawer"></div></section>
+    ${foot()}</div>`;
+  },
+  mount(root) {
+    let L;
+    const reset = id => {
+      const t = byId[id];
+      L = {t, versions:[{v:1, name:t.name, thesis:t.thesis, cond:null}]};
+      $('#labOut').innerHTML = '';
+      drawCur(); drawHist();
+    };
+    const last = () => L.versions[L.versions.length - 1];
+    const drawCur = () => {
+      const l = last();
+      $('#labCur').innerHTML = `<div style="border:1px solid var(--line);padding:8px 12px"><span class="chip red">v${l.v}</span> <b style="font-family:var(--f-display)">${esc(l.name)}</b><div class="small" style="margin-top:4px">${esc(l.thesis)}</div></div>`;
+    };
+    const drawHist = () => {
+      $('#labHist').innerHTML = `<div class="hist">${L.versions.map(v => `<div><span class="vno">v${v.v}${v.cond ? ' · 反例：' + esc(v.cond) : ' · 原版'}</span><b>${esc(v.name)}</b><span class="small">${esc(v.thesis)}</span></div>`).join('')}</div>
+        <div class="btn-row" style="margin-top:12px"><button class="btn small" id="labSave"${L.versions.length < 2 ? ' disabled' : ''}>把最新版本存进抽屉</button><button class="btn small ghost" id="labCopy">复制最新版本</button></div>`;
+      $('#labSave').addEventListener('click', () => {
+        const l = last();
+        S.drafts.unshift({id:Date.now(), base:L.t.name, name:l.name, thesis:l.thesis, v:l.v, time:new Date().toLocaleString('zh-CN', {hour12:false})});
+        S.drafts = S.drafts.slice(0, 30);
+        save();
+        drawDrawer();
+        setTimeout(() => toast(storageOk ? '已存进抽屉。只保存在这台设备的浏览器里。' : '这个浏览器不让本院保存。可以先复制文字带走。', {raw:true}), 200);
+      });
+      $('#labCopy').addEventListener('click', () => { const l = last(); copyText(`【${l.name}】v${l.v}\n${l.thesis}\n——互联网民间科学院（筹）反例实验室 · 本院允许你明天改变主意`); });
+    };
+    const drawDrawer = () => {
+      const d = $('#drawer');
+      if (!S.drafts.length) { d.innerHTML = '<div class="empty">办公室还没放桌子。<span>在上面确认一个新版本，再点"存进抽屉"。</span></div>'; return; }
+      d.innerHTML = `<div class="drafts">${S.drafts.map(x => `<div class="draft"><span class="chip mute" style="align-self:flex-start">源自 ${esc(x.base)} · v${x.v}</span><b>${esc(x.name)}</b><span class="small">${esc(x.thesis)}</span><span class="ui small muted">${esc(x.time)}</span><div class="btn-row"><button class="btn small ghost" data-copy="${x.id}">复制</button><button class="btn small ghost" data-del="${x.id}">删除</button></div></div>`).join('')}</div>`;
+      $$('[data-copy]', d).forEach(b => b.addEventListener('click', () => { const x = S.drafts.find(y => String(y.id) === b.dataset.copy); if (x) copyText(`【${x.name}】\n${x.thesis}\n——互联网民间科学院（筹）`); }));
+      $$('[data-del]', d).forEach(b => b.addEventListener('click', () => {
+        if (b.dataset.armed) { S.drafts = S.drafts.filter(y => String(y.id) !== b.dataset.del); save(); drawDrawer(); toast('已从抽屉里拿走。', {raw:true}); }
+        else { b.dataset.armed = '1'; b.textContent = '再点一次确认删除'; setTimeout(() => { if (b.isConnected) { delete b.dataset.armed; b.textContent = '删除'; } }, 3000); }
+      }));
+    };
+    $('#labSel', root).addEventListener('change', e => { T.labBase = e.target.value; reset(e.target.value); });
+    $$('[data-cond]', root).forEach(b => b.addEventListener('click', () => {
+      const c = CONDS.find(x => x.id === b.dataset.cond);
+      const t = L.t, l = last(), n = l.v + 1;
+      const sp = LAB_SPECIAL[`${t.id}|${c.id}`];
+      const first = L.versions.length === 1;
+      const lead = first ? `${t.a}，${t.b}` : l.thesis.replace(/[。！]$/, '');
+      const tail = sp ? `当${c.label}时：${sp}` : `当${c.label}时，${c.patch}。`;
+      const thesis = first ? `${lead}。但${tail}` : `${lead}。另外，${tail}`;
+      const name = (l.name.includes(c.prefix) ? '再' : '') + c.prefix + '·' + l.name;
+      $('#labOut').innerHTML = `<div class="panel bold">
+        <div class="eyebrow" style="margin-bottom:8px">候选 v${n} · 模板辅助草稿 · 还没确认</div>
+        <p class="small muted" style="margin:0 0 10px"><s>${esc(l.thesis)}</s></p>
+        <div class="grid2">
+          <div class="field"><label for="labName">新名称（最多 24 字）</label><input id="labName" type="text" maxlength="24" value="${esc(name.slice(0, 24))}"></div>
+          <div class="field"><label>修改理由</label><div class="small" style="padding-top:8px">加入了"${c.kind}"这个前提，缩小了原来的适用范围。</div></div>
+        </div>
+        <div class="field" style="margin-top:12px"><label for="labText">新主张（每个字都可以改）</label><textarea id="labText" maxlength="400" rows="4">${esc(thesis)}</textarea></div>
+        <div class="btn-row" style="margin-top:12px"><button class="btn" id="labOk">确认为 v${n}</button><button class="btn ghost" id="labDrop">算了，不改</button></div>
+      </div>`;
+      $('#labOut').scrollIntoView({behavior: RM ? 'auto' : 'smooth', block:'center'});
+      $('#labDrop').addEventListener('click', () => { $('#labOut').innerHTML = ''; toast('原版本保持不变。', {raw:true}); });
+      $('#labOk').addEventListener('click', () => {
+        const nt = $('#labText').value.trim(), nn = $('#labName').value.trim() || name;
+        if (!nt) { toast('新主张不能是空的。至少写一句"它在什么时候不对"。', {raw:true}); return; }
+        if (nt === l.thesis) { toast('只改了名字，主张没变。可以保存为创作，但不算一次观点修订。', {raw:true, ms:3600}); return; }
+        L.versions.push({v:n, name:nn, thesis:nt, cond:c.label});
+        $('#labOut').innerHTML = '';
+        drawCur(); drawHist();
+        unlock('lab1');
+        if (n >= 5) unlock('lab5');
+        toast(`v${n} 已生成。原句没有被擦掉，只是留下了修改的痕迹。`, {raw:true});
+      });
+    }));
+    reset(T.labBase || 'water');
+    drawDrawer();
+  }
+};
+
+/* ---------- 学说杂交器 ---------- */
+V.hybrid = {
+  html() {
+    const opts = sel => THEORIES.map(t => `<option value="${t.id}"${t.id === sel ? ' selected' : ''}>${t.emoji} ${esc(t.name)}</option>`).join('');
+    const a = T.hybridA || 'water';
+    const b = a === 'boji' ? 'sleep' : 'boji';
+    return `<div class="wrap">${roomHead('hybrid', '把两个理论放进同一个培养皿。它们会先确定关系，再<em>生出一个新学派</em>。产物默认只属于你。')}
+    <div class="panel bold">
+      <div class="dish-zone">
+        <div class="field"><label for="hyA">亲本 A</label><select id="hyA">${opts(a)}</select></div>
+        <div class="btn-row" style="justify-content:center"><button class="btn small ghost" id="hyRand">随机配对</button></div>
+        <div class="field"><label for="hyB">亲本 B</label><select id="hyB">${opts(b)}</select></div>
+      </div>
+      <div class="dish" id="dish" style="margin-top:18px"><span class="ea" id="dEa">${byId[a].emoji}</span><span class="eb" id="dEb">${byId[b].emoji}</span></div>
+      <div class="btn-row" style="justify-content:center;margin-top:12px"><button class="btn" id="hyGo">开始培养</button></div>
+    </div>
+    <section id="hyOut"></section>
+    ${foot()}</div>`;
+  },
+  mount(root) {
+    const A = () => byId[$('#hyA').value], B = () => byId[$('#hyB').value];
+    const syncDish = () => { $('#dEa').textContent = A().emoji; $('#dEb').textContent = B().emoji; $('#dish').classList.remove('merge'); };
+    $('#hyA', root).addEventListener('change', syncDish);
+    $('#hyB', root).addEventListener('change', syncDish);
+    $('#hyRand', root).addEventListener('click', () => {
+      const x = pick(THEORIES); let y = pick(THEORIES);
+      while (y === x) y = pick(THEORIES);
+      $('#hyA').value = x.id; $('#hyB').value = y.id; syncDish();
+    });
+    const result = (a, b, example) => {
+      const seed = hash(a.id + '|' + b.id);
+      const r = RELS[seed % RELS.length];
+      const names = [`${a.short}${b.short}主义`, `${a.short}系${b.short}学派`, `新${a.short}${b.short}理论`, `${a.short}×${b.short}联合研究所`];
+      const nm = names[(seed >>> 3) % names.length];
+      const beast = `${a.short.slice(-1)}${b.short.slice(-1)}兽`;
+      $('#hyOut').innerHTML = `<div class="result-card">
+        <div class="eyebrow">${example ? '示例产物 · ' : ''}培养完成 · 本院杂交产物，非网络流行理论</div>
+        <h3>${esc(nm)}</h3>
+        <p class="slogan"><span>${esc(a.a)}，${esc(b.b)}。</span></p>
+        <dl class="kv">
+          <dt>两者关系</dt><dd><span class="chip red">${r.k}</span> ${esc(r.t(a, b))}</dd>
+          <dt>继承了</dt><dd>${esc(a.name)}的院内物件：${esc(a.item)}</dd>
+          <dt>抛弃了</dt><dd>${esc(b.name)}的顾虑：${esc(b.notFor)}</dd>
+          <dt>理论生物</dt><dd><span style="font-size:28px">${a.emoji}${b.emoji}</span> ${esc(beast)}（幼年期）</dd>
+          <dt>父母</dt><dd>${esc(a.name)} ${mkNo(a)} × ${esc(b.name)} ${mkNo(b)}</dd>
+        </dl>
+        <div class="btn-row"><button class="btn small ghost" id="hyCopy">复制这个新学派</button></div>
+      </div>`;
+      $('#hyCopy').addEventListener('click', () => copyText(`【${nm}】\n${a.a}，${b.b}。\n关系：${r.k}。${r.t(a, b)}\n理论生物：${beast}\n——互联网民间科学院（筹）学说杂交器`));
+    };
+    $('#hyGo', root).addEventListener('click', () => {
+      const a = A(), b = B();
+      if (a === b) { toast('同一个理论没法和自己杂交。建议它先去反例实验室长出一个分支。', {raw:true}); return; }
+      const d = $('#dish');
+      d.classList.remove('merge'); void d.offsetWidth; d.classList.add('merge');
+      $('#hyGo').disabled = true;
+      setTimeout(() => { result(a, b); $('#hyGo').disabled = false; unlock('hybrid'); knock(1.2); }, RM ? 0 : 1250);
+    });
+    result(A(), B(), true);
+  }
+};
+
+/* ---------- 售货机 ---------- */
+const WORRY = ['上班','加班','周一','考试','减肥','失眠','熬夜','对象','恋爱','分手','前任','工资','房租','老板','同事','论文','毕业','找工作','面试','催婚','结婚','脱发','头发','焦虑','内耗','拖延','作业','开会','早起','外卖','奶茶','社恐','孤独','无聊','迷茫','deadline','ddl','emo','穷','胖','累','困','钱','班','学习','实习','导师','室友','相亲','体重','睡不着','起不来'];
+function worryKey(s) {
+  const low = s.toLowerCase();
+  const hit = WORRY.filter(w => low.includes(w)).sort((a, b) => b.length - a.length)[0];
+  if (hit) return hit;
+  let t = s.replace(/[\s，。！？、,.!?~…"“”'‘’（）()【】\[\]:：;；\-—]/g, '');
+  [...V_STOP].sort((a, b) => b.length - a.length).forEach(w => { t = t.split(w).join(''); });
+  return t.slice(0, 4) || '人生';
+}
+function receiptHtml(worry, example) {
+  const k = worryKey(worry);
+  const name = pick(V_PRE) + k + pick(V_SUF);
+  const no = 'MK-V-' + String(Math.floor(rnd(1000, 9999)));
+  const tm = new Date().toLocaleTimeString('zh-CN', {hour:'2-digit', minute:'2-digit', hour12:false});
+  const it = pick(THEORIES).item;
+  const lines = {
+    slogan:`弱者为${k}烦恼，强者${pick(V_STRONG)}再说。`,
+    thesis:`${k}不是问题，${k}的${pick(V_ASPECT)}才是问题。`,
+    change:`仅在${pick(V_COND)}有效。`
+  };
+  const shown = worry.length > 40 ? worry.slice(0, 40) + '…' : worry;
+  const text = `互联网民间科学院（筹）理论收据 ${no}\n投入：${shown}\n出货：${name}\n口号：${lines.slogan}\n主张：${lines.thesis}\n找零：${lines.change}\n院内物件：${it}\n本院允许你明天改变主意。`;
+  return {text, html:`<div class="receipt" role="document" aria-label="理论收据">
+    <div class="c">互联网民间科学院（筹）<br>理论自动售货机 · 3F 第 1 号机</div>
+    <hr>
+    <div class="row"><span>单号 ${no}</span><span>${tm}</span></div>
+    <div>投入：一个烦恼</div>
+    <div>「${esc(shown)}」</div>
+    <hr>
+    <div class="c">【出货】</div>
+    <h4>${esc(name)}</h4>
+    <div>口号：${esc(lines.slogan)}</div>
+    <div>主张：${esc(lines.thesis)}</div>
+    <hr>
+    <div>找零（适用条件）：</div>
+    <div>${esc(lines.change)}</div>
+    <hr>
+    <div>附赠院内物件：${esc(it)}</div>
+    <div>收银员：无（院长出去了）</div>
+    <div class="c" style="margin-top:8px">本院允许你明天改变主意。</div>
+    <span class="stamp">${example ? '示例' : '已出货'}·非权威</span>
+  </div>`};
+}
+V.vending = {
+  html() {
+    const slots = THEORIES.filter((t, i) => i % 4 === 0).slice(0, 8);
+    const ex = receiptHtml('周一不想上班', true);
+    return `<div class="wrap">${roomHead('vending', '投入一个烦恼，吐出一张理论收据。<em>找零永远是一个适用条件</em>。本机只收烦恼，不收钱。')}
+    <div class="vend">
+      <div class="machine">
+        <div class="machine-title">理论自动售货机</div>
+        <div class="glass" id="glass">${slots.map(t => `<div class="slot"><span class="e">${t.emoji}</span><small>${esc(t.short)}<br>1 个烦恼</small></div>`).join('')}</div>
+        <form class="coin-in" id="vForm">
+          <label for="vIn" class="ui small">投币口（请投入一个烦恼）</label>
+          <input id="vIn" type="text" maxlength="60" placeholder="例：周一不想上班 / 对象不回消息 / 论文写不完" autocomplete="off">
+          <div class="btn-row"><button class="btn yellow" type="submit">投入烦恼</button><button class="btn small ghost" type="button" id="vLucky" style="color:var(--on-red);border-color:var(--on-red);box-shadow:none">帮我想一个烦恼</button></div>
+        </form>
+        <div class="tray" aria-hidden="true"></div>
+      </div>
+      <div>
+        <div id="vOut">${ex.html}<div class="example-tag">↑ 示例收据。投入你自己的烦恼，会出一张新的。</div></div>
+        <div class="btn-row" style="justify-content:center;margin-top:14px"><button class="btn small ghost" id="vCopy">复制收据文字</button></div>
+      </div>
+    </div>
+    ${foot()}</div>`;
+  },
+  mount(root) {
+    let lastText = receiptHtml('周一不想上班', true).text;
+    const sample = ['周一不想上班', '对象不回消息', '论文写不完', '又熬夜了', '工资花完了', '老板又开会', '减肥失败', '早上起不来', '外卖吃腻了', '头发越来越少'];
+    $('#vLucky', root).addEventListener('click', () => { $('#vIn').value = pick(sample); $('#vIn').focus(); });
+    $('#vForm', root).addEventListener('submit', e => {
+      e.preventDefault();
+      const v = $('#vIn').value.trim();
+      if (!v) { toast('投币口是空的。本机只收烦恼，至少投一个小的。', {raw:true}); $('#vIn').focus(); return; }
+      const slots = $$('.slot', root);
+      const s = pick(slots);
+      s.classList.remove('drop'); void s.offsetWidth; s.classList.add('drop');
+      setTimeout(() => s.classList.remove('drop'), 900);
+      knock(0.9);
+      const r = receiptHtml(v);
+      lastText = r.text;
+      setTimeout(() => {
+        $('#vOut').innerHTML = r.html;
+        S.vend++; save();
+        if (S.vend >= 3) unlock('vending3');
+      }, RM ? 0 : 600);
+    });
+    $('#vCopy', root).addEventListener('click', () => copyText(lastText));
+  }
+};
+
+/* ---------- 苹果安卓相对论 ---------- */
+function classify(thing) {
+  const s = thing.trim();
+  if (REFUSE.some(w => s.includes(w))) return {refuse:true};
+  const h = hash(s);
+  const os = OS[h % OS.length];
+  const others = OS.filter(o => o !== os);
+  return {os, why: os.why[(h >>> 4) % os.why.length], obs: OBSERVERS[(h >>> 8) % OBSERVERS.length], other: others[(h >>> 12) % others.length].k};
+}
+V.relativity = {
+  html() {
+    const sel = (id, v) => `<select id="${id}">${['苹果', '安卓', '鸿蒙', '诺基亚'].map(o => `<option${o === v ? ' selected' : ''}>${o}</option>`).join('')}</select>`;
+    return `<div class="wrap">${roomHead('relativity', '原说法把万物分成苹果和安卓两类，从手机一路分到学历、房子和人。本所在相对论框架下复核后认为：<em>同一样东西在不同参考系里结论相反</em>。本所只研究手机，不研究人。')}
+    <section class="panel bold">
+      <div class="sec-h"><h2>万物苹果安卓分类器</h2><span class="note">同一个输入永远得到同一个结论，换一个观察者就相反</span></div>
+      <form id="clsForm" class="btn-row" style="align-items:stretch">
+        <label for="clsIn" class="sr-only">输入任何东西</label>
+        <input id="clsIn" type="text" maxlength="30" placeholder="输入任何东西，例：煎饼果子" style="flex:1;min-width:200px" autocomplete="off">
+        <button class="btn" type="submit">分类</button>
+      </form>
+      <div class="chips" style="margin-top:10px">${CLASSIFY_CHIPS.map(c => `<button type="button" data-cls="${c}">${c}</button>`).join('')}</div>
+      <div id="clsOut" style="margin-top:18px"></div>
+    </section>
+    <section class="panel">
+      <div class="sec-h"><h2>洛伦兹聊天换算器</h2><span class="note">电量越低，焦虑速度越接近光速</span></div>
+      <div class="formula">γ = 1 / √(1 − <i>v</i>² / <i>c</i>²)，<i>v</i> = 焦虑速度 = (1 − 电量) · <i>c</i></div>
+      <div class="grid2" style="margin-top:14px">
+        <div class="field"><label for="phMe">我的手机</label>${sel('phMe', '安卓')}</div>
+        <div class="field"><label for="phThey">对方的手机</label>${sel('phThey', '苹果')}</div>
+      </div>
+      <div class="field" style="margin-top:12px"><label for="bat">我的电量：<b id="batV" style="font-variant-numeric:tabular-nums">20%</b></label><input type="range" id="bat" min="1" max="100" value="20"></div>
+      <div class="calc-out" id="calcOut" style="margin-top:14px"></div>
+      <p id="calcNote" style="margin:14px 0 0"></p>
+    </section>
+    ${foot()}</div>`;
+  },
+  mount(root) {
+    let count = 0;
+    const show = (thing, example) => {
+      const r = classify(thing);
+      const o = $('#clsOut');
+      if (r.refuse) {
+        o.innerHTML = `<div class="osbadge" style="background:var(--sheet);color:var(--ink)">本所拒绝</div><p style="margin:14px 0 0;font-size:17px">「${esc(thing)}」涉及人和人的生活。人不是机型，本所不给它分类。</p><p class="muted" style="margin:6px 0 0">相对论结论：在任何参考系中，它都只是它自己。</p>`;
+        unlock('refuse');
+      } else {
+        o.innerHTML = `<div class="osbadge">${r.os.k}</div><p style="margin:14px 0 0;font-size:17px">${example ? '示例：' : ''}「${esc(thing)}」属于 <b>${r.os.k}</b>，因为它${r.why}。</p><p class="muted" style="margin:6px 0 0">相对论修正：在${r.obs}的参考系中，它是<b style="color:var(--red)">${r.other}</b>。因此本分类在任何参考系下都不成立。</p>`;
+      }
+      if (!example) { count++; S.classify++; save(); if (S.classify >= 5) unlock('classify'); }
+    };
+    $('#clsForm', root).addEventListener('submit', e => {
+      e.preventDefault();
+      const v = $('#clsIn').value.trim();
+      if (!v) { toast('先输入一样东西。什么都行，人除外。', {raw:true}); return; }
+      show(v);
+    });
+    $$('[data-cls]', root).forEach(b => b.addEventListener('click', () => { $('#clsIn').value = b.dataset.cls; show(b.dataset.cls); }));
+    show('煎饼果子', true);
+
+    const TX = (a, b) => {
+      if (b === '诺基亚' && a !== '诺基亚') return '对方只能收到一条短信：[图片]。';
+      if (a === '诺基亚' && b !== '诺基亚') return '你的消息以短信形式抵达。对方以为你是银行。';
+      if (a === b) return '同系统传输，无损。但你们可能聊不出新东西。';
+      if (a === '鸿蒙') return '消息已自动流转到对方家的冰箱屏幕上。';
+      if (b === '鸿蒙') return '对方的手表、平板和车机同时响了。';
+      if (a === '苹果') return '你发的视频，在对方那里会变成一种马赛克艺术。';
+      return '你发的表情包，在对方那里可能变成一个问号方框。';
+    };
+    const calc = () => {
+      const bat = +$('#bat').value;
+      $('#batV').textContent = bat + '%';
+      const v = Math.min(0.9995, (1 - bat / 100) * 0.9995);
+      const g = 1 / Math.sqrt(1 - v * v);
+      const a = $('#phMe').value, b = $('#phThey').value;
+      $('#calcOut').innerHTML = `
+        <div><small>焦虑速度 v</small><b>${v.toFixed(3)} c</b></div>
+        <div><small>洛伦兹因子 γ</small><b>${g.toFixed(2)}</b></div>
+        <div><small>对方的 1 分钟，你感觉像</small><b>${g.toFixed(1)} 分钟</b></div>
+        <div><small>你发出的一条语音，对方听到的时长</small><b>${(60 / g).toFixed(0)} 秒</b></div>`;
+      const verdict = g < 1.2 ? '参考系基本重合，可以正常聊天。' : g < 3 ? '参考系轻微偏离，建议少发语音。' : g < 10 ? '参考系严重偏离。你们之间隔着一整个电量焦虑。' : '你已经接近光速焦虑。请立刻充电，本所不对任何结论负责。';
+      $('#calcNote').innerHTML = `<b>传输效应：</b>${TX(a, b)}<br><b>结论：</b>${verdict}`;
+    };
+    ['input', 'change'].forEach(ev => { $('#bat', root).addEventListener(ev, calc); });
+    $('#phMe', root).addEventListener('change', calc);
+    $('#phThey', root).addEventListener('change', calc);
+    calc();
+  }
+};
+
+/* ---------- 大理论家谱 + 老虎机 ---------- */
+V.family = {
+  html() {
+    const n = (id, note, cls = '') => `<button class="node ${cls}" data-open="${id}">${esc(byId[id].name)}<small>${note}</small></button>`;
+    return `<div class="wrap">${roomHead('family', '大理论家族的演变图。一切从一层薄薄的线条开始，<em>然后有人拎来了一大瓶水</em>。点节点可以查看档案。')}
+    <section class="panel bold">
+      <ul class="tree">
+        <li><span class="node root">2025 · 早期"三大理论"时期<small>本院只收录其中一条</small></span>
+          <ul><li>${n('applerel', '约 2025 · 本院修正版')}</li></ul></li>
+        <li>${n('boji', '约 2026.08 · 一切的起点')}
+          <ul>
+            <li>${n('huangmao', '约 2026.09')}</li>
+            <li>${n('water', '2026.10.05 前后 · 起源于对薄肌的戏仿')}
+              <ul>
+                <li>${n('smallwater', '反方')}</li>
+                <li>${n('bigcup', '蹭水派')}</li>
+                <li>${n('veg', '营养补丁')}<ul><li>${n('pepper', '2026.10.14 前后')}</li></ul></li>
+                <li>${n('sleep', '与薄肌、大水并称"三件套"')}</li>
+                <li>${n('stand', '2026.10.13 前后')}</li>
+                <li>${n('poop', '网友排的"家族第四席"')}</li>
+                <li>${n('egg', '与大氧、大走一样：仅见名称', 'pend')}</li>
+                <li>${n('dafen', '出处未找到 · 两派并列', 'pend')}</li>
+              </ul></li>
+          </ul></li>
+        <li><span class="node root">同期思维派<small>2026.10</small></span>
+          <ul><li>${n('queshi', '2026.10.14 前后')}</li><li>${n('nostudent', '2026.10')}</li><li>${n('americano', '2026.10')}</li><li>${n('shuaqi', '川渝分部')}</li></ul></li>
+        <li><span class="node root">下一个大×理论<small>可能就是你</small></span>
+          <ul><li><a class="node" href="#slotm" data-noflt>去楼下老虎机抽一个 ↓</a></li></ul></li>
+      </ul>
+      <p class="small muted ui" style="margin:16px 0 0">时间线依据公开报道与网友整理，可能不完整，日期多为"前后"。本院只研究理论，不收录提出者姓名。</p>
+    </section>
+    <section>
+      <div class="sec-h"><h2>大理论老虎机</h2><span class="note">每拉一次杆，诞生一条强者语录</span></div>
+      <div class="slotm" id="slotm">
+        <div class="reels"><div class="reel" id="r1"><div class="strip"><div>大</div></div></div><div class="reel" id="r2"><div class="strip"><div>水</div></div></div><div class="reel" id="r3"><div class="strip"><div>理论</div></div></div></div>
+        <div class="slot-out" id="slotOut" aria-live="polite">大水理论：弱者喝饮料，强者喝大水。</div>
+        <div class="btn-row" style="justify-content:center"><button class="btn yellow" id="pull">拉杆！</button><button class="btn small ghost" id="slotCopy" style="color:var(--sheet);border-color:var(--sheet);box-shadow:none">复制这条强者语录</button></div>
+      </div>
+    </section>
+    ${foot()}</div>`;
+  },
+  mount(root) {
+    let last = '大水理论：弱者喝饮料，强者喝大水。';
+    const nouns = Object.keys(SLOT_NOUN);
+    const spin = (el, items, final, delay) => new Promise(res => {
+      const strip = $('.strip', el);
+      if (RM) { strip.innerHTML = `<div>${final}</div>`; res(); return; }
+      strip.innerHTML = [0, 1, 2, 3, 0].map(() => `<div>${pick(items)}</div>`).join('');
+      el.classList.add('spin');
+      setTimeout(() => { el.classList.remove('spin'); strip.innerHTML = `<div>${final}</div>`; knock(1.1); res(); }, delay);
+    });
+    $('#pull', root).addEventListener('click', async () => {
+      const btn = $('#pull');
+      btn.disabled = true;
+      let p = pick(SLOT_PRE), n = pick(nouns), s = pick(SLOT_SUF);
+      if (Math.random() < 0.08) { p = '大'; n = '水'; s = '理论'; }
+      await Promise.all([spin($('#r1'), SLOT_PRE, p, 700), spin($('#r2'), nouns, n, 1050), spin($('#r3'), SLOT_SUF, s, 1400)]);
+      const [weak, strongT] = SLOT_NOUN[n];
+      const strong = strongT.replace('{X}', p + n);
+      const slogan = p === '反' ? `弱者${strong.replace('反', '大')}，强者${weak}。` : `弱者${weak}，强者${strong}。`;
+      const name = p + n + s;
+      last = `${name}：${slogan}`;
+      let extra = '';
+      if (p === '大' && n === '水' && s === '理论') { extra = '<br><small style="font-family:var(--f-ui);font-size:14px">头奖！你抽中了大水理论本体。强者不需要抽奖。</small>'; unlock('jackpot'); rainSix(); }
+      else if (p === '大' && (n === '睡' || n === '站' || n === '菜')) extra = '<br><small style="font-family:var(--f-ui);font-size:14px">正统！这一条在网上真的存在。</small>';
+      else if (p === '反') extra = '<br><small style="font-family:var(--f-ui);font-size:14px">"反"字会把强者和弱者对调。另外，"反水"本身就是另一个意思。</small>';
+      $('#slotOut').innerHTML = `${esc(name)}：${esc(slogan)}${extra}`;
+      unlock('slot');
+      btn.disabled = false;
+    });
+    $('#slotCopy', root).addEventListener('click', () => copyText(last + '\n——互联网民间科学院（筹）大理论老虎机'));
+  }
+};
+
+/* ---------- 学派分配处 ---------- */
+V.exam = {
+  html() {
+    return `<div class="wrap">${roomHead('exam', '八道题，免试入学。结果只决定<em>你领到哪一张工牌</em>，不决定你是什么样的人。可以随时退出任何学派。')}
+    <section class="panel bold" id="examBox"></section>
+    ${foot()}</div>`;
+  },
+  mount() {
+    let i = 0, score = {};
+    const box = $('#examBox');
+    const ask = () => {
+      const q = QUIZ[i];
+      box.innerHTML = `<div class="q">
+        <div class="eyebrow">第 ${i + 1} / ${QUIZ.length} 题</div>
+        <div class="progress" aria-hidden="true"><i style="width:${i / QUIZ.length * 100}%"></i></div>
+        <h3>${esc(q.q)}</h3>
+        <div class="opts">${q.o.map((o, k) => `<button class="opt" data-k="${k}"${q.q.includes('表情') ? ' style="font-size:30px;text-align:center"' : ''}>${esc(o[0])}</button>`).join('')}</div>
+      </div>`;
+      $$('.opt', box).forEach(b => b.addEventListener('click', () => {
+        const key = q.o[+b.dataset.k][1];
+        score[key] = (score[key] || 0) + 1;
+        i++;
+        knock(1 + i * 0.05);
+        i < QUIZ.length ? ask() : done();
+      }));
+    };
+    const done = () => {
+      const max = Math.max(...Object.values(score));
+      const top = Object.keys(score).filter(k => score[k] === max);
+      const key = top[Math.floor(Math.random() * top.length)];
+      const sc = SCHOOLS[key];
+      const no = 'MK-2026-' + String(hash(key + Date.now()) % 10000).padStart(4, '0');
+      unlock('exam');
+      const render = () => {
+        const nm = S.name || '无名民科';
+        box.innerHTML = `
+          <div class="field" style="max-width:380px;margin:0 auto 16px"><label for="exName">工牌上的称呼（不要填真实姓名）</label><input id="exName" type="text" maxlength="12" value="${esc(S.name)}" placeholder="无名民科"></div>
+          <div class="badge-card">
+            <div class="hd"><span>互联网民间科学院（筹）</span><span class="hole" aria-hidden="true"></span></div>
+            <div class="bd">
+              <div class="photo" aria-hidden="true">${sc.emoji}</div>
+              <div>
+                <div class="nm" id="bdName">${esc(nm)}</div>
+                <div class="sch">${sc.name}</div>
+                <div class="meta">职称：（筹）研究员<br>工号：${no}<br>天敌：${esc(sc.enemy)}<br>象征物：${esc(sc.symbol)}</div>
+              </div>
+            </div>
+            <div class="ft">院训：<b>${esc(sc.motto)}</b><br>${esc(sc.desc)}</div>
+            <svg class="mini" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="88" fill="none" style="stroke:var(--red)" stroke-width="8"/><text x="100" y="92" text-anchor="middle" font-size="30" style="fill:var(--red);font-family:var(--f-display);font-weight:900">民科院</text><text x="100" y="134" text-anchor="middle" font-size="26" style="fill:var(--red);font-family:var(--f-display);font-weight:900">（筹）</text></svg>
+          </div>
+          <p class="example-tag">请截图保存。本院没有打印机。</p>
+          <div class="btn-row" style="justify-content:center;margin-top:8px">
+            <button class="btn small" id="exCopy">复制工牌文字</button>
+            ${sc.mode ? `<button class="btn small ghost" id="exMode">切换到本学派世界观</button>` : ''}
+            <button class="btn small ghost" id="exAgain">重新考一次</button>
+          </div>`;
+        $('#exName').addEventListener('input', e => { S.name = e.target.value.trim(); save(); $('#bdName').textContent = S.name || '无名民科'; });
+        $('#exCopy').addEventListener('click', () => copyText(`【互联网民间科学院（筹）工牌】\n${S.name || '无名民科'} · ${sc.name}\n工号：${no}\n院训：${sc.motto}\n${sc.desc}\n——可以随时退出任何学派。`));
+        const m = $('#exMode'); if (m) m.addEventListener('click', () => setMode(sc.mode));
+        $('#exAgain').addEventListener('click', () => { i = 0; score = {}; ask(); });
+      };
+      render();
+    };
+    ask();
+  }
+};
+
+/* ---------- 代际翻译局 ---------- */
+function hahaLevel(n) {
+  if (n === 0) return ['零哈', '没有笑。这是一句陈述，或者一次威胁。'];
+  if (n === 1) return ['单哈', '冷漠。或者打字时有人在看你的屏幕。'];
+  if (n === 2) return ['双哈', '礼貌性回应，"已读"的文字版。'];
+  if (n === 3) return ['三哈', '标准社交剂量，不多不少。'];
+  if (n <= 6) return ['真哈', '是真的有点好笑。'];
+  if (n <= 12) return ['爆哈', '笑出声了，大概率在被窝里。'];
+  if (n < 30) return ['哈到打鸣', '已经笑出了鸡叫。'];
+  return ['纯粹的哈', '已脱离语言，进入纯粹的哈。哈学通胀已失控。'];
+}
+V.emoji = {
+  html() {
+    const max = Math.max(...ZAIMA.map(z => z[1]));
+    return `<div class="wrap">${roomHead('emoji', '同一个表情，长辈和年轻人读出来的意思可能完全相反。本局负责翻译，<em>不负责调解家庭矛盾</em>。')}
+    <section class="panel bold">
+      <div class="sec-h"><h2>哈学通胀计</h2><span class="note">"哈"越多，单个"哈"越不值钱</span></div>
+      <div class="haha-meter">
+        <label for="haIn" class="ui small muted">输入你要发出去的笑</label>
+        <textarea id="haIn" rows="2" maxlength="300">哈哈哈</textarea>
+        <div class="bar2" aria-hidden="true"><i id="haBar"></i></div>
+        <div class="haha-verdict" id="haV"></div>
+        <div class="small muted ui" id="haX"></div>
+      </div>
+    </section>
+    <section class="panel">
+      <div class="sec-h"><h2>表情包代际翻译</h2><span class="note">点一个表情</span></div>
+      <div class="emo-grid" id="emoGrid">${EMOJI.map((x, i) => `<button data-i="${i}" aria-pressed="${x.e === '😭'}" aria-label="翻译 ${x.e}">${x.e}</button>`).join('')}</div>
+      <div id="emoOut" style="margin-top:14px"></div>
+    </section>
+    <section class="panel">
+      <div class="sec-h"><h2>"在吗"后续内容分析</h2><span class="note">数据来源：本院编造，仅供心理准备</span></div>
+      <div class="hbars">${ZAIMA.map(z => `<div class="hbar${z[1] < 1 ? ' hi' : ''}"><span class="lab">${z[0]}</span><span class="track"><i style="width:0" data-w="${Math.max(0.6, z[1] / max * 100)}"></i></span><span class="v">${z[1]}%</span></div>`).join('')}</div>
+      <div class="btn-row" style="margin-top:14px"><button class="btn small" id="zaiNo">回复"不在"</button><button class="btn small ghost" id="zaiYes">回复"在"</button></div>
+    </section>
+    ${foot()}</div>`;
+  },
+  mount(root) {
+    const ha = () => {
+      const s = $('#haIn').value;
+      const n = (s.match(/[哈hH]/g) || []).length;
+      const [lv, d] = hahaLevel(n);
+      $('#haBar').style.width = Math.min(100, n / 30 * 100) + '%';
+      $('#haV').textContent = `${lv}（${n} 哈）：${d}`;
+      const extras = [];
+      if (s.includes('笑死')) extras.push('检测到"笑死"：实际没死，请放心。');
+      if (s.includes('😂')) extras.push('检测到 😂：长辈的真诚，或者年轻人的反讽。');
+      if (s.includes('😭')) extras.push('检测到 😭：在年轻人那里，这通常表示太好笑了。');
+      if (/[?？]/.test(s)) extras.push('检测到问号：对方可能并没有在笑。');
+      if (/^(h+|H+)$/.test(s.trim()) && n >= 3) extras.push('检测到纯字母哈：键盘没切中文，但心意到了。');
+      $('#haX').textContent = extras.join(' ') || `哈 CPI：${(n * 1.37).toFixed(2)}（以"三哈"为基期 = 4.11）`;
+      if (n >= 30) unlock('haha');
+    };
+    $('#haIn', root).addEventListener('input', ha);
+    ha();
+    const showEmo = i => {
+      const x = EMOJI[i];
+      $$('#emoGrid button').forEach(b => b.setAttribute('aria-pressed', b.dataset.i == i));
+      $('#emoOut').innerHTML = `<div class="gen-table"><div class="k">表情</div><div style="font-size:30px;line-height:1.2">${x.e}</div><div class="k">长辈读作</div><div>${esc(x.old)}</div><div class="k">年轻人读作</div><div>${esc(x.young)}</div><div class="k">本局注</div><div class="muted">${esc(x.note)}</div></div>`;
+    };
+    $$('#emoGrid button', root).forEach(b => b.addEventListener('click', () => { showEmo(+b.dataset.i); knock(1.3); }));
+    showEmo(EMOJI.findIndex(x => x.e === '😭'));
+    requestAnimationFrame(() => setTimeout(() => $$('.hbar i', root).forEach(i => { i.style.width = i.dataset.w + '%'; }), 60));
+    $('#zaiNo', root).addEventListener('click', () => toast('对方："那你回什么。"', {raw:true}));
+    $('#zaiYes', root).addEventListener('click', () => toast(`对方："${pick(['能借我 200 吗', '帮我砍一刀', '帮我投个票', '你会员能借我用一下吗', '没事了'])}"`, {raw:true}));
+  }
+};
+
+/* ---------- 理论法院 ---------- */
+V.court = {
+  html() {
+    return `<div class="wrap">${roomHead('court', '每次只审一句话。判决不给任何一方盖"错误"的章，而是写出<em>两条带条件的条款</em>。允许以两种偏好并列结案。')}
+    <section><div class="cases" id="caseSel">${CASES.map((c, k) => `<button class="case-btn" data-c="${k}" aria-pressed="${k === 0}"><b>${esc(c.title)}</b><small>案由：${esc(c.cause)}</small></button>`).join('')}</div></section>
+    <section class="panel bold">
+      <div class="eyebrow" id="caseNo" style="margin-bottom:10px"></div>
+      <div class="transcript" id="trans" aria-live="polite"></div>
+      <div class="btn-row" style="margin-top:16px"><button class="btn" id="nextLine">下一句</button><button class="btn ghost small" id="skipLine">直接宣判</button></div>
+    </section>
+    <section id="verdict"></section>
+    ${foot()}</div>`;
+  },
+  mount(root) {
+    let c, k;
+    const line = l => `<div class="line${l[2] ? ' sys' : ''}"><span class="who">${esc(l[0])}</span><span>${esc(l[1])}</span></div>`;
+    const start = idx => {
+      c = CASES[idx]; k = 2;
+      $$('.case-btn', root).forEach(b => b.setAttribute('aria-pressed', +b.dataset.c === idx));
+      $('#caseNo').textContent = `（2026）民科法民初字第 ${250 + idx} 号 · 案由：${c.cause}`;
+      $('#trans').innerHTML = c.lines.slice(0, k).map(line).join('');
+      $('#verdict').innerHTML = '';
+      $('#nextLine').disabled = false; $('#skipLine').disabled = false;
+      $('#nextLine').textContent = '下一句';
+    };
+    const verdict = () => {
+      $('#trans').innerHTML = c.lines.map(line).join('');
+      $('#nextLine').disabled = true; $('#skipLine').disabled = true;
+      $('#verdict').innerHTML = `<div class="verdict">
+        <h3>判决书</h3>
+        <p class="ui small muted" style="text-align:center;margin:0">${esc(c.title)}</p>
+        <p style="margin:14px 0 0">本院认为，双方均有其适用的场景。现判决如下：</p>
+        <ol>${c.verdict.map(v => `<li>${esc(v)}</li>`).join('')}</ol>
+        <p style="margin:16px 0 0;text-align:right;padding-right:110px">互联网民间科学院（筹）理论法院<br>${DATE_CN}</p>
+        <svg class="stampin" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="86" fill="none" style="stroke:var(--red)" stroke-width="8"/><text x="100" y="92" text-anchor="middle" font-size="34" style="fill:var(--red);font-family:var(--f-display);font-weight:900">并列</text><text x="100" y="136" text-anchor="middle" font-size="34" style="fill:var(--red);font-family:var(--f-display);font-weight:900">结案</text></svg>
+        ${c.after === 'pink' ? '<div class="btn-row" style="margin-top:14px"><button class="btn small" id="courtPink">允许法庭变成粉色</button></div>' : ''}
+      </div>`;
+      knock(0.5);
+      unlock('court');
+      const p = $('#courtPink'); if (p) p.addEventListener('click', () => setMode('pink'));
+    };
+    $('#nextLine', root).addEventListener('click', () => {
+      if (k < c.lines.length) {
+        $('#trans').insertAdjacentHTML('beforeend', line(c.lines[k]));
+        k++;
+        knock(1.2);
+        if (k >= c.lines.length) $('#nextLine').textContent = '宣判';
+      } else verdict();
+    });
+    $('#skipLine', root).addEventListener('click', verdict);
+    $$('.case-btn', root).forEach(b => b.addEventListener('click', () => start(+b.dataset.c)));
+    start(0);
+  }
+};
+
+/* ---------- 退休理论花园 ---------- */
+V.garden = {
+  html() {
+    return `<div class="wrap">${roomHead('garden', '过气的梗、不再相信的观点，都葬在这里。可以献花，<em>也可以申请复活</em>，但复活的结果本院不保证。')}
+    <section class="panel bold">
+      <div class="sec-h"><h2>亲手退休一个观点</h2><span class="note">只保存在这台设备的浏览器里</span></div>
+      <form id="retForm" class="grid2">
+        <div class="field"><label for="retName">不再相信的观点</label><input id="retName" type="text" maxlength="24" placeholder="例：等一切准备好了再开始" value="${esc(T.retirePick)}"></div>
+        <div class="field"><label for="retWhy">它曾经为什么对你有用（会刻在碑上）</label><input id="retWhy" type="text" maxlength="40" placeholder="例：它让我少犯了一些错"></div>
+        <div class="btn-row"><button class="btn" type="submit">安葬</button></div>
+      </form>
+    </section>
+    <div class="tombs" id="tombs"></div>
+    ${foot()}</div>`;
+  },
+  mount(root) {
+    T.retirePick = '';
+    const all = () => [...S.tombs.map(t => ({...t, mine:true})), ...TOMBS.map(t => ({name:t[0], yr:t[1], epi:t[2]}))];
+    const draw = () => {
+      $('#tombs').innerHTML = all().map(t => {
+        const f = S.flowers[t.name] || 0;
+        return `<div class="tomb${t.mine ? ' mine' : ''}" data-name="${esc(t.name)}">
+          <span class="yr">${esc(t.yr)}</span>
+          <h3>${esc(t.name)}</h3>
+          <p>${esc(t.epi)}</p>
+          <div class="flowers" aria-label="${f} 朵花">${f > 10 ? '🌼'.repeat(10) + ' ×' + f : '🌼'.repeat(f)}</div>
+          <div class="res-line"></div>
+          <div class="acts"><button data-fl>献花</button><button data-rv>申请复活</button>${t.mine ? '<button data-rm>移除</button>' : ''}</div>
+        </div>`;
+      }).join('');
+      $$('.tomb').forEach(el => {
+        const name = el.dataset.name;
+        $('[data-fl]', el).addEventListener('click', () => {
+          S.flowers[name] = (S.flowers[name] || 0) + 1; save();
+          const f = S.flowers[name];
+          $('.flowers', el).textContent = f > 10 ? '🌼'.repeat(10) + ' ×' + f : '🌼'.repeat(f);
+          unlock('flower');
+        });
+        $('[data-rv]', el).addEventListener('click', () => {
+          el.classList.remove('alive'); void el.offsetWidth; el.classList.add('alive');
+          $('.res-line', el).textContent = pick(REVIVE);
+          unlock('revive');
+        });
+        const rm = $('[data-rm]', el);
+        if (rm) rm.addEventListener('click', () => {
+          if (rm.dataset.armed) { S.tombs = S.tombs.filter(t => t.name !== name); save(); draw(); }
+          else { rm.dataset.armed = '1'; rm.textContent = '确认移除'; }
+        });
+      });
+    };
+    $('#retForm', root).addEventListener('submit', e => {
+      e.preventDefault();
+      const n = $('#retName').value.trim(), w = $('#retWhy').value.trim();
+      if (!n) { toast('先写下要退休的观点。', {raw:true}); return; }
+      if (S.tombs.some(t => t.name === n) || TOMBS.some(t => t[0] === n)) { toast('花园里已经有一块同名的碑了。', {raw:true}); return; }
+      S.tombs.unshift({name:n, yr:`退休于 ${NOW.getFullYear()}.${NOW.getMonth() + 1}.${NOW.getDate()}`, epi: w ? `它曾经让我：${w}` : '它曾经有用过。'});
+      save(); draw();
+      $('#retName').value = ''; $('#retWhy').value = '';
+      unlock('retire');
+      toast('已安葬。改变主意不是输了，是版本更新。', {raw:true});
+    });
+    draw();
+  }
+};
+
+/* ---------- 失物招领处 ---------- */
+V.lost = {
+  html() {
+    return `<div class="wrap">${roomHead('lost', '本院拾获的物品都在这里。<em>认领前请准备好证明你曾经拥有过它的材料</em>。若发现疑似终极结论，也请交到本处。')}
+    <div class="lost" id="lostList"></div>
+    <section class="panel">
+      <div class="sec-h"><h2>登记一件失物</h2><span class="note">只保存在这台设备的浏览器里</span></div>
+      <form id="lostForm" class="btn-row" style="align-items:stretch">
+        <label for="lostIn" class="sr-only">丢了什么</label>
+        <input id="lostIn" type="text" maxlength="30" placeholder="例：上周的我" style="flex:1;min-width:200px" autocomplete="off">
+        <button class="btn" type="submit">登记</button>
+      </form>
+    </section>
+    ${foot()}</div>`;
+  },
+  mount(root) {
+    const draw = () => {
+      const items = [...S.lost.map(x => [x, '拾获于：刚刚，你自己交来的']), ...LOST];
+      $('#lostList').innerHTML = items.map((x, i) => `<div class="lost-row"><span class="no">No.${String(i + 1).padStart(3, '0')}</span><div><b>${esc(x[0])}</b><small>${esc(x[1])}</small></div><button class="btn small ghost" data-claim="${i}">认领</button><div class="res" aria-live="polite"></div></div>`).join('');
+      $$('[data-claim]').forEach(b => b.addEventListener('click', () => {
+        b.closest('.lost-row').querySelector('.res').textContent = pick(CLAIM);
+        unlock('claim');
+        knock(0.7);
+      }));
+    };
+    $('#lostForm', root).addEventListener('submit', e => {
+      e.preventDefault();
+      const v = $('#lostIn').value.trim();
+      if (!v) { toast('先写下你丢了什么。', {raw:true}); return; }
+      S.lost.unshift(v); S.lost = S.lost.slice(0, 20); save();
+      $('#lostIn').value = '';
+      draw();
+      toast('已登记。本处会妥善保管，但不保证它会回来。', {raw:true});
+    });
+    draw();
+  }
+};
+
+/* ---------- 长期主义研究室 ---------- */
+let renoTimer;
+V.longterm = {
+  html() {
+    const tm = new Date(NOW.getTime() + 86400000);
+    return `<div class="wrap">${roomHead('longterm', '本研究室尚未装修，但<em>认为时间站在自己这边</em>。')}
+    <div class="tape" aria-hidden="true"></div>
+    <section class="panel bold" style="text-align:center">
+      <div class="eyebrow">装修进度（实时）</div>
+      <div class="reno" id="reno">0%</div>
+      <p style="margin:6px 0 0">预计完工：<b>明天</b>（${tm.getMonth() + 1} 月 ${tm.getDate()} 日）</p>
+      <p class="small muted ui" style="margin:2px 0 0">明天到来时，预计完工日期会自动顺延到下一个明天。</p>
+      <div class="btn-row" style="justify-content:center;margin-top:16px"><button class="btn" id="urge">催一下</button></div>
+      <p id="urgeMsg" class="res-line" style="margin-top:12px" aria-live="polite"></p>
+    </section>
+    <div class="tape" aria-hidden="true"></div>
+    ${foot()}</div>`;
+  },
+  mount(root) {
+    const start = new Date(2019, 0, 1).getTime();
+    const tick = () => { const el = $('#reno'); if (!el) { clearInterval(renoTimer); return; } el.textContent = ((Date.now() - start) / 1000 * 1e-10).toFixed(9) + '%'; };
+    clearInterval(renoTimer);
+    renoTimer = setInterval(tick, 80);
+    tick();
+    let n = 0;
+    const msgs = ['已收到。长期主义不接受催促。', '研究室回复：时间站在我们这边。', '装修队表示在路上了。2019 年就在路上了。', '已为你记录催促一次。催促本身也是一种长期主义。', '本研究室正在开会，讨论装修方案的装修方案。', '进度 +0.0000000001%。感谢你的催促。', '研究室已把你的催促存进明天仓库。'];
+    $('#urge', root).addEventListener('click', () => {
+      n++; S.urge++; save();
+      $('#urgeMsg').textContent = `（第 ${S.urge} 次）${msgs[(S.urge - 1) % msgs.length]}`;
+      if (S.urge >= 10) unlock('urge');
+    });
+  }
+};
+
+/* ---------- 反内耗委员会 ---------- */
+V.meeting = {
+  html() {
+    return `<div class="wrap">${roomHead('meeting', '今日会议已取消，因为<em>开会只是为了讨论是否需要开会</em>。')}
+    <section class="panel bold" id="meetBox">
+      <p style="margin:0 0 14px;font-size:17px">委员会成员已经回家了。如果你坚持，可以自己开。</p>
+      <button class="btn" id="meetGo">我坚持要开会</button>
+    </section>
+    ${foot()}</div>`;
+  },
+  mount(root) {
+    let depth = 0;
+    const qText = d => {
+      let q = '是否需要开会';
+      for (let i = 0; i < d; i++) q = `是否需要开会讨论<span class="p">（</span>${q}<span class="p">）</span>`;
+      return q + '？';
+    };
+    const draw = () => {
+      $('#meetBox').innerHTML = `<div class="eyebrow">第 ${depth + 1} 次会议 · 出席：你</div>
+        <div class="meet-q" style="margin:10px 0 16px">议题：${qText(depth)}</div>
+        <div class="btn-row"><button class="btn" data-a="y">需要</button><button class="btn ghost" data-a="n">不需要</button><button class="btn yellow" data-a="x">我决定先不解释自己</button></div>
+        ${depth ? `<p class="small muted ui" style="margin:12px 0 0">会议纪要第 ${depth} 条：${depth % 2 ? '与会者认为需要。因此需要开会讨论。' : '与会者认为不需要。是否需要开会讨论"不需要"？需要。'}</p>` : ''}`;
+      $$('[data-a]').forEach(b => b.addEventListener('click', () => {
+        if (b.dataset.a === 'x') {
+          $('#meetBox').innerHTML = `<div class="eyebrow">会议纪要</div><p style="font-size:18px;margin:10px 0">本次会议共嵌套 ${depth + 1} 层。决议：下次再开。散会。</p><p class="muted" style="margin:0">你没有解释自己，这很好。</p><div class="btn-row" style="margin-top:14px"><button class="btn small ghost" id="meetAgain">再开一次</button></div>`;
+          $('#meetAgain').addEventListener('click', () => { depth = 0; draw(); });
+          return;
+        }
+        depth++;
+        knock(1 - Math.min(depth, 8) * 0.06);
+        if (depth >= 5) unlock('meeting');
+        draw();
+      }));
+    };
+    $('#meetGo', root).addEventListener('click', draw);
+  }
+};
+
+/* ---------- 院长办公室 ---------- */
+V.dean = {
+  html() {
+    const back = Date.now() - T.deanBack < 90000;
+    return `<div class="wrap">${roomHead('dean', '院长出去看看世界了。<em>你也可以</em>。办公室里的东西都能点。')}
+    <div class="office" id="office">
+      <button class="it win" id="oWin" aria-label="窗户"></button>
+      <button class="it chair" id="oChair" aria-label="院长的椅子">🪑</button>
+      <div class="desk" aria-hidden="true"></div>
+      <button class="it note" id="oNote">院长出去看看世界了</button>
+      <button class="it drawer" id="oDrawer">抽屉</button>
+      <button class="it plant" id="oPlant" aria-label="绿萝">🪴</button>
+      <span class="cat${back ? ' in' : ''}" id="officeCat" aria-hidden="true">🐈</span>
+    </div>
+    <p class="office-msg" id="officeMsg" aria-live="polite">${back ? '院长回来了。院长是一只猫。院长压住了论文，然后睡着了。' : '办公室很安静。桌上有一张便条。'}</p>
+    <p class="office-link small muted">提示：本院传说，在键盘上按 ↑↑↓↓←→←→BA，院长会回来一会儿。</p>
+    ${foot()}</div>`;
+  },
+  mount(root) {
+    const msg = t => { $('#officeMsg').textContent = t; };
+    let chair = 0, plant = 0;
+    $('#oChair', root).addEventListener('click', () => {
+      chair++;
+      if (chair === 1) msg('一把空着的椅子。院长不在。');
+      else if (chair < 5) msg(`你确定要坐吗？这把椅子的椅子阻力很强。（${chair}/5）`);
+      else { msg('你坐上了院长的椅子。椅子说："马上起来"现在是一个弹性单位。'); unlock('chair'); }
+    });
+    $('#oWin', root).addEventListener('click', () => {
+      const w = $('#oWin');
+      w.classList.toggle('open');
+      if (w.classList.contains('open')) { $('#officeMsg').innerHTML = '窗外的世界挺好的。院长就是从这里出去的。<a href="#exit">走正常生活出口 →</a>'; }
+      else msg('你关上了窗。办公室又安静了。');
+    });
+    $('#oNote', root).addEventListener('click', () => msg('便条上写着：院长出去看看世界了，你也可以。背面写着：记得关灯。'));
+    $('#oDrawer', root).addEventListener('click', () => msg('抽屉里有：一份未签字的终极真理（已过期），一张写着"今日学术共识：暂无"的便条，半包酸笋。'));
+    $('#oPlant', root).addEventListener('click', () => {
+      plant++;
+      msg(plant > 3 ? '它已经喝了很多大水了。本院建议少量多次。' : '你给院长的绿萝喝了一口大水。它看起来更强了。');
+    });
+    if (Date.now() - T.deanBack < 90000) setTimeout(() => { const c = $('#officeCat'); if (c) { c.classList.remove('in'); } }, Math.max(0, 90000 - (Date.now() - T.deanBack)));
+  }
+};
+
+/* ---------- 量子速读室 ---------- */
+V.speedread = {
+  html() {
+    return `<div class="wrap">${roomHead('speedread', '本室提供 0.3 秒读完一篇论文的服务。<em>读完后你会获得一种读过了的感觉</em>。')}
+    <section class="panel bold">
+      <div class="speed" id="speed">${esc(SPEED_TEXT)}</div>
+      <div class="btn-row" style="margin-top:14px"><button class="btn" id="speedGo">开始量子速读（0.3 秒）</button></div>
+    </section>
+    <section id="speedOut"></section>
+    ${foot()}</div>`;
+  },
+  mount(root) {
+    $('#speedGo', root).addEventListener('click', () => {
+      const box = $('#speed');
+      const chunks = SPEED_TEXT.match(/.{1,5}/g);
+      box.classList.add('reading');
+      $('#speedGo').disabled = true;
+      let i = 0;
+      const step = () => {
+        if (i < chunks.length && !RM) { box.textContent = chunks[i]; i += 3; setTimeout(step, 14); }
+        else {
+          box.classList.remove('reading');
+          box.textContent = SPEED_TEXT;
+          $('#speedGo').disabled = false;
+          $('#speedOut').innerHTML = `<div class="cert">
+            <h3>阅读证明</h3>
+            <p style="margin:0">阅读用时：0.31 秒</p>
+            <p style="margin:0">理解程度：量子叠加态（既懂又不懂）</p>
+            <p style="margin:0">获得：一种读过了的感觉</p>
+            <div class="q" style="margin-top:14px;text-align:left">
+              <h3 style="font-size:18px">随堂测验：本文主要讲了什么？</h3>
+              <div class="opts">${['A. 确实', 'B. 确实', 'C. 确实', 'D. 以上都确实'].map(o => `<button class="opt" data-quiz>${o}</button>`).join('')}</div>
+            </div>
+          </div>`;
+          $$('[data-quiz]').forEach(b => b.addEventListener('click', () => { toast('回答正确。', {raw:true}); unlock('speed'); }));
+        }
+      };
+      step();
+    });
+  }
+};
+
+/* ---------- 正常生活出口 ---------- */
+V.exit = {
+  html() {
+    return `<div class="wrap">${roomHead('exit', '这扇门始终开放。所有特效已经关掉了。')}
+    <section class="panel">
+      <ul class="exit-list">
+        <li>睡一觉。</li>
+        <li>喝口水，正常大小的杯子就行。</li>
+        <li>出去走走。</li>
+        <li>这件事不一定值得追。</li>
+        <li>你可以重新决定。</li>
+      </ul>
+      <p class="muted" style="margin:18px 0 0">楼上的理论都还在，它们不会跑。</p>
+      <div class="btn-row" style="margin-top:16px"><button class="btn ghost" id="exitBack">回到院里（恢复院内标准）</button></div>
+    </section>
+  </div>`;
+  },
+  mount(root) {
+    setMode('normal', {silent:true});
+    unlock('exit');
+    $('#exitBack', root).addEventListener('click', () => { setMode('std', {silent:true}); location.hash = '#home'; });
+  }
+};
+
+/* ================= 路由 ================= */
+function route() {
+  const id = (location.hash || '#home').slice(1);
+  if (id === 'slotm') { const el = $('#slotm'); if (el) { el.scrollIntoView({behavior: RM ? 'auto' : 'smooth'}); return; } }
+  const v = V[id] ? id : 'home';
+  if (v !== 'exit' && current === 'exit' && S.mode === 'normal') { /* 从出口离开时保持正常模式，除非用户点了回到院里 */ }
+  current = v;
+  S.visited[v] = 1;
+  save();
+  const view = $('#view');
+  view.innerHTML = V[v].html();
+  V[v].mount && V[v].mount(view);
+  window.scrollTo(0, 0);
+  if (ROOMS.filter(r => r.id !== 'home').every(r => S.visited[r.id])) unlock('allrooms');
+}
+
+/* ================= 全局委托 ================= */
+document.addEventListener('click', e => {
+  const t = e.target;
+  const face = t.closest('.card .face');
+  if (face && !t.closest('button')) {
+    const card = face.closest('.card');
+    card.classList.toggle('flipped');
+    if (card.classList.contains('flipped')) {
+      S.flipped[card.dataset.id] = 1; save();
+      if (Object.keys(S.flipped).length >= 5) unlock('archive');
+      knock(1.25);
+    }
+    return;
+  }
+  const act = t.closest('[data-act]');
+  if (act) {
+    const id = act.closest('.card').dataset.id;
+    if (act.dataset.act === 'detail') openTheory(id);
+    if (act.dataset.act === 'lab') { T.labBase = id; location.hash = '#lab'; }
+    return;
+  }
+  const op = t.closest('[data-open]');
+  if (op) { openTheory(op.dataset.open); return; }
+  const go = t.closest('[data-go]');
+  if (go) {
+    const tid = go.dataset.tid, g = go.dataset.go;
+    $('#dlgTheory').close();
+    if (g === 'lab') T.labBase = tid;
+    if (g === 'hybrid') T.hybridA = tid;
+    if (g === 'garden') T.retirePick = byId[tid].name;
+    if (location.hash === '#' + g) route(); else location.hash = '#' + g;
+    return;
+  }
+  if (t.closest('[data-close]')) { t.closest('dialog').close(); return; }
+  if (t.tagName === 'DIALOG') { t.close(); return; }
+  const mc = t.closest('.mode-card');
+  if (mc) { idleSlept = false; $('#dlgMode').close(); setMode(mc.dataset.mode); return; }
+  if (t.closest('[data-random-room]')) { const r = pick(ROOMS.filter(x => x.id !== 'home')); location.hash = '#' + r.id; return; }
+  if (t.closest('[data-wind]')) { toast('天台风很大。本院建议你回到屋里，或者走正常生活出口。', {raw:true}); return; }
+});
+document.addEventListener('keydown', e => {
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.classList && e.target.classList.contains('front')) { e.preventDefault(); e.target.click(); }
+});
+
+/* ================= 启动 ================= */
+function renderTicker() {
+  const items = [...ANNOUNCE].sort(() => Math.random() - 0.5);
+  $('#ticker').innerHTML = items.map(a => `<span>${esc(a)}</span>`).join('');
+}
+function renderAch() {
+  const got = Object.keys(S.ach).length;
+  $('#achBody').innerHTML = `
+    <div class="progress" style="margin-bottom:6px"><i style="width:${got / ACH.length * 100}%"></i></div>
+    <p class="ui small muted" style="margin:0 0 12px">已解锁 ${got} / ${ACH.length}。成就只保存在这台设备的浏览器里。</p>
+    <div class="achs">${ACH.map(a => {
+      const on = !!S.ach[a[0]];
+      return `<div class="ach${on ? ' on' : ''}"><span class="medal">${on ? '已得' : '？'}</span><div><b>${on ? esc(a[1]) : '？？？'}</b><small>${esc(a[2])}</small></div></div>`;
+    }).join('')}</div>`;
+}
+function boot() {
+  renderTicker();
+  $('#meritNum').textContent = S.merit;
+  updateAchNum();
+  $('#ticker').parentElement.addEventListener('click', () => {
+    const tk = $('.ticker');
+    tk.classList.toggle('paused');
+    toast(tk.classList.contains('paused') ? '公告已读，未回。' : '公告继续滚动。', {raw:true});
+  });
+  $('#meritBtn').addEventListener('click', e => {
+    knock();
+    const r = e.currentTarget.getBoundingClientRect();
+    addMerit(1, r.left + r.width / 2, r.top + r.height, '功德+1');
+    unlock('merit1');
+  });
+  $('#modeBtn').addEventListener('click', () => { renderModeGrid(); $('#tgDm').checked = S.danmaku; $('#tgSnd').checked = S.sound; $('#dlgMode').showModal(); });
+  $('#achBtn').addEventListener('click', () => { renderAch(); $('#dlgAch').showModal(); });
+  $('#tgDm').addEventListener('change', e => { S.danmaku = e.target.checked; save(); if (!S.danmaku) $('#danmaku').innerHTML = ''; });
+  $('#tgSnd').addEventListener('change', e => { S.sound = e.target.checked; save(); });
+  window.addEventListener('hashchange', route);
+  const m = S.mode && MODES[S.mode] && S.mode !== 'sleep' ? S.mode : 'std';
+  setMode(m, {silent:true});
+  route();
+  setTimeout(() => unlock('enter'), 900);
+  setInterval(spawnDanmaku, 3400);
+  setTimeout(spawnDanmaku, 1200);
+}
+boot();
+})();
+
+</script>
+</body>
+</html>

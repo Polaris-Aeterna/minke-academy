@@ -1,0 +1,54 @@
+<title>互联网民间科学院（筹）</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@200;400;700;900&family=ZCOOL+QingKe+HuangYou&display=swap">
+<style>
+/*__CSS__*/
+</style>
+<!--__BODY__-->
+
+<header class="bar">
+  <a href="#home" class="bar-logo" aria-label="回到大厅"><span class="mini-seal" aria-hidden="true">民科</span><span class="txt">互联网民间科学院<i>（筹）</i></span></a>
+  <div class="bar-tools">
+    <button class="tool merit" id="meritBtn" type="button" title="敲一下，功德 +1"><span class="lbl-long">学术</span>功德 <b id="meritNum">0</b></button>
+    <button class="tool" id="modeBtn" type="button">世界观<span class="lbl-long"> · <span id="modeName">院内标准</span></span></button>
+    <button class="tool" id="achBtn" type="button">成就 <b id="achNum">0</b></button>
+  </div>
+</header>
+<div class="ticker" title="点一下暂停"><div class="ticker-track" id="ticker"></div></div>
+
+<main id="view"></main>
+
+<div id="fx" aria-hidden="true"></div>
+<div id="danmaku" aria-hidden="true"></div>
+<div id="floaters" aria-hidden="true"></div>
+<div id="toasts" role="status" aria-live="polite"></div>
+
+<dialog id="dlgTheory" aria-label="理论档案">
+  <div class="dlg"><button class="dlg-close" type="button" data-close aria-label="关闭">×</button><div id="theoryBody" style="display:flex;flex-direction:column;gap:12px"></div></div>
+</dialog>
+<dialog id="dlgMode" aria-label="世界观切换器">
+  <div class="dlg">
+    <button class="dlg-close" type="button" data-close aria-label="关闭">×</button>
+    <h2 style="font-family:var(--f-display);font-weight:900;font-size:26px;margin:0;padding-right:40px">世界观切换器</h2>
+    <p class="small muted" style="margin:0">选一个学派的规则，整个网站会照它的样子重新表达。"正常生活"永远在最后一个。</p>
+    <div class="modes" id="modeGrid"></div>
+    <div class="toggles"><label><input type="checkbox" id="tgDm"> 院内 NPC 弹幕</label><label><input type="checkbox" id="tgSnd"> 电子木鱼声</label></div>
+    <p class="small muted ui" style="margin:0">键盘彩蛋：在页面空白处直接打出 boji、dafen、queshi、fafeng 试试。还有几个，本院不说。</p>
+  </div>
+</dialog>
+<dialog id="dlgAch" aria-label="学术成就">
+  <div class="dlg">
+    <button class="dlg-close" type="button" data-close aria-label="关闭">×</button>
+    <h2 style="font-family:var(--f-display);font-weight:900;font-size:26px;margin:0;padding-right:40px">学术成就</h2>
+    <div id="achBody"></div>
+  </div>
+</dialog>
+
+<script>
+/*__DATA__*/
+</script>
+<script>
+/*__APP__*/
+</script>
