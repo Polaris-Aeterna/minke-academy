@@ -201,19 +201,25 @@ FX.water = () => {
   });
 };
 FX.pink = () => {
-  if (RM) return;
   const fx = $('#fx');
+  let fans = 1024 + Math.floor(Math.random() * 400);
+  const hud = document.createElement('div');
+  hud.className = 'fanhud';
+  const draw = () => { hud.innerHTML = `<span>粉丝 <b>${fans.toLocaleString('zh-CN')}</b> ↑</span><span>引用 <b>0</b> →</span>`; };
+  draw();
+  fx.appendChild(hud);
+  modeTimers.push(setInterval(() => { fans += Math.floor(rnd(3, 60)); draw(); }, 600));
+  if (RM) return;
   modeTimers.push(setInterval(() => {
     const n = document.createElement('span');
-    const isBowl = Math.random() < 0.35;
-    n.className = isBowl ? 'noodle' : 'noodle str';
-    if (isBowl) n.textContent = pick(['🍜', '🍥', '🌸']);
+    n.className = 'noodle';
+    n.textContent = pick(['❤️', '👤', '📈', '➕', '粉']);
     n.style.left = rnd(0, 98) + 'vw';
-    n.style.setProperty('--spin', rnd(-360, 360) + 'deg');
+    n.style.setProperty('--spin', rnd(-200, 200) + 'deg');
     n.style.animationDuration = rnd(4, 8) + 's';
     fx.appendChild(n);
     setTimeout(() => n.remove(), 8200);
-  }, 380));
+  }, 420));
 };
 FX.crazy = () => {
   if (RM) return;
@@ -372,7 +378,7 @@ document.addEventListener('click', e => {
   const t = c.contains('mode-queshi') ? '确实'
     : c.contains('mode-sleep') ? pick(['嘘——', 'zzz', '睡意+1'])
     : c.contains('mode-water') ? pick(['咕咚', '大水+1', '波'])
-    : c.contains('mode-pink') ? pick(['嗦', '粉+1', '🍜'])
+    : c.contains('mode-pink') ? pick(['粉丝+1', '涨粉', '引用+0'])
     : c.contains('mode-thin') ? '线条+1'
     : c.contains('mode-work') ? pick(['收到', '已阅', '好的'])
     : c.contains('mode-crazy') ? pick(['啊！', '啊啊！', '？！'])
@@ -968,8 +974,8 @@ V.family = {
     return `<div class="wrap">${roomHead('family', '大理论家族的演变图。一切从一层薄薄的线条开始，<em>然后有人拎来了一大瓶水</em>。点节点可以查看档案。')}
     <section class="panel bold">
       <ul class="tree">
-        <li><span class="node root">2025 · 早期"三大理论"时期<small>本院只收录其中一条</small></span>
-          <ul><li>${n('applerel', '约 2025 · 本院修正版')}</li></ul></li>
+        <li><span class="node root">2025 · "三大理论"时期<small>大理论时代的前传</small></span>
+          <ul><li>${n('freud', '约 2025 · 民间弗洛伊德')}</li><li>${n('ligong', '约 2025')}</li><li>${n('applerel', '约 2025 · 本院修正版')}</li></ul></li>
         <li>${n('boji', '约 2026.08 · 一切的起点')}
           <ul>
             <li>${n('huangmao', '约 2026.09')}</li>
@@ -982,11 +988,10 @@ V.family = {
                 <li>${n('stand', '2026.10.13 前后')}</li>
                 <li>${n('poop', '网友排的"家族第四席"')}</li>
                 <li>${n('egg', '与大氧、大走一样：仅见名称', 'pend')}</li>
-                <li>${n('dafen', '出处未找到 · 两派并列', 'pend')}</li>
               </ul></li>
           </ul></li>
         <li><span class="node root">同期思维派<small>2026.10</small></span>
-          <ul><li>${n('queshi', '2026.10.14 前后')}</li><li>${n('nostudent', '2026.10')}</li><li>${n('americano', '2026.10')}</li><li>${n('shuaqi', '川渝分部')}</li></ul></li>
+          <ul><li>${n('dafen', '2026.10.11 前后 · 学术圈分支')}</li><li>${n('queshi', '2026.10.14 前后')}</li><li>${n('nostudent', '2026.10')}</li><li>${n('americano', '2026.10')}</li><li>${n('shuaqi', '川渝分部')}</li></ul></li>
         <li><span class="node root">下一个大×理论<small>可能就是你</small></span>
           <ul><li><a class="node" href="#slotm" data-noflt>去楼下老虎机抽一个 ↓</a></li></ul></li>
       </ul>
@@ -1025,7 +1030,7 @@ V.family = {
       last = `${name}：${slogan}`;
       let extra = '';
       if (p === '大' && n === '水' && s === '理论') { extra = '<br><small style="font-family:var(--f-ui);font-size:14px">头奖！你抽中了大水理论本体。强者不需要抽奖。</small>'; unlock('jackpot'); rainSix(); }
-      else if (p === '大' && (n === '睡' || n === '站' || n === '菜')) extra = '<br><small style="font-family:var(--f-ui);font-size:14px">正统！这一条在网上真的存在。</small>';
+      else if (p === '大' && (n === '睡' || n === '站' || n === '菜' || n === '粉')) extra = '<br><small style="font-family:var(--f-ui);font-size:14px">正统！这一条在网上真的存在。</small>';
       else if (p === '反') extra = '<br><small style="font-family:var(--f-ui);font-size:14px">"反"字会把强者和弱者对调。另外，"反水"本身就是另一个意思。</small>';
       $('#slotOut').innerHTML = `${esc(name)}：${esc(slogan)}${extra}`;
       unlock('slot');

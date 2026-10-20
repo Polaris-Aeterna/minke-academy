@@ -609,3 +609,6 @@ input[type=range]{width:100%;accent-color:var(--red)}
 .res-line{font-family:var(--f-pop);color:var(--red);font-size:15px;line-height:1.4;min-height:1.4em}
 .office-link{font-family:var(--f-ui);font-size:14px}
 body.mode-water #toasts{bottom:calc(112px + env(safe-area-inset-bottom,0px))}
+.fanhud{position:fixed;z-index:35;top:calc(86px + env(safe-area-inset-top,0px));right:max(16px, env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:2px;background:var(--sheet);border:2px solid var(--pink);padding:8px 12px;font-family:var(--f-ui);font-size:13px;box-shadow:3px 3px 0 var(--pink);pointer-events:none;font-variant-numeric:tabular-nums}
+.fanhud b{font-family:var(--f-display);font-weight:900;font-size:17px}
+.fanhud span:first-child b{color:var(--pink)}

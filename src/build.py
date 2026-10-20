@@ -12,7 +12,7 @@ root = here.parent
 read = lambda name: (here / name).read_text(encoding="utf-8")
 
 SITE = "https://polaris-aeterna.github.io/minke-academy/"
-DESC = "一栋永远在筹备中的民间科学院：34 份“大理论”档案，16 个能乱点的房间，8 种世界观，44 个隐藏成就。"
+DESC = "一栋永远在筹备中的民间科学院：36 份理论档案，16 个能乱点的房间，8 种世界观，44 个隐藏成就。"
 
 page = read("shell.html")
 page = page.replace("/*__CSS__*/", read("style.css"))

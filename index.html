@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="一栋永远在筹备中的民间科学院：34 份“大理论”档案，16 个能乱点的房间，8 种世界观，44 个隐藏成就。">
+<meta name="description" content="一栋永远在筹备中的民间科学院：36 份理论档案，16 个能乱点的房间，8 种世界观，44 个隐藏成就。">
 <meta name="theme-color" content="#d0121a">
 <meta property="og:type" content="website">
 <meta property="og:title" content="互联网民间科学院（筹）">
-<meta property="og:description" content="一栋永远在筹备中的民间科学院：34 份“大理论”档案，16 个能乱点的房间，8 种世界观，44 个隐藏成就。">
+<meta property="og:description" content="一栋永远在筹备中的民间科学院：36 份理论档案，16 个能乱点的房间，8 种世界观，44 个隐藏成就。">
 <meta property="og:url" content="https://polaris-aeterna.github.io/minke-academy/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Ccircle%20cx%3D%2732%27%20cy%3D%2732%27%20r%3D%2727%27%20fill%3D%27none%27%20stroke%3D%27%23d0121a%27%20stroke-width%3D%275%27/%3E%3Ctext%20x%3D%2732%27%20y%3D%2743%27%20font-size%3D%2730%27%20font-weight%3D%27900%27%20text-anchor%3D%27middle%27%20fill%3D%27%23d0121a%27%20font-family%3D%27serif%27%3E%E6%B0%91%3C/text%3E%3C/svg%3E">
 <style>
@@ -633,6 +633,9 @@ input[type=range]{width:100%;accent-color:var(--red)}
 .res-line{font-family:var(--f-pop);color:var(--red);font-size:15px;line-height:1.4;min-height:1.4em}
 .office-link{font-family:var(--f-ui);font-size:14px}
 body.mode-water #toasts{bottom:calc(112px + env(safe-area-inset-bottom,0px))}
+.fanhud{position:fixed;z-index:35;top:calc(86px + env(safe-area-inset-top,0px));right:max(16px, env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:2px;background:var(--sheet);border:2px solid var(--pink);padding:8px 12px;font-family:var(--f-ui);font-size:13px;box-shadow:3px 3px 0 var(--pink);pointer-events:none;font-variant-numeric:tabular-nums}
+.fanhud b{font-family:var(--f-display);font-weight:900;font-size:17px}
+.fanhud span:first-child b{color:var(--pink)}
 
 </style>
 </head>
@@ -684,7 +687,7 @@ const SRC = {
   classic:{label:'网络古典', cls:'green'},
   orig:{label:'本院戏仿', cls:'red'}
 };
-const FAMS = ['大字辈','思维派','网络古典','本院原创'];
+const FAMS = ['三大理论','大字辈','思维派','网络古典','本院原创'];
 
 const THEORIES = [
   {id:'boji', name:'薄肌理论', short:'薄肌', emoji:'💪', fam:'大字辈', src:'net', when:'约 2026.08',
@@ -771,13 +774,13 @@ const THEORIES = [
    useful:'你终于开始关心自己身体的时候。',
    notFor:'在饭桌上讨论本理论。',
    item:'一卷印着"已阅"的卫生纸', cred:3},
-  {id:'dafen', name:'大粉理论', short:'大粉', emoji:'🍜', fam:'大字辈', src:'pend', when:'出处未找到',
-   slogan:'弱者吃轻食，强者嗦大粉。',
-   thesis:'本院全网检索，未找到可靠出处。学界因此分裂为两派：嗦粉派认为是一大碗米粉，粉色派认为是把一切变成粉色。本院以两种解读并列收录。',
-   a:'嗦一大碗粉', b:'顺便把世界调成粉色',
-   useful:'饿了，或者心情灰了。',
-   notFor:'白衬衫。',
-   item:'一只粉色的碗，里面装着粉', cred:2},
+  {id:'dafen', name:'大粉理论', short:'大粉', emoji:'📈', fam:'大字辈', src:'net', when:'2026.10.11 前后',
+   slogan:'对 PhD 来说，粉丝数 > 引用数。',
+   thesis:'推特和小红书上的粉丝数量，比 Google Scholar 上的引用数量更重要。PhD 应该不遗余力地搞传播、建立个人 IP、让更多人认识你。本院首版曾把"大粉"误读成一大碗米粉，现已更正，误读版已葬入退休理论花园。',
+   a:'先把粉丝涨上去', b:'让更多人认识你',
+   useful:'你做了很好的工作，但全世界只有你导师知道的时候。',
+   notFor:'代替论文本身。粉丝能让人点开你的论文，不能替你把证明写完。',
+   item:'一个只显示粉丝数、不显示引用数的主页', cred:3},
   {id:'huangmao', name:'黄毛思维', short:'黄毛', emoji:'👱', fam:'思维派', src:'net', when:'约 2026.09',
    slogan:'头发可以不黄，日子必须先过。',
    thesis:'不必真去染黄毛。重点是先把自己的日子过好，守住边界和选择权，不因为别人丢了自己。',
@@ -813,7 +816,21 @@ const THEORIES = [
    useful:'你已经纠结了三天要不要出门的时候。',
    notFor:'第二天早上八点的考试。',
    item:'一副永远凑不齐四个人的麻将', cred:3},
-  {id:'applerel', name:'苹果安卓相对论', short:'苹安', emoji:'📱', fam:'思维派', src:'net', when:'约 2025',
+  {id:'freud', name:'性压抑论', short:'憋', emoji:'🎈', fam:'三大理论', src:'net', when:'约 2025',
+   slogan:'一切毛病，都是憋出来的。',
+   thesis:'男生身上的种种毛病，爱抬杠、脾气冲、打游戏上头，都能归因于一个字：憋。网友称之为"民间弗洛伊德理论"。',
+   a:'把所有毛病归因于憋', b:'用一个字解释全部人生',
+   useful:'提醒你：情绪和欲望憋太久，确实会换个出口冒出来。',
+   notFor:'解释一切。把所有问题都归到同一个原因上，本身也是一种憋：憋着不去看别的原因。',
+   item:'一只一直在漏气的气球', cred:2},
+  {id:'ligong', name:'力工思维论', short:'力工', emoji:'🧱', fam:'三大理论', src:'net', when:'约 2025',
+   slogan:'平时省到骨头里，关键时刻一把梭。',
+   thesis:'长期省吃俭用，一分钱都不舍得花在自己身上，攒到最后一次性全部押上，比如换一场婚姻。网友把这种思路概括为"力工思维"。本院注：这里说的是一种思维方式，不是任何一种职业。',
+   a:'平时一分钱都不舍得花', b:'最后一次性全部押上',
+   useful:'把多年积蓄押在一个决定上之前，提醒你想想能不能分几次下注。',
+   notFor:'嘲笑认真攒钱的人。省钱没有错，错在把全部人生押在一次交易上。',
+   item:'一只攒了很多年、只打算砸一次的存钱罐', cred:2},
+  {id:'applerel', name:'苹果安卓相对论', short:'苹安', emoji:'📱', fam:'三大理论', src:'net', when:'约 2025',
    slogan:'没有绝对的苹果，只有相对的参考系。（本院修正版）',
    thesis:'原说法把万物分成"苹果"和"安卓"两类，从手机一路分到学历、房子和人。本院在相对论框架下复核后认为：同一个人在不同参考系里可以同时是苹果和安卓，所以这套分类在任何参考系里都不成立。唯一绝对的，是电量。',
    a:'把万物分成两类', b:'再发现分类取决于参考系',
@@ -938,7 +955,7 @@ const ANNOUNCE = [
   '大睡学派提醒：现在如果已过十点，请勿继续阅读本公告。',
   '确实。',
   '薄肌学派招新：门槛很低，线条很薄。',
-  '本院全网检索"大粉理论"出处未果，现以嗦粉派、粉色派两种解读并列收录。',
+  '更正：大粉理论的"粉"是粉丝，不是米粉。嗦粉派已光荣退休，墓碑在六楼。',
   '本院非权威机构。权威上周出门买大水，至今未归。',
   '大站理论研究小组提醒：你已经坐了很久了。',
   '苹果安卓相对论研究所声明：本所只研究手机，不研究人。'
@@ -975,7 +992,7 @@ const ROOMS = [
   {id:'relativity', name:'苹果安卓相对论研究所', floor:'3F', status:'参考系混乱'},
   {id:'lab', name:'反例实验室', floor:'2F', status:'"但是"试剂充足'},
   {id:'hybrid', name:'学说杂交器', floor:'2F', status:'培养皿已消毒'},
-  {id:'archive', name:'理论档案馆', floor:'1F', status:'34 份档案'},
+  {id:'archive', name:'理论档案馆', floor:'1F', status:THEORIES.length + ' 份档案'},
   {id:'home', name:'大厅', floor:'1F', status:'你在这里'},
   {id:'speedread', name:'量子速读室', floor:'B1', status:'0.3 秒一本'},
   {id:'exit', name:'正常生活出口', floor:'B1', status:'始终开放'}
@@ -986,7 +1003,7 @@ const MODES = {
   sleep:{name:'大睡', desc:'关灯。整个页面开始打瞌睡。'},
   water:{name:'大水', desc:'水位上涨，卡片漂起来，附赠一只大水瓶。'},
   thin:{name:'薄肌', desc:'所有字体练成薄肌，只剩线条。'},
-  pink:{name:'大粉', desc:'嗦粉派与粉色派联合执政。天上掉粉。'},
+  pink:{name:'大粉', desc:'全站变粉。粉丝数一路上涨，引用数纹丝不动。'},
   crazy:{name:'发疯', desc:'精神状态良好（自评）。'},
   work:{name:'班味', desc:'全站变灰，所有按钮自带"收到"。'},
   queshi:{name:'确实', desc:'本院对一切的回应统一为：确实。'},
@@ -1001,7 +1018,7 @@ const ACH = [
   ['m_sleep','主动大睡','切换到大睡世界观'],
   ['m_water','强者喝大水','切换到大水世界观'],
   ['m_thin','薄肌初成','切换到薄肌世界观'],
-  ['m_pink','嗦粉派与粉色派','切换到大粉世界观'],
+  ['m_pink','涨粉','切换到大粉世界观'],
   ['m_crazy','精神状态良好','切换到发疯世界观'],
   ['m_work','班味入味','切换到班味世界观'],
   ['m_queshi','确实','切换到确实世界观'],
@@ -1063,7 +1080,10 @@ const LAB_SPECIAL = {
   'collect|battery':'电量 1% 时，收藏夹里的 2,371 条学习资料一条也救不了你。先充电。',
   'applerel|battery':'电量 1% 的苹果和电量 1% 的安卓，处在同一个参考系：都快没电了。',
   'nexttime|bus':'公交车不接受"下次一定"。它真的会走。',
-  'dafen|broke':'37 块还够嗦三碗粉。本理论到了月底反而最强。',
+  'freud|2am':'凌晨两点睡不着，本理论会说是憋的。本院认为更可能是下午四点那杯冰美式。',
+  'ligong|broke':'月底只剩 37 块，本理论建议继续攒。本院建议先吃顿好的：人比存钱罐重要。',
+  'dafen|mom':'妈妈问你今年发了几篇论文。请不要回答"发了 40 篇笔记"。',
+  'dafen|boss':'导师就站在你身后。请先关掉小红书后台，回到 LaTeX 窗口。',
   'hotwater|rain':'淋了雨，确实可以多喝热水。本理论终于等到了它的适用场景。',
   'tomorrow|mom':'妈妈问的事，不能存进明天仓库。仓库不收这一类货。',
   'ddl|2am':'凌晨两点的灵感，正好赶上明早九点的截止。本理论在此刻抵达巅峰。',
@@ -1081,7 +1101,7 @@ const RELS = [
 /* ---- 售货机 ---- */
 const V_PRE = ['大','薄','小','纯血','野生','反向','量子','赛博','超大杯','原教旨'];
 const V_SUF = ['理论','主义','定律','守恒定律','相对论','思维','学派','二象性'];
-const V_STRONG = ['先喝一大瓶水','先大睡一觉','先站起来五分钟','先说一句确实','先嗦一碗大粉','先出门吸一口大氧','先把它存进明天仓库'];
+const V_STRONG = ['先喝一大瓶水','先大睡一觉','先站起来五分钟','先说一句确实','先发条小红书涨一波大粉','先出门吸一口大氧','先把它存进明天仓库'];
 const V_ASPECT = ['参考系','剂量','窗口期','含水量','线条','电量','饱和度'];
 const V_COND = ['周一以外','电量高于 20%','睡满八小时之后','喝完第三杯水之后','没有人看着的时候','吃饱以后','老板不在线时','不下雨的日子'];
 const V_STOP = ['我','的','了','很','太','好','想','要','在','是','就','都','也','还','有','没','怎么','什么','为什么','今天','真的','一直','又','总是','感觉','觉得','不知道','怎么办','啊','吧','呢','吗','嗯','这个','那个','老是','有点','一点','特别','非常'];
@@ -1103,7 +1123,7 @@ const CLASSIFY_CHIPS = ['煎饼果子','我的工位','周一','奶茶','大水'
 const SLOT_PRE = ['大','小','薄','纯','反','野','超大'];
 const SLOT_NOUN = {
   '水':['喝饮料','喝{X}'], '睡':['熬夜刷手机','十点{X}'], '站':['久坐不动','每小时{X}一次'], '蛋':['点外卖','每天两个{X}'],
-  '菜':['吃炸鸡','端一盆{X}'], '粉':['吃轻食','嗦一碗{X}'], '走':['打车三百米','{X}一万步'], '氧':['闷在空调房','出门吸{X}'],
+  '菜':['吃炸鸡','端一盆{X}'], '粉':['只发论文','先涨{X}'], '走':['打车三百米','{X}一万步'], '氧':['闷在空调房','出门吸{X}'],
   '肌':['练成门板','只要{X}'], '班':['加班到十点','准点下{X}'], '哭':['憋着','{X}一场'], '笑':['强颜欢笑','{X}三声'],
   '躺':['假装没在躺','光明正大地{X}'], '饭':['随便对付一口','认真吃一顿{X}'], '门':['宅在家里','出{X}'], '确':['急着反驳','先说{X}实']
 };
@@ -1114,7 +1134,7 @@ const SCHOOLS = {
   sleep:{name:'大睡学派', emoji:'😴', motto:'十点断电，八小时重启。', symbol:'一盏会自己熄灭的灯', enemy:'凌晨两点的灵感', desc:'你相信大部分问题睡一觉会变小，剩下的问题睡两觉。你不是懒，你是在执行一次长达八小时的系统更新。', mode:'sleep'},
   water:{name:'大水学派', emoji:'💧', motto:'弱者喝饮料，强者喝大水。', symbol:'一只比包还大的水瓶', enemy:'下午三点的奶茶广告', desc:'你的方案朴素而坚定：先喝口水。你的瓶子很大，但你记得少量多次。', mode:'water'},
   boji:{name:'薄肌学派', emoji:'💪', motto:'不要块头，要线条。', symbol:'一面只照得到锁骨的镜子', enemy:'夜宵', desc:'你追求一种克制的力量感。不必很大，但要清楚。这一点在你的人际关系里也成立。', mode:'thin'},
-  fen:{name:'大粉学派', emoji:'🍜', motto:'一切问题，嗦完再说。', symbol:'一只粉色的碗', enemy:'白衬衫', desc:'你知道一碗热乎的东西能化解多少情绪。至于你是嗦粉派还是粉色派，本院允许你两个都是。', mode:'pink'},
+  fen:{name:'大粉学派', emoji:'📈', motto:'粉丝数 > 引用数。', symbol:'一个不显示引用数的主页', enemy:'"你今年发了几篇论文"', desc:'你相信好东西应该被看见，所以你发的每一条都在为下一次被认真读到做准备。只是别忘了，主页背后得有点真东西。', mode:'pink'},
   queshi:{name:'确实学派', emoji:'🙂', motto:'确实。', symbol:'一个只会点头的摆件', enemy:'需要你说"不"的场合', desc:'你擅长让空气降温。你说"确实"的时候，心里其实已经想好了下一步。', mode:'queshi'},
   crazy:{name:'发疯学派', emoji:'🫠', motto:'精神状态良好（自评）。', symbol:'一本写满"啊"的笔记本', enemy:'"你冷静一点"', desc:'你的情绪很真实，表达也很真实。你没疯，你只是拒绝把所有感受都写成周报。', mode:'crazy'},
   slack:{name:'纪律性摆烂学派', emoji:'🛋️', motto:'准时开始，准时摆烂。', symbol:'一台只在打卡时罢工的打卡机', enemy:'"今天你进步了吗"', desc:'你知道休息不需要理由，但需要纪律。你的摆烂很规律，规律到有点像一种自律。', mode:'work'},
@@ -1122,13 +1142,13 @@ const SCHOOLS = {
 };
 const QUIZ = [
   {q:'周一早上七点，闹钟响了。你：', o:[['再睡五分钟（重复六次）','sleep'],['先灌一口床头的大水','water'],['做十个俯卧撑，然后后悔','boji'],['对着天花板发出一声学术性尖叫','crazy']]},
-  {q:'同事说："这个方案是不是有点问题？"你：', o:[['确实。','queshi'],['心里不慌，手上已经开始改了','run'],['先去嗦碗粉，冷静一下','fen'],['有问题，明天再说','slack']]},
-  {q:'你的包里一定有：', o:[['一瓶 1.5 升的水','water'],['眼罩和耳塞','sleep'],['一根弹力带','boji'],['一包螺蛳粉附赠的酸笋','fen']]},
+  {q:'同事说："这个方案是不是有点问题？"你：', o:[['确实。','queshi'],['心里不慌，手上已经开始改了','run'],['先发条小红书问问网友','fen'],['有问题，明天再说','slack']]},
+  {q:'你的包里一定有：', o:[['一瓶 1.5 升的水','water'],['眼罩和耳塞','sleep'],['一根弹力带','boji'],['一个拍 vlog 用的手机支架','fen']]},
   {q:'晚上十二点，你在：', o:[['早就睡了','sleep'],['刷别人早睡打卡的视频，越刷越精神','crazy'],['按计划躺着，什么也不想','slack'],['想明早怎么赶上第一班地铁','run']]},
   {q:'收到一条"在吗"。你回：', o:[['确实在。','queshi'],['（已读，不回）','slack'],['"在！怎么了？"然后去喝了口水','water'],['"？"','crazy']]},
-  {q:'选一个最像你的表情：', o:[['😅','queshi'],['🫠','crazy'],['💪','boji'],['🍜','fen']]},
+  {q:'选一个最像你的表情：', o:[['😅','queshi'],['🫠','crazy'],['💪','boji'],['📈','fen']]},
   {q:'公交车正在关门。你：', o:[['平静地，快跑','run'],['等下一班，顺便坐会儿','slack'],['跑，并把它算作今天的有氧','boji'],['确实关了。','queshi']]},
-  {q:'人生遇到一个大难题。你的第一反应：', o:[['先睡一觉','sleep'],['先喝杯水','water'],['先吃碗粉','fen'],['先拆成三件明天就能做的小事','run']]}
+  {q:'人生遇到一个大难题。你的第一反应：', o:[['先睡一觉','sleep'],['先喝杯水','water'],['先发个帖子，看看网友怎么说','fen'],['先拆成三件明天就能做的小事','run']]}
 ];
 
 /* ---- 代际翻译 ---- */
@@ -1178,16 +1198,17 @@ const CASES = [
     ['证人 · 手机','我可以作证。屏幕使用时间显示，被告昨晚看了 214 条视频，记住了 0 条。'],
     ['审判长','本庭认为被告的诉求有一部分成立：白天确实欠了被告时间。']],
    verdict:['被告追讨时间的诉求成立，但追讨对象应当是白天，而不是睡眠。','在第二天需要早起的夜晚，大睡优先执行。','周五晚上本庭休庭，不予审理。','本案以两种偏好并列结案。宣判时，原告已睡着。']},
-  {id:'b', title:'薄肌 诉 大粉', cause:'嗦粉是否破坏线条',
+  {id:'b', title:'引用数 诉 粉丝数', cause:'对 PhD 来说，哪个数字更重要',
    lines:[
-    ['书记员','现在开庭。请被告先把碗放下。',1],
-    ['原告 · 薄肌理论','我练了三个月才有一层线条，被告一碗就让它消失了。'],
-    ['被告 · 大粉理论（嗦粉派）','线条是你的，粉是我的。你不能要求世界上没有粉。'],
-    ['被告 · 大粉理论（粉色派）','补充一点：我们派只是想让世界变成粉色，与碳水无关。'],
-    ['审判长','粉色派请先坐下，你们不是本案被告。'],
-    ['证人 · 一碗螺蛳粉','（沉默，但存在感很强）'],
-    ['原告 · 薄肌理论','……其实我也想吃。']],
-   verdict:['粉可以嗦，线条可以练，二者分时段执行时不构成冲突。','嗦粉后步行二十分钟，视为双方和解。','粉色派与本案无关，但本庭允许法庭变成粉色。','本案以"吃完去走走"调解结案。'], after:'pink'},
+    ['书记员','现在开庭。旁听席已满，其中一半是来涨粉的。',1],
+    ['原告 · Google Scholar 引用数','我是学术界的硬通货。审稿人看我，教职委员会也看我。'],
+    ['被告 · 大粉理论','可你的论文，有几个人真的点开过？我能让一篇论文被一万个人看见。'],
+    ['原告 · 引用数','被看见，不等于被引用。'],
+    ['被告 · 大粉理论','被引用之前，总得先被看见。'],
+    ['证人 · 一篇 arXiv 预印本','我挂上去三个月了，下载 12 次，其中 9 次是作者本人。'],
+    ['证人 · 导师','（已读未回）'],
+    ['审判长','本庭注意到，双方争的是同一样东西：被认真读到。']],
+   verdict:['在申请教职、基金与评审的场合，引用数优先。','在找合作者、找机会、让别人知道你做了什么的场合，粉丝数有用。','用粉丝数代替论文本身者，两方均不予支持。','本案以两种偏好并列结案。宣判视频已同步发布至小红书。'], after:'pink'},
   {id:'q', title:'拒绝学生思维 诉 确实', cause:'说"确实"，算不算放弃思考',
    lines:[
     ['书记员','现在开庭。',1],
@@ -1203,6 +1224,7 @@ const CASES = [
 
 /* ---- 花园 ---- */
 const TOMBS = [
+  ['大粉理论（嗦粉误读版）','2026.10','本院曾以为大粉是一大碗米粉。它让本院饱过一阵。'],
   ['神马都是浮云','约 2010','生前看淡一切，死后亦然。'],
   ['给力','约 2010','曾经很给力，现在不太给力了。'],
   ['元芳你怎么看','约 2012','元芳至今没有回答。'],
@@ -1470,19 +1492,25 @@ FX.water = () => {
   });
 };
 FX.pink = () => {
-  if (RM) return;
   const fx = $('#fx');
+  let fans = 1024 + Math.floor(Math.random() * 400);
+  const hud = document.createElement('div');
+  hud.className = 'fanhud';
+  const draw = () => { hud.innerHTML = `<span>粉丝 <b>${fans.toLocaleString('zh-CN')}</b> ↑</span><span>引用 <b>0</b> →</span>`; };
+  draw();
+  fx.appendChild(hud);
+  modeTimers.push(setInterval(() => { fans += Math.floor(rnd(3, 60)); draw(); }, 600));
+  if (RM) return;
   modeTimers.push(setInterval(() => {
     const n = document.createElement('span');
-    const isBowl = Math.random() < 0.35;
-    n.className = isBowl ? 'noodle' : 'noodle str';
-    if (isBowl) n.textContent = pick(['🍜', '🍥', '🌸']);
+    n.className = 'noodle';
+    n.textContent = pick(['❤️', '👤', '📈', '➕', '粉']);
     n.style.left = rnd(0, 98) + 'vw';
-    n.style.setProperty('--spin', rnd(-360, 360) + 'deg');
+    n.style.setProperty('--spin', rnd(-200, 200) + 'deg');
     n.style.animationDuration = rnd(4, 8) + 's';
     fx.appendChild(n);
     setTimeout(() => n.remove(), 8200);
-  }, 380));
+  }, 420));
 };
 FX.crazy = () => {
   if (RM) return;
@@ -1641,7 +1669,7 @@ document.addEventListener('click', e => {
   const t = c.contains('mode-queshi') ? '确实'
     : c.contains('mode-sleep') ? pick(['嘘——', 'zzz', '睡意+1'])
     : c.contains('mode-water') ? pick(['咕咚', '大水+1', '波'])
-    : c.contains('mode-pink') ? pick(['嗦', '粉+1', '🍜'])
+    : c.contains('mode-pink') ? pick(['粉丝+1', '涨粉', '引用+0'])
     : c.contains('mode-thin') ? '线条+1'
     : c.contains('mode-work') ? pick(['收到', '已阅', '好的'])
     : c.contains('mode-crazy') ? pick(['啊！', '啊啊！', '？！'])
@@ -2237,8 +2265,8 @@ V.family = {
     return `<div class="wrap">${roomHead('family', '大理论家族的演变图。一切从一层薄薄的线条开始，<em>然后有人拎来了一大瓶水</em>。点节点可以查看档案。')}
     <section class="panel bold">
       <ul class="tree">
-        <li><span class="node root">2025 · 早期"三大理论"时期<small>本院只收录其中一条</small></span>
-          <ul><li>${n('applerel', '约 2025 · 本院修正版')}</li></ul></li>
+        <li><span class="node root">2025 · "三大理论"时期<small>大理论时代的前传</small></span>
+          <ul><li>${n('freud', '约 2025 · 民间弗洛伊德')}</li><li>${n('ligong', '约 2025')}</li><li>${n('applerel', '约 2025 · 本院修正版')}</li></ul></li>
         <li>${n('boji', '约 2026.08 · 一切的起点')}
           <ul>
             <li>${n('huangmao', '约 2026.09')}</li>
@@ -2251,11 +2279,10 @@ V.family = {
                 <li>${n('stand', '2026.10.13 前后')}</li>
                 <li>${n('poop', '网友排的"家族第四席"')}</li>
                 <li>${n('egg', '与大氧、大走一样：仅见名称', 'pend')}</li>
-                <li>${n('dafen', '出处未找到 · 两派并列', 'pend')}</li>
               </ul></li>
           </ul></li>
         <li><span class="node root">同期思维派<small>2026.10</small></span>
-          <ul><li>${n('queshi', '2026.10.14 前后')}</li><li>${n('nostudent', '2026.10')}</li><li>${n('americano', '2026.10')}</li><li>${n('shuaqi', '川渝分部')}</li></ul></li>
+          <ul><li>${n('dafen', '2026.10.11 前后 · 学术圈分支')}</li><li>${n('queshi', '2026.10.14 前后')}</li><li>${n('nostudent', '2026.10')}</li><li>${n('americano', '2026.10')}</li><li>${n('shuaqi', '川渝分部')}</li></ul></li>
         <li><span class="node root">下一个大×理论<small>可能就是你</small></span>
           <ul><li><a class="node" href="#slotm" data-noflt>去楼下老虎机抽一个 ↓</a></li></ul></li>
       </ul>
@@ -2294,7 +2321,7 @@ V.family = {
       last = `${name}：${slogan}`;
       let extra = '';
       if (p === '大' && n === '水' && s === '理论') { extra = '<br><small style="font-family:var(--f-ui);font-size:14px">头奖！你抽中了大水理论本体。强者不需要抽奖。</small>'; unlock('jackpot'); rainSix(); }
-      else if (p === '大' && (n === '睡' || n === '站' || n === '菜')) extra = '<br><small style="font-family:var(--f-ui);font-size:14px">正统！这一条在网上真的存在。</small>';
+      else if (p === '大' && (n === '睡' || n === '站' || n === '菜' || n === '粉')) extra = '<br><small style="font-family:var(--f-ui);font-size:14px">正统！这一条在网上真的存在。</small>';
       else if (p === '反') extra = '<br><small style="font-family:var(--f-ui);font-size:14px">"反"字会把强者和弱者对调。另外，"反水"本身就是另一个意思。</small>';
       $('#slotOut').innerHTML = `${esc(name)}：${esc(slogan)}${extra}`;
       unlock('slot');
